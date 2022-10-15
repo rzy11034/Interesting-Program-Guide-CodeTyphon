@@ -1,0 +1,24 @@
+program IPGC;
+
+{$mode objfpc}{$H+}
+
+uses
+ {$IFDEF UNIX}
+  cthreads,
+ {$ENDIF}
+ {$IFDEF HASAMIGA}
+  athreads,
+ {$ENDIF}
+  Interfaces, // this includes the CT adLCL widgetset
+  Forms,
+  Case01.FrmMain, Case02.FrmMain;
+
+{$R *.res}
+
+begin
+  RequireDerivedFormResource := true;
+  Application.Scaled:=True;
+  Application.Initialize;
+  Application.CreateForm(TCase02_FrmMain, Case02_FrmMain);
+  Application.Run;
+end.
