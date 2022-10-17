@@ -79,7 +79,12 @@
         <FRMtype Value="200"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Case02_FrmMain"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Case02\Case02.Calculate.pas"/>
+        <IsPartOfProject Value="True"/>
       </Unit>
     </Units>
   </ProjectOptions>
@@ -107,6 +112,9 @@
         <StackChecks Value="True"/>
       </Checks>
       <VerifyObjMethodCallValidity Value="True"/>
+      <Optimizations>
+        <OptimizationLevel Value="0"/>
+      </Optimizations>
     </CodeGeneration>
     <Linking>
       <Debugging>
@@ -122,7 +130,7 @@
     </Linking>
     <Other>
       <CompilerMessages>
-        <IgnoredMessages idx4105="True"/>
+        <IgnoredMessages idx4105="True" idx4104="True"/>
       </CompilerMessages>
     </Other>
   </CompilerOptions>

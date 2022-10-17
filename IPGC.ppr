@@ -11,7 +11,7 @@ uses
  {$ENDIF}
   Interfaces, // this includes the CT adLCL widgetset
   Forms,
-  Case01.FrmMain, Case02.FrmMain;
+  Case01.FrmMain, Case02.FrmMain, Case02.Calculate;
 
 {$R *.res}
 
