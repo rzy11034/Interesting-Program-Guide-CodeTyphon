@@ -1,4 +1,4 @@
-unit Case01.FrmMain;
+﻿unit Case01.FrmMain;
 
 {$mode objfpc}{$H+}
 {$ModeSwitch unicodestrings}

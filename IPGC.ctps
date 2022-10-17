@@ -11,8 +11,8 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <CursorPos X="36" Y="8"/>
-        <UsageCount Value="77"/>
+        <CursorPos X="25" Y="15"/>
+        <UsageCount Value="87"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -26,7 +26,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="58"/>
         <CursorPos X="9" Y="82"/>
-        <UsageCount Value="77"/>
+        <UsageCount Value="87"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case02\Case02.FrmMain.pas"/>
@@ -35,23 +35,22 @@
         <ComponentName Value="Case02_FrmMain"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="88"/>
-        <CursorPos X="28" Y="115"/>
-        <UsageCount Value="77"/>
+        <TopLine Value="172"/>
+        <CursorPos X="48" Y="176"/>
+        <UsageCount Value="87"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case02\Case02.Calculate.pas"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="49"/>
-        <CursorPos Y="69"/>
-        <UsageCount Value="62"/>
+        <TopLine Value="172"/>
+        <CursorPos X="50" Y="177"/>
+        <UsageCount Value="72"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -63,16 +62,16 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="14"/>
+        <UsageCount Value="13"/>
       </Unit>
       <Unit>
         <Filename Value="README.md"/>
         <FRMtype Value="0"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
-        <CursorPos X="14" Y="5"/>
+        <CursorPos X="21" Y="5"/>
         <SyntaxHighlighter Value="FreePascal"/>
-        <UsageCount Value="38"/>
+        <UsageCount Value="43"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
@@ -83,7 +82,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="5689"/>
         <CursorPos Y="5700"/>
-        <UsageCount Value="5"/>
+        <UsageCount Value="4"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\datih.inc"/>
@@ -92,7 +91,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="108"/>
         <CursorPos X="10" Y="129"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\dati.inc"/>
@@ -101,7 +100,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="249"/>
         <CursorPos X="3" Y="262"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\syssbh.inc"/>
@@ -110,16 +109,16 @@
         <WindowIndex Value="0"/>
         <TopLine Value="49"/>
         <CursorPos X="15" Y="69"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="..\DeepStar-Lib\Typhon\Package\Source\Utils\DeepStar.UString.pas"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="10"/>
-        <CursorPos X="3" Y="46"/>
-        <UsageCount Value="9"/>
+        <TopLine Value="147"/>
+        <CursorPos X="13" Y="154"/>
+        <UsageCount Value="11"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\sysstrh.inc"/>
@@ -128,7 +127,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="301"/>
         <CursorPos X="33" Y="328"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\syssb.inc"/>
@@ -137,157 +136,53 @@
         <WindowIndex Value="0"/>
         <TopLine Value="325"/>
         <CursorPos X="3" Y="336"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\DeepStar-Lib\Typhon\Package\Source\DSA\Linear\DeepStar.DSA.Linear.DoubleLinkedList.pas"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="242"/>
+        <CursorPos X="19" Y="246"/>
+        <UsageCount Value="13"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\lcl\lcltype.pp"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="LCLType"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="525"/>
+        <CursorPos X="3" Y="3032"/>
+        <UsageCount Value="11"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\lcl\include\control.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="3589"/>
+        <CursorPos Y="3596"/>
         <UsageCount Value="10"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="28">
-      <Position>
-        <Filename Value="Source\Case02\Case02.Calculate.pas"/>
-        <Caret Line="67" TopLine="52"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case02\Case02.Calculate.pas"/>
-        <Caret Line="69" TopLine="52"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case02\Case02.Calculate.pas"/>
-        <Caret Line="70" TopLine="52"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case02\Case02.Calculate.pas"/>
-        <Caret Line="67" TopLine="52"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case02\Case02.Calculate.pas"/>
-        <Caret Line="69" TopLine="52"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case02\Case02.Calculate.pas"/>
-        <Caret Line="70" TopLine="52"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case02\Case02.Calculate.pas"/>
-        <Caret Line="67" TopLine="52"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case02\Case02.Calculate.pas"/>
-        <Caret Line="69" TopLine="52"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case02\Case02.Calculate.pas"/>
-        <Caret Line="70" TopLine="52"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case02\Case02.Calculate.pas"/>
-        <Caret Line="67" TopLine="52"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case02\Case02.Calculate.pas"/>
-        <Caret Line="73" TopLine="55"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case02\Case02.Calculate.pas"/>
-        <Caret Line="69" TopLine="56"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case02\Case02.Calculate.pas"/>
-        <Caret Line="66" TopLine="56"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case02\Case02.Calculate.pas"/>
-        <Caret Line="67" TopLine="56"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case02\Case02.Calculate.pas"/>
-        <Caret Line="69" Column="14" TopLine="56"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case02\Case02.Calculate.pas"/>
-        <Caret Line="67" TopLine="56"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case02\Case02.Calculate.pas"/>
-        <Caret Line="69" TopLine="56"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case02\Case02.Calculate.pas"/>
-        <Caret Line="70" TopLine="56"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case02\Case02.Calculate.pas"/>
-        <Caret Line="67" TopLine="56"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case02\Case02.Calculate.pas"/>
-        <Caret Line="69" TopLine="56"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case02\Case02.Calculate.pas"/>
-        <Caret Line="63" TopLine="52"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case02\Case02.Calculate.pas"/>
-        <Caret Line="41" TopLine="30"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case02\Case02.Calculate.pas"/>
-        <Caret Line="42" TopLine="30"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case02\Case02.Calculate.pas"/>
-        <Caret Line="43" TopLine="30"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case02\Case02.Calculate.pas"/>
-        <Caret Line="44" TopLine="30"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case02\Case02.Calculate.pas"/>
-        <Caret Line="46" TopLine="30"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case02\Case02.Calculate.pas"/>
-        <Caret Line="48" TopLine="30"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case02\Case02.Calculate.pas"/>
-        <Caret Line="49" TopLine="30"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case02\Case02.Calculate.pas"/>
-        <Caret Line="41" TopLine="45"/>
-      </Position>
-    </JumpHistory>
+    <JumpHistory HistoryIndex="-1"/>
     <RunParams>
       <FormatVersion Value="2"/>
       <Modes ActiveMode=""/>
     </RunParams>
   </ProjectSession>
   <Debugging>
-    <BreakPoints>
-      <Item>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="Source\Case02\Case02.Calculate.pas"/>
-        <Line Value="69"/>
-      </Item>
-    </BreakPoints>
     <Watches>
       <Item ClassAutoCast="True">
-        <Expression Value="_CardValue"/>
+        <Expression Value="_OriginalStrs"/>
       </Item>
       <Item ClassAutoCast="True">
-        <Expression Value="_CardKind"/>
+        <Expression Value="_ReversePolishStrs"/>
       </Item>
       <Item ClassAutoCast="True">
-        <Expression Value="_RandomData"/>
-      </Item>
-      <Item ClassAutoCast="True">
-        <Expression Value="sb"/>
-      </Item>
-      <Item ClassAutoCast="True">
-        <Expression Value="a[i]"/>
+        <Expression Value="_OriginalStrs[i]"/>
       </Item>
     </Watches>
   </Debugging>

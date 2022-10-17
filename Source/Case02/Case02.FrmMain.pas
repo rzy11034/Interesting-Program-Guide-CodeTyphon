@@ -32,9 +32,11 @@ type
     Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
+    Label6: TLabel;
     Timer1: TTimer;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
     procedure Edit1KeyPress(Sender: TObject; var Key: char);
     procedure FormCreate(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
@@ -90,17 +92,25 @@ procedure TCase02_FrmMain.Button2Click(Sender: TObject);
 var
   clt: TCalculate;
 begin
-  clt := TCalculate.Create(Edit1.Text);
-  try
+  if Edit1.Text = '' then Exit;
 
+  clt := TCalculate.Create(Edit1.Text + '#');
+  try
+    Label6.Caption := Format('结果：%s = %d', [Edit1.Text, clt.Calc24]);
+    Edit1.Text := '';
   finally
     clt.Free;
   end;
 end;
 
+procedure TCase02_FrmMain.Button3Click(Sender: TObject);
+begin
+  Close;
+end;
+
 procedure TCase02_FrmMain.Edit1KeyPress(Sender: TObject; var Key: char);
 begin
-  if not (key in VALID_CHAR) then
+  if not (key in VALID_CHAR) and (Ord(Key) <> VK_BACK) then
     Key := #0;
 end;
 
@@ -112,7 +122,7 @@ begin
   Timer1.Enabled := false;
   Timer1.Interval := 1000;
 
-  Edit1.Text := '11*(21+31)';
+  Edit1.Text := '';
 
   str := FILE_PATH + CARD_BLACK;
   Image1.Picture.LoadFromFile(CrossFixFileName(str));
