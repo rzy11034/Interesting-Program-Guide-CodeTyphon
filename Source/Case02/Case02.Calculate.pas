@@ -117,9 +117,9 @@ var
   res: integer;
 begin
   case opt of
-    '+': res := a + b;
+    '+': res := b + a;
     '-': res := b - a;
-    '*': res := a * b;
+    '*': res := b * a;
     '/': res := b div a;
     '^': res := b ** a;
   end;

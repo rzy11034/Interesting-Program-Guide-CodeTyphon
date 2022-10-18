@@ -91,11 +91,25 @@ end;
 procedure TCase02_FrmMain.Button2Click(Sender: TObject);
 var
   clt: TCalculate;
+  res: integer;
 begin
   if Edit1.Text = '' then Exit;
 
   clt := TCalculate.Create(Edit1.Text + '#');
   try
+    res := clt.Calc24;
+
+    if res <> 24 then
+    begin
+      MessageDlg('错了，请重新计算。', mtError, [mbOK], 0);
+      Exit;
+    end
+    else
+    begin
+      MessageDlg('恭喜你，答对了。', mtInformation, [mbOK], 0);
+      Timer1.Enabled := false;
+    end;
+
     Label6.Caption := Format('结果：%s = %d', [Edit1.Text, clt.Calc24]);
     Edit1.Text := '';
   finally

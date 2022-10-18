@@ -11,14 +11,18 @@ uses
  {$ENDIF}
   Interfaces, // this includes the CT adLCL widgetset
   Forms,
-  Case01.FrmMain, Case02.FrmMain, Case02.Calculate;
+  IPGC.Main,
+  Case01.FrmMain,
+  Case02.FrmMain,
+  Case02.Calculate, Case03.FrmMain, Case03.StrConsts;
 
 {$R *.res}
 
 begin
+  TranslateLCL;
   RequireDerivedFormResource := true;
   Application.Scaled:=True;
   Application.Initialize;
-  Application.CreateForm(TCase02_FrmMain, Case02_FrmMain);
+  Application.CreateForm(TCase03_FrmMain, Case03_FrmMain);
   Application.Run;
 end.
