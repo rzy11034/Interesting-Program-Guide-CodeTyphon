@@ -19,6 +19,7 @@ uses
 
 type
   TCase03_FrmMain = class(TForm)
+    BitBtn1: TBitBtn;
     Button1: TButton;
     Button2: TButton;
     ImageList160x160: TImageList;
@@ -27,9 +28,11 @@ type
     ImageList80x160: TImageList;
     Label1: TLabel;
     Panel1: TPanel;
+    Panel2: TPanel;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+
   private
     _JpgCaocao: integer;
     _JpgBing: integer;
@@ -39,7 +42,22 @@ type
     _JpgZhangfei: integer;
     _JpgZhaoyun: integer;
 
+    _BitBtnCaocao: TBitBtn;
+    _BitBtnGuanyu: TBitBtn;
+    _BitBtnHuangzhong: TBitBtn;
+    _BitBtnMachao: TBitBtn;
+    _BitBtnZhangfei: TBitBtn;
+    _BitBtnZhaoyun: TBitBtn;
+    _BitBtnBing1: TBitBtn;
+    _BitBtnBing2: TBitBtn;
+    _BitBtnBing3: TBitBtn;
+    _BitBtnBing4: TBitBtn;
+
+
+    procedure _BitBtnMouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: integer);
     procedure __LoadImage;
+    procedure __InitBitBtn;
+
   public
 
   end;
@@ -68,7 +86,179 @@ end;
 
 procedure TCase03_FrmMain.FormCreate(Sender: TObject);
 begin
+  Panel1.Width := FIX_PIXEL * 4;
+  Panel1.Height := FIX_PIXEL * 5;
+  Panel1.Top := 4;
+  Panel1.Left := 4;
 
+  Panel2.Width := Panel1.Width + 10;
+  Panel2.Height := Panel1.Height + 10;
+
+  __LoadImage;
+  __InitBitBtn;
+end;
+
+procedure TCase03_FrmMain._BitBtnMouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: integer);
+begin
+end;
+
+procedure TCase03_FrmMain.__InitBitBtn;
+begin
+  _BitBtnMachao := TBitBtn.Create(Self.Panel1);
+  with _BitBtnMachao do
+  begin
+    Name := '_BitBtnMachao';
+    Caption := '';
+    Tag := 1;
+    Parent := Self.Panel1;
+    Width := ImageList80x160.Width;
+    Height := ImageList80x160.Height;
+    Top := 0;
+    Left := 0;
+    Images := ImageList80x160;
+    ImageIndex := _JpgMachao;
+  end;
+
+  _BitBtnCaocao := TBitBtn.Create(Self.Panel1);
+  with _BitBtnCaocao do
+  begin
+    Name := '_BitBtnCaocao';
+    Caption := '';
+    Tag := 2;
+    Parent := Self.Panel1;
+    Width := ImageList160x160.Width;
+    Height := ImageList160x160.Height;
+    Top := 0;
+    Left := 80;
+    Images := ImageList160x160;
+    ImageIndex := _JpgCaocao;
+  end;
+
+  _BitBtnZhaoyun := TBitBtn.Create(Self.Panel1);
+  with _BitBtnZhaoyun do
+  begin
+    Name := '_BitBtnZhaoyun';
+    Caption := '';
+    Tag := 3;
+    Parent := Self.Panel1;
+    Width := ImageList80x160.Width;
+    Height := ImageList80x160.Height;
+    Top := 0;
+    Left := FIX_PIXEL * 3;
+    Images := ImageList80x160;
+    ImageIndex := _JpgZhaoyun;
+  end;
+
+  _BitBtnZhangfei := TBitBtn.Create(Self.Panel1);
+  with _BitBtnZhangfei do
+  begin
+    Name := '_BitBtnZhangfei';
+    Caption := '';
+    Tag := 4;
+    Parent := Self.Panel1;
+    Width := ImageList80x160.Width;
+    Height := ImageList80x160.Height;
+    Top := FIX_PIXEL * 2;
+    Left := 0;
+    Images := ImageList80x160;
+    ImageIndex := _JpgZhangfei;
+  end;
+
+  _BitBtnGuanyu := TBitBtn.Create(Self.Panel1);
+  with _BitBtnGuanyu do
+  begin
+    Name := '_BitBtnGuanyu';
+    Caption := '';
+    Tag := 5;
+    Parent := Self.Panel1;
+    Width := ImageList160x80.Width;
+    Height := ImageList160x80.Height;
+    Top := FIX_PIXEL * 2;
+    Left := FIX_PIXEL;
+    Images := ImageList160x80;
+    ImageIndex := _JpgGuanyu;
+  end;
+
+  _BitBtnHuangzhong := TBitBtn.Create(Self.Panel1);
+  with _BitBtnHuangzhong do
+  begin
+    Name := '_BitBtnHuangzhong';
+    Caption := '';
+    Tag := 5;
+    Parent := Self.Panel1;
+    Width := ImageList80x160.Width;
+    Height := ImageList80x160.Height;
+    Top := FIX_PIXEL * 2;
+    Left := FIX_PIXEL * 3;
+    Images := ImageList80x160;
+    ImageIndex := _JpgHuangzhong;
+  end;
+
+  _BitBtnBing1 := TBitBtn.Create(Self.Panel1);
+  with _BitBtnBing1 do
+  begin
+    Name := '_BitBtnBing1';
+    Caption := '';
+    Tag := 5;
+    Parent := Self.Panel1;
+    Width := ImageList80x80.Width;
+    Height := ImageList80x80.Height;
+    Top := FIX_PIXEL * 4;
+    Left := 0;
+    Images := ImageList80x80;
+    ImageIndex := _JpgBing;
+  end;
+
+  _BitBtnBing2 := TBitBtn.Create(Self.Panel1);
+  with _BitBtnBing2 do
+  begin
+    Name := '_BitBtnBing2';
+    Caption := '';
+    Tag := 5;
+    Parent := Self.Panel1;
+    Width := ImageList80x80.Width;
+    Height := ImageList80x80.Height;
+    Top := FIX_PIXEL * 3;
+    Left := FIX_PIXEL;
+    Images := ImageList80x80;
+    ImageIndex := _JpgBing;
+  end;
+
+  _BitBtnBing3 := TBitBtn.Create(Self.Panel1);
+  with _BitBtnBing3 do
+  begin
+    Name := '_BitBtnBing3';
+    Caption := '';
+    Tag := 5;
+    Parent := Self.Panel1;
+    Width := ImageList80x80.Width;
+    Height := ImageList80x80.Height;
+    Top := FIX_PIXEL * 3;
+    Left := FIX_PIXEL * 2;
+    Images := ImageList80x80;
+    ImageIndex := _JpgBing;
+  end;
+
+  _BitBtnBing4 := TBitBtn.Create(Self.Panel1);
+  with _BitBtnBing4 do
+  begin
+    Name := '_BitBtnBing4';
+    Caption := '';
+    Tag := 5;
+    Parent := Self.Panel1;
+    Width := ImageList80x80.Width;
+    Height := ImageList80x80.Height;
+    Top := FIX_PIXEL * 4;
+    Left := FIX_PIXEL * 3;
+    Images := ImageList80x80;
+    ImageIndex := _JpgBing;
+  end;
+end;
+
+procedure TCase03_FrmMain.__LoadImage;
+var
+  jpg: TJPEGImage;
+begin
   ImageList160x160.Width := FIX_PIXEL * 2;
   ImageList160x160.Height := FIX_PIXEL * 2;
 
@@ -81,26 +271,35 @@ begin
   ImageList160x80.Width := FIX_PIXEL * 2;
   ImageList160x80.Height := FIX_PIXEL;
 
-  __LoadImage;
-
-  BitBtn2.Images := ImageList80x80;
-  BitBtn2.ImageIndex := _BmpBing;
-end;
-
-procedure TCase03_FrmMain.__LoadImage;
-var
-  jpg: TJPEGImage;
-begin
   jpg := TJPEGImage.Create;
   try
     jpg.LoadFromFile(CrossFixFileName(JPG_CAOCAO_FILE));
-    _BmpCaocao := ImageList160x160.Add(jpg, nil);
+    _JpgCaocao := ImageList160x160.Add(jpg, nil);
     jpg.FreeImage;
 
     jpg.LoadFromFile(CrossFixFileName(JPG_BING_FILE));
-    _BmpBing := ImageList80x80.Add(jpg, nil);
+    _JpgBing := ImageList80x80.Add(jpg, nil);
+    jpg.FreeImage;
 
-    a := jpg.PixelFormat;
+    jpg.LoadFromFile(CrossFixFileName(JPG_GUANYU_FILE));
+    _JpgGuanyu := ImageList160x80.add(jpg, nil);
+    jpg.FreeImage;
+
+    jpg.LoadFromFile(CrossFixFileName(JPG_HUANGZHONG_FILE));
+    _JpgHuangzhong := ImageList80x160.Add(jpg, nil);
+    jpg.FreeImage;
+
+    jpg.LoadFromFile(CrossFixFileName(JPG_MACHAO_FILE));
+    _JpgMachao := ImageList80x160.Add(jpg, nil);
+    jpg.FreeImage;
+
+    jpg.LoadFromFile(CrossFixFileName(JPG_ZHANGFEI_FILE));
+    _JpgZhangfei := ImageList80x160.Add(jpg, nil);
+    jpg.FreeImage;
+
+    jpg.LoadFromFile(CrossFixFileName(JPG_ZHAOYUN_FILE));
+    _JpgZhaoyun := ImageList80x160.Add(jpg, nil);
+    jpg.FreeImage;
   finally
     jpg.Free;
   end;

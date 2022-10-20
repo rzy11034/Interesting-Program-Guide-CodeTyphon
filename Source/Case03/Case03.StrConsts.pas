@@ -1,6 +1,7 @@
 ﻿unit Case03.StrConsts;
 
 {$mode ObjFPC}{$H+}
+{$ModeSwitch unicodestrings}
 
 interface
 
