@@ -12,7 +12,7 @@
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
         <CursorPos X="55" Y="18"/>
-        <UsageCount Value="106"/>
+        <UsageCount Value="124"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -26,7 +26,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="58"/>
         <CursorPos X="9" Y="82"/>
-        <UsageCount Value="106"/>
+        <UsageCount Value="124"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case02\Case02.FrmMain.pas"/>
@@ -38,7 +38,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <CursorPos X="25" Y="143"/>
-        <UsageCount Value="106"/>
+        <UsageCount Value="124"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case02\Case02.Calculate.pas"/>
@@ -47,7 +47,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="102"/>
         <CursorPos X="23" Y="120"/>
-        <UsageCount Value="91"/>
+        <UsageCount Value="109"/>
       </Unit>
       <Unit>
         <Filename Value="Source\IPGC.Main.pas"/>
@@ -55,7 +55,7 @@
         <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
         <CursorPos X="42" Y="34"/>
-        <UsageCount Value="34"/>
+        <UsageCount Value="52"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -68,9 +68,9 @@
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="10"/>
-        <CursorPos X="40" Y="43"/>
-        <UsageCount Value="29"/>
+        <TopLine Value="64"/>
+        <CursorPos X="42" Y="83"/>
+        <UsageCount Value="47"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -79,8 +79,8 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="4"/>
         <WindowIndex Value="0"/>
-        <CursorPos X="19" Y="22"/>
-        <UsageCount Value="28"/>
+        <CursorPos X="6" Y="19"/>
+        <UsageCount Value="46"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -92,7 +92,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="README.md"/>
@@ -101,7 +101,7 @@
         <WindowIndex Value="0"/>
         <CursorPos X="13" Y="6"/>
         <SyntaxHighlighter Value="FreePascal"/>
-        <UsageCount Value="52"/>
+        <UsageCount Value="61"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
@@ -112,7 +112,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="5689"/>
         <CursorPos Y="5700"/>
-        <UsageCount Value="2"/>
+        <UsageCount Value="1"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\datih.inc"/>
@@ -121,7 +121,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="108"/>
         <CursorPos X="10" Y="129"/>
-        <UsageCount Value="3"/>
+        <UsageCount Value="2"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\dati.inc"/>
@@ -130,7 +130,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="249"/>
         <CursorPos X="3" Y="262"/>
-        <UsageCount Value="3"/>
+        <UsageCount Value="2"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\syssbh.inc"/>
@@ -139,7 +139,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="49"/>
         <CursorPos X="15" Y="69"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="..\DeepStar-Lib\Typhon\Package\Source\Utils\DeepStar.UString.pas"/>
@@ -148,7 +148,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="147"/>
         <CursorPos X="13" Y="154"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\sysstrh.inc"/>
@@ -157,7 +157,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="301"/>
         <CursorPos X="33" Y="328"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\syssb.inc"/>
@@ -166,7 +166,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="325"/>
         <CursorPos X="3" Y="336"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="..\DeepStar-Lib\Typhon\Package\Source\DSA\Linear\DeepStar.DSA.Linear.DoubleLinkedList.pas"/>
@@ -175,7 +175,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="242"/>
         <CursorPos X="19" Y="246"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\lcl\lcltype.pp"/>
@@ -185,7 +185,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="2198"/>
         <CursorPos X="3" Y="2219"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\lcl\include\control.inc"/>
@@ -194,7 +194,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="3589"/>
         <CursorPos Y="3596"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\BaseUtils\translations.pas"/>
@@ -204,7 +204,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1041"/>
         <CursorPos Y="1061"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\classes\classesh.inc"/>
@@ -213,7 +213,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="1300"/>
         <CursorPos X="3" Y="1315"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\types.pp"/>
@@ -223,7 +223,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="382"/>
         <CursorPos X="3" Y="87"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\inc\resh.inc"/>
@@ -231,7 +231,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <CursorPos X="3" Y="14"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\inc\sysres.inc"/>
@@ -240,129 +240,169 @@
         <WindowIndex Value="0"/>
         <TopLine Value="59"/>
         <CursorPos X="10" Y="80"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Case03\Case03.FrmMain.frm"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="FRM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\lcl\imglist.pp"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="ImgList"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="325"/>
+        <CursorPos X="15" Y="325"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\lcl\graphics.pp"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="Graphics"/>
+        <EditorIndex Value="5"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1249"/>
+        <CursorPos X="14" Y="1270"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\components\BaseUtils\graphtype.pp"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="GraphType"/>
+        <EditorIndex Value="6"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="192"/>
+        <CursorPos X="3" Y="204"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
       <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="40" TopLine="24"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="41" TopLine="31"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="42" TopLine="31"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="46" TopLine="22"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="46" TopLine="36"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="47" TopLine="36"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="48" TopLine="36"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="49" TopLine="36"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="51" TopLine="36"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="41" Column="18" TopLine="17"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="54" TopLine="18"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="51" Column="51" TopLine="25"/>
-      </Position>
-      <Position>
-        <Filename Value="IPGC.ppr"/>
-        <Caret Line="23" Column="44" TopLine="5"/>
-      </Position>
-      <Position>
-        <Filename Value="IPGC.ppr"/>
-        <Caret Line="30" TopLine="19"/>
-      </Position>
-      <Position>
-        <Filename Value="IPGC.ppr"/>
-        <Caret Line="31" TopLine="19"/>
-      </Position>
-      <Position>
-        <Filename Value="IPGC.ppr"/>
-        <Caret Line="32" TopLine="19"/>
-      </Position>
-      <Position>
-        <Filename Value="IPGC.ppr"/>
-        <Caret Line="33" TopLine="19"/>
-      </Position>
-      <Position>
-        <Filename Value="IPGC.ppr"/>
-        <Caret Line="35" TopLine="19"/>
-      </Position>
-      <Position>
-        <Filename Value="IPGC.ppr"/>
-        <Caret Line="34" TopLine="19"/>
-      </Position>
-      <Position>
-        <Filename Value="IPGC.ppr"/>
-        <Caret Line="36" Column="61" TopLine="10"/>
-      </Position>
-      <Position>
-        <Filename Value="IPGC.ppr"/>
-        <Caret Line="32" Column="19" TopLine="3"/>
-      </Position>
-      <Position>
-        <Filename Value="IPGC.ppr"/>
-        <Caret Line="26" Column="33" TopLine="8"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="4"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="28" Column="39" TopLine="4"/>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="62" Column="31" TopLine="48"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="23" Column="5"/>
+        <Caret Line="68" Column="31" TopLine="43"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="25" Column="5"/>
+        <Caret Line="63" Column="29" TopLine="42"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="34" Column="33"/>
+        <Caret Line="66" Column="38" TopLine="40"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="35" Column="33"/>
+        <Caret Line="65" TopLine="52"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="42" Column="33"/>
+        <Caret Line="66" TopLine="53"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="38" Column="34" TopLine="10"/>
+        <Caret Line="65" Column="20" TopLine="46"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="63" Column="22" TopLine="46"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\codetyphon\typhon\lcl\graphics.pp"/>
+        <Caret Line="1439" Column="3" TopLine="1424"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\codetyphon\typhon\lcl\graphics.pp"/>
+        <Caret Line="1381" Column="3" TopLine="1366"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\codetyphon\typhon\lcl\graphics.pp"/>
+        <Caret Line="1240" Column="3" TopLine="1219"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="67" Column="36" TopLine="37"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\codetyphon\typhon\lcl\graphics.pp"/>
+        <Caret Line="1337" Column="14" TopLine="1317"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="67" Column="36" TopLine="37"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="64" Column="60" TopLine="46"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\codetyphon\typhon\lcl\graphics.pp"/>
+        <Caret Line="1791" Column="3" TopLine="1769"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="67" Column="34" TopLine="43"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="65" TopLine="55"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="66" TopLine="55"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="67" TopLine="55"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="73" Column="48" TopLine="49"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="42" Column="20" TopLine="31"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="77" Column="37" TopLine="54"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="90" Column="18" TopLine="70"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="104" Column="20" TopLine="71"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\codetyphon\typhon\lcl\graphics.pp"/>
+        <Caret Line="1336" Column="58" TopLine="1316"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="105" TopLine="96"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="85" Column="42" TopLine="66"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="84" Column="42" TopLine="65"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="83" Column="42" TopLine="64"/>
       </Position>
     </JumpHistory>
     <RunParams>

@@ -7,8 +7,19 @@ interface
 uses
   DeepStar.Utils;
 
+const
+  FIX_PIXEL = 80;
+
+  JPG_BING_FILE = '..\..\Source\Case03\Resource\bing.JPG';
+  JPG_CAOCAO_FILE = '..\..\Source\Case03\Resource\Caocao.JPG';
+  JPG_GUANYU_FILE = '..\..\Source\Case03\Resource\guanyu.JPG';
+  JPG_HUANGZHONG_FILE = '..\..\Source\Case03\Resource\huangzhong_s.JPG';
+  JPG_MACHAO_FILE = '..\..\Source\Case03\Resource\machao_s.JPG';
+  JPG_ZHANGFEI_FILE = '..\..\Source\Case03\Resource\zhangfei_s.JPG';
+  JPG_ZHAOYUN_FILE = '..\..\Source\Case03\Resource\zhaoyun_s.JPG';
+
 resourcestring
-  GameOverStr =
+  GAME_OVER_STR =
     '华容小径' + LineEnding +
     '兵不在多，四个则行' + LineEnding +
     '将不在广，五虎则灵' + LineEnding +
@@ -19,7 +30,7 @@ resourcestring
     '私放曹操，报答恩情' + LineEnding +
     '有诗云：华容游戏见真情' + LineEnding;
 
-  GameIntroduceStr =
+  GAME_INTRODUCE_STR =
     '华容道' + LineEnding +
     '    华容道游戏源于三国时期著名' + LineEnding +
     '的历史故事。车汉末年，曹操、孙' + LineEnding +

@@ -11,6 +11,7 @@ object Case03_FrmMain: TCase03_FrmMain
   Font.Height = -14
   Font.Pitch = fpVariable
   Font.Quality = fqDraft
+  OnCreate = FormCreate
   Position = poScreenCenter
   LCLVersion = '7.9'
   object Label1: TLabel
@@ -39,5 +40,30 @@ object Case03_FrmMain: TCase03_FrmMain
     Caption = 'Button2'
     OnClick = Button2Click
     TabOrder = 1
+  end
+  object Panel1: TPanel
+    Left = 16
+    Height = 409
+    Top = 24
+    Width = 376
+    BevelOuter = bvNone
+    BorderStyle = bsSingle
+    TabOrder = 2
+  end
+  object ImageList160x160: TImageList
+    Left = 416
+    Top = 104
+  end
+  object ImageList80x80: TImageList
+    Left = 416
+    Top = 176
+  end
+  object ImageList80x160: TImageList
+    Left = 416
+    Top = 248
+  end
+  object ImageList160x80: TImageList
+    Left = 416
+    Top = 320
   end
 end
