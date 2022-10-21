@@ -14,7 +14,7 @@ uses
   IPGC.Main,
   Case01.FrmMain,
   Case02.FrmMain,
-  Case02.Calculate, Case03.FrmMain, Case03.StrConsts;
+  Case02.Calculate, Case03.FrmMain, Case03.StrConsts, Case03.DragObject;
 
 {$R *.res}
 

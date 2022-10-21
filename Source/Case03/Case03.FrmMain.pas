@@ -1,6 +1,6 @@
 ﻿unit Case03.FrmMain;
 
-{$mode ObjFPC}{$H+}
+{$mode objfpc}{$H+}
 {$ModeSwitch unicodestrings}
 
 interface
@@ -29,11 +29,21 @@ type
     Label1: TLabel;
     Panel1: TPanel;
     Panel2: TPanel;
+    Panel3: TPanel;
+    procedure BitBtn1StartDrag(Sender: TObject; var DragObject: TDragObject);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure Panel2Paint(Sender: TObject);
+
+  private type
+    TDirection = (Up, Right, Down, Left);
 
   private
+    _Map: TArr2D_int;
+    _Route: TDirection;
+    _BeginPosition: TPoint;
+
     _JpgCaocao: integer;
     _JpgBing: integer;
     _JpgGuanyu: integer;
@@ -54,10 +64,9 @@ type
     _BitBtnBing4: TBitBtn;
 
 
-    procedure _BitBtnMouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: integer);
+    procedure __GameInit;
     procedure __LoadImage;
     procedure __InitBitBtn;
-
   public
 
   end;
@@ -68,15 +77,31 @@ var
 implementation
 
 uses
+  Case03.DragObject,
   Case03.StrConsts;
 
 {$R *.frm}
 
 { TCase03_FrmMain }
 
+procedure TCase03_FrmMain.BitBtn1StartDrag(Sender: TObject; var DragObject: TDragObject);
+begin
+  DragObject := TMyDragObject.Create(Sender as TControl);
+end;
+
 procedure TCase03_FrmMain.Button1Click(Sender: TObject);
+var
+  jpg: TJPEGImage;
 begin
   Label1.Caption := GAME_OVER_STR;
+
+  jpg := TJPEGImage.Create();
+  try
+    jpg.LoadFromFile(JPG_BACKGROUND_FILE);
+    Self.Canvas.Draw(0, 0, jpg);
+  finally
+    jpg.Free;
+  end;
 end;
 
 procedure TCase03_FrmMain.Button2Click(Sender: TObject);
@@ -98,8 +123,32 @@ begin
   __InitBitBtn;
 end;
 
-procedure TCase03_FrmMain._BitBtnMouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: integer);
+procedure TCase03_FrmMain.Panel2Paint(Sender: TObject);
+var
+  cvs: TCanvas;
+  jpg: TJPEGImage;
+  rect: TRect;
 begin
+  cvs := Panel2.Canvas;
+
+  jpg := TJPEGImage.Create();
+  try
+    jpg.LoadFromFile(JPG_BACKGROUND_FILE);
+    rect := TRect.Create(0, 0, Panel2.Width, Panel2.Height);
+    cvs.StretchDraw(rect, jpg);
+  finally
+    jpg.Free;
+  end;
+end;
+
+procedure TCase03_FrmMain.__GameInit;
+begin
+  _Map := [
+    [2, 4, 4, 2],
+    [2, 4, 4, 2],
+    [2, 3, 3, 2],
+    [2, 1, 1, 2],
+    [1, 0, 0, 1]];
 end;
 
 procedure TCase03_FrmMain.__InitBitBtn;
@@ -109,7 +158,7 @@ begin
   begin
     Name := '_BitBtnMachao';
     Caption := '';
-    Tag := 1;
+    Tag := 2;
     Parent := Self.Panel1;
     Width := ImageList80x160.Width;
     Height := ImageList80x160.Height;
