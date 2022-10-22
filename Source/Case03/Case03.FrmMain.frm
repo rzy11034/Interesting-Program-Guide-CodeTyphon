@@ -11,7 +11,9 @@ object Case03_FrmMain: TCase03_FrmMain
   Font.Height = -14
   Font.Pitch = fpVariable
   Font.Quality = fqDraft
+  KeyPreview = True
   OnCreate = FormCreate
+  OnMouseMove = FormMouseMove
   Position = poScreenCenter
   LCLVersion = '7.9'
   object Label1: TLabel
@@ -49,8 +51,8 @@ object Case03_FrmMain: TCase03_FrmMain
     BevelOuter = bvNone
     BorderStyle = bsSingle
     Caption = 'Panel2'
-    ClientHeight = 406
-    ClientWidth = 326
+    ClientHeight = 408
+    ClientWidth = 328
     Color = 4227327
     ParentColor = False
     TabOrder = 2
@@ -62,6 +64,7 @@ object Case03_FrmMain: TCase03_FrmMain
       Width = 210
       BevelOuter = bvNone
       TabOrder = 0
+      OnPaint = Panel1Paint
     end
   end
   object Panel3: TPanel
@@ -73,17 +76,24 @@ object Case03_FrmMain: TCase03_FrmMain
     ClientHeight = 410
     ClientWidth = 351
     TabOrder = 3
+    OnDragOver = Panel3DragOver
     object BitBtn1: TBitBtn
       Left = 32
       Height = 30
-      Top = 88
+      Top = 56
       Width = 75
       Caption = 'BitBtn1'
-      DragCursor = crNoDrop
       DragMode = dmAutomatic
+      OnEndDrag = BitBtn1EndDrag
       OnStartDrag = BitBtn1StartDrag
       TabOrder = 0
     end
+  end
+  object Image1: TImage
+    Left = 223
+    Height = 90
+    Top = 441
+    Width = 90
   end
   object ImageList160x160: TImageList
     Left = 416

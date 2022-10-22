@@ -22,6 +22,7 @@ type
     BitBtn1: TBitBtn;
     Button1: TButton;
     Button2: TButton;
+    Image1: TImage;
     ImageList160x160: TImageList;
     ImageList160x80: TImageList;
     ImageList80x80: TImageList;
@@ -30,12 +31,15 @@ type
     Panel1: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
+    procedure BitBtn1EndDrag(Sender, Target: TObject; X, Y: integer);
     procedure BitBtn1StartDrag(Sender: TObject; var DragObject: TDragObject);
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure FormMouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
+    procedure Panel1Paint(Sender: TObject);
     procedure Panel2Paint(Sender: TObject);
-
+    procedure Panel3DragOver(Sender, Source: TObject; X, Y: integer; State: TDragState; var Accept: boolean);
   private type
     TDirection = (Up, Right, Down, Left);
 
@@ -84,9 +88,17 @@ uses
 
 { TCase03_FrmMain }
 
+var
+  ax, ay: integer;
+
+procedure TCase03_FrmMain.BitBtn1EndDrag(Sender, Target: TObject; X, Y: integer);
+begin
+  BitBtn1.SetBounds(x, y, BitBtn1.Width, BitBtn1.Height);
+end;
+
 procedure TCase03_FrmMain.BitBtn1StartDrag(Sender: TObject; var DragObject: TDragObject);
 begin
-  DragObject := TMyDragObject.Create(Sender as TControl);
+  DragObject := TDragObjectEx.Create(Sender as TControl);
 end;
 
 procedure TCase03_FrmMain.Button1Click(Sender: TObject);
@@ -123,6 +135,29 @@ begin
   __InitBitBtn;
 end;
 
+procedure TCase03_FrmMain.FormMouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
+begin
+  Caption := Format('X:%d, Y:%d', [x, y]);
+end;
+
+procedure TCase03_FrmMain.Panel1Paint(Sender: TObject);
+var
+  cvs: TCanvas;
+  jpg: TJPEGImage;
+  rect: TRect;
+begin
+  cvs := Panel1.Canvas;
+
+  jpg := TJPEGImage.Create();
+  try
+    jpg.LoadFromFile(CrossFixFileName(JPG_BACKGROUND_FILE));
+    rect := TRect.Create(0, 0, Panel1.Width, Panel1.Height);
+    cvs.StretchDraw(rect, jpg);
+  finally
+    jpg.Free;
+  end;
+end;
+
 procedure TCase03_FrmMain.Panel2Paint(Sender: TObject);
 var
   cvs: TCanvas;
@@ -133,12 +168,28 @@ begin
 
   jpg := TJPEGImage.Create();
   try
-    jpg.LoadFromFile(JPG_BACKGROUND_FILE);
+    jpg.LoadFromFile(CrossFixFileName(JPG_BACKGROUND_FILE));
     rect := TRect.Create(0, 0, Panel2.Width, Panel2.Height);
     cvs.StretchDraw(rect, jpg);
   finally
     jpg.Free;
   end;
+end;
+
+procedure TCase03_FrmMain.Panel3DragOver(Sender, Source: TObject; X, Y: integer; State: TDragState; var Accept: boolean);
+var
+  i: integer;
+begin
+  //Accept := true;
+  //
+  //for i := 0 to Panel3.ControlCount-1 do
+  //begin
+  //  //Panel3.Controls[i].Enabled := false;
+  //end;
+  //
+  //ax:=x;
+  //ay:=y;
+  //Caption := Format('X:%d, Y:%d', [x, y]);
 end;
 
 procedure TCase03_FrmMain.__GameInit;

@@ -11,8 +11,8 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <CursorPos X="72" Y="17"/>
-        <UsageCount Value="139"/>
+        <CursorPos X="29" Y="6"/>
+        <UsageCount Value="146"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -26,7 +26,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="58"/>
         <CursorPos X="9" Y="82"/>
-        <UsageCount Value="139"/>
+        <UsageCount Value="146"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case02\Case02.FrmMain.pas"/>
@@ -38,7 +38,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <CursorPos X="25" Y="143"/>
-        <UsageCount Value="139"/>
+        <UsageCount Value="146"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case02\Case02.Calculate.pas"/>
@@ -47,7 +47,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="102"/>
         <CursorPos X="23" Y="120"/>
-        <UsageCount Value="124"/>
+        <UsageCount Value="131"/>
       </Unit>
       <Unit>
         <Filename Value="Source\IPGC.Main.pas"/>
@@ -56,7 +56,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="4"/>
         <CursorPos X="8" Y="38"/>
-        <UsageCount Value="67"/>
+        <UsageCount Value="74"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -66,11 +66,12 @@
         <ComponentName Value="Case03_FrmMain"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="337"/>
-        <CursorPos Y="355"/>
-        <UsageCount Value="62"/>
+        <TopLine Value="124"/>
+        <CursorPos X="3" Y="126"/>
+        <UsageCount Value="69"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -80,17 +81,16 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <CursorPos X="59" Y="31"/>
-        <UsageCount Value="61"/>
+        <UsageCount Value="68"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case03\Case03.DragObject.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="23"/>
-        <CursorPos X="3" Y="33"/>
-        <UsageCount Value="22"/>
+        <TopLine Value="21"/>
+        <CursorPos X="20" Y="21"/>
+        <UsageCount Value="29"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -111,7 +111,7 @@
         <WindowIndex Value="0"/>
         <CursorPos X="13" Y="6"/>
         <SyntaxHighlighter Value="FreePascal"/>
-        <UsageCount Value="69"/>
+        <UsageCount Value="72"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
@@ -120,8 +120,8 @@
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="5689"/>
-        <CursorPos Y="5700"/>
+        <TopLine Value="4445"/>
+        <CursorPos X="34" Y="4447"/>
         <UsageCount Value="10"/>
       </Unit>
       <Unit>
@@ -202,9 +202,9 @@
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="3589"/>
-        <CursorPos Y="3596"/>
-        <UsageCount Value="6"/>
+        <TopLine Value="1564"/>
+        <CursorPos X="3" Y="1569"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\BaseUtils\translations.pas"/>
@@ -325,8 +325,8 @@
         <UnitName Value="Controls"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="426"/>
-        <CursorPos X="3" Y="446"/>
+        <TopLine Value="2342"/>
+        <CursorPos X="19" Y="2360"/>
         <UsageCount Value="10"/>
       </Unit>
       <Unit>
@@ -334,8 +334,8 @@
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="112"/>
-        <CursorPos X="3" Y="114"/>
+        <TopLine Value="113"/>
+        <CursorPos X="3" Y="121"/>
         <UsageCount Value="10"/>
       </Unit>
       <Unit>
@@ -364,141 +364,158 @@
         <UnitName Value="StdCtrls"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1169"/>
-        <CursorPos X="3" Y="1177"/>
-        <UsageCount Value="10"/>
+        <TopLine Value="1234"/>
+        <CursorPos X="14" Y="1254"/>
+        <UsageCount Value="12"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\lcl\include\dragmanager.inc"/>
         <FRMtype Value="0"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="250"/>
-        <CursorPos Y="259"/>
+        <TopLine Value="182"/>
+        <CursorPos Y="191"/>
+        <UsageCount Value="11"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\lcl\include\winapih.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="262"/>
+        <CursorPos X="10" Y="283"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\lcl\include\winapi.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1047"/>
+        <CursorPos X="3" Y="1049"/>
+        <UsageCount Value="10"/>
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="97" Column="17" TopLine="72"/>
+        <Caret Line="156" Column="22" TopLine="141"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="96" Column="17" TopLine="71"/>
+        <Caret Line="94" Column="3" TopLine="77"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="97" Column="17" TopLine="15"/>
+        <Caret Line="163" Column="3" TopLine="131"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="18" Column="11" TopLine="15"/>
+        <Caret Line="94" Column="3" TopLine="86"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="90" Column="58" TopLine="73"/>
+        <Caret Line="174" Column="43" TopLine="149"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="87" Column="90" TopLine="57"/>
+        <Caret Line="151" TopLine="109"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="91" Column="3" TopLine="66"/>
+        <Caret Line="166" Column="41" TopLine="147"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="89" Column="5" TopLine="66"/>
+        <Caret Line="168" Column="23" TopLine="158"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="87" Column="90" TopLine="60"/>
+        <Caret Line="166" TopLine="158"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="81" Column="3" TopLine="54"/>
+        <Caret Line="171" TopLine="158"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="80" Column="38" TopLine="61"/>
+        <Caret Line="172" TopLine="158"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="86" Column="27" TopLine="65"/>
+        <Caret Line="173" TopLine="158"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="80" Column="22" TopLine="65"/>
+        <Caret Line="161" Column="3" TopLine="152"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="91" TopLine="66"/>
+        <Caret Line="170" TopLine="168"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="90" Column="5" TopLine="67"/>
+        <Caret Line="150" Column="12" TopLine="134"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="84" Column="21" TopLine="67"/>
+        <Caret Line="169" Column="43" TopLine="146"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="91" TopLine="60"/>
+        <Caret Line="102" Column="3" TopLine="80"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="82" Column="32" TopLine="69"/>
+        <Caret Line="99" Column="11" TopLine="50"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="89" Column="3" TopLine="69"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case03\Case03.DragObject.pas"/>
-        <Caret Line="15" Column="11"/>
+        <Caret Line="358" Column="46" TopLine="312"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="91" TopLine="69"/>
+        <Caret Line="144" Column="19" TopLine="125"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="89" Column="5" TopLine="69"/>
+        <Caret Line="155" Column="13" TopLine="126"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="3" Column="14"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case03\Case03.DragObject.pas"/>
-        <Caret Line="15" Column="9"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case03\Case03.DragObject.pas"/>
-        <Caret Line="27" Column="3"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case03\Case03.DragObject.pas"/>
-        <Caret Line="29" Column="13"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case03\Case03.DragObject.pas"/>
-        <Caret Line="51" TopLine="22"/>
+        <Caret Line="150" Column="52" TopLine="126"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="355" TopLine="337"/>
+        <Caret Line="145" Column="3" TopLine="126"/>
       </Position>
       <Position>
-        <Filename Value="Source\Case03\Case03.DragObject.pas"/>
-        <Caret Line="51" TopLine="42"/>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="144" Column="3" TopLine="125"/>
       </Position>
       <Position>
-        <Filename Value="Source\Case03\Case03.DragObject.pas"/>
-        <Caret Line="33" Column="5" TopLine="23"/>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="151" Column="3" TopLine="127"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="197" Column="3" TopLine="181"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="5" Column="32" TopLine="5"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="22" Column="16" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="21" Column="33" TopLine="21"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="22" Column="22" TopLine="21"/>
       </Position>
     </JumpHistory>
     <RunParams>
@@ -510,6 +527,9 @@
     <Watches>
       <Item ClassAutoCast="True">
         <Expression Value="_BitBtnCaocao"/>
+      </Item>
+      <Item ClassAutoCast="True">
+        <Expression Value="Panel3.Controls[i]"/>
       </Item>
     </Watches>
   </Debugging>

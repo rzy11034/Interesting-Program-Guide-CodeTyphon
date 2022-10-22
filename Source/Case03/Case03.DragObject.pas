@@ -12,7 +12,7 @@ uses
   Buttons;
 
 type
-  TMyDragObject = class(TDragControlObject)
+  TDragObjectEx = class(TDragControlObjectEx)
   private
     _DragImages: TDragImageList;
   protected
@@ -24,9 +24,9 @@ type
 
 implementation
 
-{ TMyDragObject }
+{ TDragObjectEx }
 
-constructor TMyDragObject.Create(NewControl: TControl);
+constructor TDragObjectEx.Create(NewControl: TControl);
 var
   bmp: TBitmap;
 begin
@@ -52,13 +52,13 @@ begin
   end;
 end;
 
-destructor TMyDragObject.Destroy;
+destructor TDragObjectEx.Destroy;
 begin
   _DragImages.Free;
   inherited Destroy;
 end;
 
-function TMyDragObject.GetDragImages: TDragImageList;
+function TDragObjectEx.GetDragImages: TDragImageList;
 begin
   Result := _DragImages;
 end;
