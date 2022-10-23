@@ -9,7 +9,7 @@ uses
   DeepStar.Utils;
 
 const
-  FIX_PIXEL = 80;
+  FIX_PIXEL = 100;
 
   JPG_BACKGROUND_FILE = '..\..\Source\Case03\Resource\Background.JPG';
   JPG_BING_FILE = '..\..\Source\Case03\Resource\bing.JPG';

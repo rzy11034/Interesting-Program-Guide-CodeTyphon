@@ -7,9 +7,11 @@ interface
 uses
   Classes,
   SysUtils,
+  LCLType,
   Controls,
   Graphics,
-  Buttons;
+  Buttons,
+  ImgList;
 
 type
   TDragObjectEx = class(TDragControlObjectEx)
@@ -18,7 +20,7 @@ type
   protected
     function GetDragImages: TDragImageList; override;
   public
-    constructor Create(NewControl: TControl); override;
+    constructor Create(NewControl: TControl; bmp: TBitmap); reintroduce;
     destructor Destroy; override;
   end;
 
@@ -26,30 +28,17 @@ implementation
 
 { TDragObjectEx }
 
-constructor TDragObjectEx.Create(NewControl: TControl);
-var
-  bmp: TBitmap;
+constructor TDragObjectEx.Create(NewControl: TControl; bmp: TBitmap);
 begin
   inherited Create(NewControl);
 
   _DragImages := TDragImageList.Create(NewControl);
   AlwaysShowDragImages := true;
 
-  bmp := TBitmap.Create();
-  try
-    bmp.Width := NewControl.Width;
-    bmp.Height := NewControl.Height;
-
-    if NewControl is TWinControl then
-      (NewControl as TWinControl).PaintTo(bmp.Canvas, 0, 0);
-
-    _DragImages.Width := bmp.Width;
-    _DragImages.Height := bmp.Height;
-    _DragImages.Add(bmp, nil);
-    _DragImages.DragHotspot := Point(bmp.Width, bmp.Height);
-  finally
-    bmp.Free;
-  end;
+  _DragImages.Width := bmp.Width;
+  _DragImages.Height := bmp.Height;
+  _DragImages.Add(bmp, nil);
+  _DragImages.DragHotspot := Point(bmp.Width, bmp.Height);
 end;
 
 destructor TDragObjectEx.Destroy;

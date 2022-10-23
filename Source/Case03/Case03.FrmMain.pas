@@ -8,6 +8,7 @@ interface
 uses
   Classes,
   SysUtils,
+  LResources,
   DeepStar.Utils,
   Forms,
   Controls,
@@ -15,11 +16,11 @@ uses
   Dialogs,
   StdCtrls,
   ExtCtrls,
-  Buttons;
+  Buttons,
+  ButtonPanel;
 
 type
   TCase03_FrmMain = class(TForm)
-    BitBtn1: TBitBtn;
     Button1: TButton;
     Button2: TButton;
     Image1: TImage;
@@ -30,21 +31,20 @@ type
     Label1: TLabel;
     Panel1: TPanel;
     Panel2: TPanel;
-    Panel3: TPanel;
-    procedure BitBtn1EndDrag(Sender, Target: TObject; X, Y: integer);
-    procedure BitBtn1StartDrag(Sender: TObject; var DragObject: TDragObject);
-    procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure FormMouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
+    procedure Panel1DragOver(Sender, Source: TObject; X, Y: Integer; State: TDragState; var Accept: Boolean);
     procedure Panel1Paint(Sender: TObject);
-    procedure Panel2Paint(Sender: TObject);
-    procedure Panel3DragOver(Sender, Source: TObject; X, Y: integer; State: TDragState; var Accept: boolean);
+
   private type
     TDirection = (Up, Right, Down, Left);
 
   private
+    ax, ay:integer;
+
     _Map: TArr2D_int;
+    _Visited: TArr2D_bool;
+
     _Route: TDirection;
     _BeginPosition: TPoint;
 
@@ -56,21 +56,23 @@ type
     _JpgZhangfei: integer;
     _JpgZhaoyun: integer;
 
-    _BitBtnCaocao: TBitBtn;
-    _BitBtnGuanyu: TBitBtn;
-    _BitBtnHuangzhong: TBitBtn;
-    _BitBtnMachao: TBitBtn;
-    _BitBtnZhangfei: TBitBtn;
-    _BitBtnZhaoyun: TBitBtn;
-    _BitBtnBing1: TBitBtn;
-    _BitBtnBing2: TBitBtn;
-    _BitBtnBing3: TBitBtn;
-    _BitBtnBing4: TBitBtn;
-
+    _ImCaocao: TImage;
+    _ImGuanyu: TImage;
+    _ImHuangzhong: TImage;
+    _ImMachao: TImage;
+    _ImZhangfei: TImage;
+    _ImZhaoyun: TImage;
+    _ImBing1: TImage;
+    _ImBing2: TImage;
+    _ImBing3: TImage;
+    _ImBing4: TImage;
 
     procedure __GameInit;
     procedure __LoadImage;
-    procedure __InitBitBtn;
+    procedure __InitCheckerBoard;
+    procedure __ImageStartDrag(Sender: TObject; var DragObject: TDragObject);
+    procedure __ImageDragDrop(Sender, Source: TObject; X, Y: integer);
+    procedure __ImageEndDrag(Sender, Target: TObject; X, Y: integer);
   public
 
   end;
@@ -88,34 +90,6 @@ uses
 
 { TCase03_FrmMain }
 
-var
-  ax, ay: integer;
-
-procedure TCase03_FrmMain.BitBtn1EndDrag(Sender, Target: TObject; X, Y: integer);
-begin
-  BitBtn1.SetBounds(x, y, BitBtn1.Width, BitBtn1.Height);
-end;
-
-procedure TCase03_FrmMain.BitBtn1StartDrag(Sender: TObject; var DragObject: TDragObject);
-begin
-  DragObject := TDragObjectEx.Create(Sender as TControl);
-end;
-
-procedure TCase03_FrmMain.Button1Click(Sender: TObject);
-var
-  jpg: TJPEGImage;
-begin
-  Label1.Caption := GAME_OVER_STR;
-
-  jpg := TJPEGImage.Create();
-  try
-    jpg.LoadFromFile(JPG_BACKGROUND_FILE);
-    Self.Canvas.Draw(0, 0, jpg);
-  finally
-    jpg.Free;
-  end;
-end;
-
 procedure TCase03_FrmMain.Button2Click(Sender: TObject);
 begin
   Label1.Caption := GAME_INTRODUCE_STR;
@@ -123,21 +97,23 @@ end;
 
 procedure TCase03_FrmMain.FormCreate(Sender: TObject);
 begin
+  __GameInit;
+  __LoadImage;
+  __InitCheckerBoard;
+
   Panel1.Width := FIX_PIXEL * 4;
   Panel1.Height := FIX_PIXEL * 5;
-  Panel1.Top := 4;
-  Panel1.Left := 4;
+  Panel1.Top := 5;
+  Panel1.Left := 5;
 
-  Panel2.Width := Panel1.Width + 10;
-  Panel2.Height := Panel1.Height + 10;
-
-  __LoadImage;
-  __InitBitBtn;
+  Panel2.Width := Panel1.Width + 15;
+  Panel2.Height := Panel1.Height + 15;
 end;
 
-procedure TCase03_FrmMain.FormMouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
+procedure TCase03_FrmMain.Panel1DragOver(Sender, Source: TObject; X, Y: Integer; State: TDragState; var Accept: Boolean);
 begin
-  Caption := Format('X:%d, Y:%d', [x, y]);
+  ax:=x;
+  ay:=y;
 end;
 
 procedure TCase03_FrmMain.Panel1Paint(Sender: TObject);
@@ -158,41 +134,9 @@ begin
   end;
 end;
 
-procedure TCase03_FrmMain.Panel2Paint(Sender: TObject);
-var
-  cvs: TCanvas;
-  jpg: TJPEGImage;
-  rect: TRect;
-begin
-  cvs := Panel2.Canvas;
-
-  jpg := TJPEGImage.Create();
-  try
-    jpg.LoadFromFile(CrossFixFileName(JPG_BACKGROUND_FILE));
-    rect := TRect.Create(0, 0, Panel2.Width, Panel2.Height);
-    cvs.StretchDraw(rect, jpg);
-  finally
-    jpg.Free;
-  end;
-end;
-
-procedure TCase03_FrmMain.Panel3DragOver(Sender, Source: TObject; X, Y: integer; State: TDragState; var Accept: boolean);
-var
-  i: integer;
-begin
-  //Accept := true;
-  //
-  //for i := 0 to Panel3.ControlCount-1 do
-  //begin
-  //  //Panel3.Controls[i].Enabled := false;
-  //end;
-  //
-  //ax:=x;
-  //ay:=y;
-  //Caption := Format('X:%d, Y:%d', [x, y]);
-end;
-
 procedure TCase03_FrmMain.__GameInit;
+var
+  i, j: integer;
 begin
   _Map := [
     [2, 4, 4, 2],
@@ -200,158 +144,187 @@ begin
     [2, 3, 3, 2],
     [2, 1, 1, 2],
     [1, 0, 0, 1]];
+
+  SetLength(_Visited, 5, 4);
+
+  for i := 0 to High(_Map) do
+    for j := 0 to High(_Map[i]) do
+      if _Map[i, j] <> 0 then
+        _Visited[i, j] := true;
 end;
 
-procedure TCase03_FrmMain.__InitBitBtn;
+procedure TCase03_FrmMain.__ImageDragDrop(Sender, Source: TObject; X, Y: integer);
 begin
-  _BitBtnMachao := TBitBtn.Create(Self.Panel1);
-  with _BitBtnMachao do
+
+end;
+
+procedure TCase03_FrmMain.__ImageEndDrag(Sender, Target: TObject; X, Y: integer);
+begin
+  Caption := Format('X:%d, Y:%d, ax:%d, ay:%d', [_BeginPosition.X, _BeginPosition.Y, ax, ay]);
+end;
+
+procedure TCase03_FrmMain.__ImageStartDrag(Sender: TObject; var DragObject: TDragObject);
+var
+  bmp: TBitmap;
+  im: TImage;
+begin
+  im := (Sender as TImage);
+  _BeginPosition := Point(im.Left, im.Top);
+
+  bmp := TBitmap.Create;
+  try
+    bmp.SetSize(im.Width, im.Height);
+    bmp.Assign((Sender as TImage).Picture.Bitmap);
+    DragObject := TDragObjectEx.Create(Sender as TControl, bmp);
+  finally
+    bmp.Free;
+  end;
+end;
+
+procedure TCase03_FrmMain.__InitCheckerBoard;
+var
+  i: integer;
+begin
+  {$REGION '棋字初始化'}
+  _ImMachao := TImage.Create(Self.Panel1);
+  with _ImMachao do
   begin
-    Name := '_BitBtnMachao';
-    Caption := '';
+    Name := '_ImMachao';
     Tag := 2;
     Parent := Self.Panel1;
-    Width := ImageList80x160.Width;
-    Height := ImageList80x160.Height;
+    AutoSize := true;
     Top := 0;
     Left := 0;
-    Images := ImageList80x160;
-    ImageIndex := _JpgMachao;
+    ImageList80x160.GetBitmap(_JpgMachao, Picture.Bitmap);
   end;
 
-  _BitBtnCaocao := TBitBtn.Create(Self.Panel1);
-  with _BitBtnCaocao do
+  _ImCaocao := TImage.Create(Self.Panel1);
+  with _ImCaocao do
   begin
-    Name := '_BitBtnCaocao';
-    Caption := '';
-    Tag := 2;
+    Name := '_ImCaocao';
+    Tag := 4;
     Parent := Self.Panel1;
     Width := ImageList160x160.Width;
     Height := ImageList160x160.Height;
     Top := 0;
-    Left := 80;
-    Images := ImageList160x160;
-    ImageIndex := _JpgCaocao;
+    Left := FIX_PIXEL;
+    ImageList160x160.GetBitmap(_JpgCaocao, Picture.Bitmap);
   end;
 
-  _BitBtnZhaoyun := TBitBtn.Create(Self.Panel1);
-  with _BitBtnZhaoyun do
+  _ImZhaoyun := TImage.Create(Self.Panel1);
+  with _ImZhaoyun do
   begin
-    Name := '_BitBtnZhaoyun';
-    Caption := '';
-    Tag := 3;
+    Name := '_ImZhaoyun';
+    Tag := 2;
     Parent := Self.Panel1;
     Width := ImageList80x160.Width;
     Height := ImageList80x160.Height;
     Top := 0;
     Left := FIX_PIXEL * 3;
-    Images := ImageList80x160;
-    ImageIndex := _JpgZhaoyun;
+    ImageList80x160.GetBitmap(_JpgZhaoyun, Picture.Bitmap);
   end;
 
-  _BitBtnZhangfei := TBitBtn.Create(Self.Panel1);
-  with _BitBtnZhangfei do
+  _ImZhangfei := TImage.Create(Self.Panel1);
+  with _ImZhangfei do
   begin
-    Name := '_BitBtnZhangfei';
-    Caption := '';
-    Tag := 4;
+    Name := '_ImZhangfei';
+    Tag := 2;
     Parent := Self.Panel1;
     Width := ImageList80x160.Width;
     Height := ImageList80x160.Height;
     Top := FIX_PIXEL * 2;
     Left := 0;
-    Images := ImageList80x160;
-    ImageIndex := _JpgZhangfei;
+    ImageList80x160.GetBitmap(_JpgZhangfei, Picture.Bitmap);
   end;
 
-  _BitBtnGuanyu := TBitBtn.Create(Self.Panel1);
-  with _BitBtnGuanyu do
+  _ImGuanyu := TImage.Create(Self.Panel1);
+  with _ImGuanyu do
   begin
-    Name := '_BitBtnGuanyu';
-    Caption := '';
-    Tag := 5;
+    Name := '_ImGuanyu';
+    Tag := 3;
     Parent := Self.Panel1;
     Width := ImageList160x80.Width;
     Height := ImageList160x80.Height;
     Top := FIX_PIXEL * 2;
     Left := FIX_PIXEL;
-    Images := ImageList160x80;
-    ImageIndex := _JpgGuanyu;
+    ImageList160x80.GetBitmap(_JpgGuanyu, Picture.Bitmap);
   end;
 
-  _BitBtnHuangzhong := TBitBtn.Create(Self.Panel1);
-  with _BitBtnHuangzhong do
+  _ImHuangzhong := TImage.Create(Self.Panel1);
+  with _ImHuangzhong do
   begin
-    Name := '_BitBtnHuangzhong';
-    Caption := '';
-    Tag := 5;
+    Name := '_ImHuangzhong';
+    Tag := 2;
     Parent := Self.Panel1;
     Width := ImageList80x160.Width;
     Height := ImageList80x160.Height;
     Top := FIX_PIXEL * 2;
     Left := FIX_PIXEL * 3;
-    Images := ImageList80x160;
-    ImageIndex := _JpgHuangzhong;
+    ImageList80x160.GetBitmap(_JpgHuangzhong, Picture.Bitmap);
   end;
 
-  _BitBtnBing1 := TBitBtn.Create(Self.Panel1);
-  with _BitBtnBing1 do
+  _ImBing1 := TImage.Create(Self.Panel1);
+  with _ImBing1 do
   begin
-    Name := '_BitBtnBing1';
-    Caption := '';
-    Tag := 5;
+    Name := '_ImBing1';
+    Tag := 1;
     Parent := Self.Panel1;
     Width := ImageList80x80.Width;
     Height := ImageList80x80.Height;
     Top := FIX_PIXEL * 4;
     Left := 0;
-    Images := ImageList80x80;
-    ImageIndex := _JpgBing;
+    ImageList80x80.GetBitmap(_JpgBing, Picture.Bitmap);
   end;
 
-  _BitBtnBing2 := TBitBtn.Create(Self.Panel1);
-  with _BitBtnBing2 do
+  _ImBing2 := TImage.Create(Self.Panel1);
+  with _ImBing2 do
   begin
-    Name := '_BitBtnBing2';
-    Caption := '';
-    Tag := 5;
+    Name := '_ImBing2';
+    Tag := 1;
     Parent := Self.Panel1;
     Width := ImageList80x80.Width;
     Height := ImageList80x80.Height;
     Top := FIX_PIXEL * 3;
     Left := FIX_PIXEL;
-    Images := ImageList80x80;
-    ImageIndex := _JpgBing;
+    ImageList80x80.GetBitmap(_JpgBing, Picture.Bitmap);
   end;
 
-  _BitBtnBing3 := TBitBtn.Create(Self.Panel1);
-  with _BitBtnBing3 do
+  _ImBing3 := TImage.Create(Self.Panel1);
+  with _ImBing3 do
   begin
-    Name := '_BitBtnBing3';
-    Caption := '';
-    Tag := 5;
+    Name := '_ImBing3';
+    Tag := 1;
     Parent := Self.Panel1;
     Width := ImageList80x80.Width;
     Height := ImageList80x80.Height;
     Top := FIX_PIXEL * 3;
     Left := FIX_PIXEL * 2;
-    Images := ImageList80x80;
-    ImageIndex := _JpgBing;
+    ImageList80x80.GetBitmap(_JpgBing, Picture.Bitmap);
   end;
 
-  _BitBtnBing4 := TBitBtn.Create(Self.Panel1);
-  with _BitBtnBing4 do
+  _ImBing4 := TImage.Create(Self.Panel1);
+  with _ImBing4 do
   begin
-    Name := '_BitBtnBing4';
-    Caption := '';
-    Tag := 5;
+    Name := '_ImBing4';
+    Tag := 1;
     Parent := Self.Panel1;
     Width := ImageList80x80.Width;
     Height := ImageList80x80.Height;
     Top := FIX_PIXEL * 4;
     Left := FIX_PIXEL * 3;
-    Images := ImageList80x80;
-    ImageIndex := _JpgBing;
+    ImageList80x80.GetBitmap(_JpgBing, Picture.Bitmap);
+  end;
+  {$ENDREGION}
+
+  for i := 0 to Panel1.ControlCount - 1 do
+  begin
+    if Panel1.Controls[i] is TImage then
+    begin
+      (Panel1.Controls[i] as TImage).OnStartDrag := @__ImageStartDrag;
+      (Panel1.Controls[i] as TImage).OnDragDrop := @__ImageDragDrop;
+      (Panel1.Controls[i] as TImage).OnEndDrag := @__ImageEndDrag;
+      (Panel1.Controls[i] as TImage).DragMode := TDragMode.dmAutomatic;
+    end;
   end;
 end;
 

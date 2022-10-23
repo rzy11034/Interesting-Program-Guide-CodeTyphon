@@ -1,114 +1,93 @@
 object Case03_FrmMain: TCase03_FrmMain
   Left = 86
-  Height = 657
+  Height = 558
   Top = 85
-  Width = 1047
+  Width = 775
   BorderStyle = bsSingle
   Caption = '华容道'
-  ClientHeight = 657
-  ClientWidth = 1047
+  ClientHeight = 558
+  ClientWidth = 775
+  DesignTimePPI = 120
   Font.CharSet = ANSI_CHARSET
-  Font.Height = -14
+  Font.Height = -18
   Font.Pitch = fpVariable
   Font.Quality = fqDraft
   KeyPreview = True
   OnCreate = FormCreate
-  OnMouseMove = FormMouseMove
   Position = poScreenCenter
   LCLVersion = '7.9'
   object Label1: TLabel
-    Left = 368
-    Height = 302
-    Top = 19
-    Width = 220
+    Left = 460
+    Height = 378
+    Top = 24
+    Width = 275
     AutoSize = False
     Caption = 'Label1'
     WordWrap = True
   end
   object Button1: TButton
-    Left = 368
-    Height = 25
-    Top = 404
-    Width = 75
+    Left = 460
+    Height = 31
+    Top = 505
+    Width = 94
     Caption = 'Button1'
-    OnClick = Button1Click
+    DragMode = dmAutomatic
     TabOrder = 0
   end
   object Button2: TButton
-    Left = 456
-    Height = 25
-    Top = 404
-    Width = 75
+    Left = 600
+    Height = 31
+    Top = 500
+    Width = 94
     Caption = 'Button2'
     OnClick = Button2Click
     TabOrder = 1
   end
   object Panel2: TPanel
-    Left = 19
-    Height = 410
+    Left = 16
+    Height = 512
     Top = 19
-    Width = 330
+    Width = 412
     BevelOuter = bvNone
     BorderStyle = bsSingle
     Caption = 'Panel2'
-    ClientHeight = 408
-    ClientWidth = 328
+    ClientHeight = 508
+    ClientWidth = 408
     Color = 4227327
     ParentColor = False
     TabOrder = 2
-    OnPaint = Panel2Paint
     object Panel1: TPanel
-      Left = 24
-      Height = 318
-      Top = 24
-      Width = 210
+      Left = 30
+      Height = 0
+      Top = 30
+      Width = 0
       BevelOuter = bvNone
+      ParentColor = False
       TabOrder = 0
+      OnDragOver = Panel1DragOver
       OnPaint = Panel1Paint
     end
   end
-  object Panel3: TPanel
-    Left = 681
-    Height = 410
-    Top = 82
-    Width = 351
-    Caption = 'Panel3'
-    ClientHeight = 410
-    ClientWidth = 351
-    TabOrder = 3
-    OnDragOver = Panel3DragOver
-    object BitBtn1: TBitBtn
-      Left = 32
-      Height = 30
-      Top = 56
-      Width = 75
-      Caption = 'BitBtn1'
-      DragMode = dmAutomatic
-      OnEndDrag = BitBtn1EndDrag
-      OnStartDrag = BitBtn1StartDrag
-      TabOrder = 0
-    end
-  end
   object Image1: TImage
-    Left = 223
-    Height = 90
-    Top = 441
-    Width = 90
+    Left = 528
+    Height = 113
+    Top = 352
+    Width = 113
   end
   object ImageList160x160: TImageList
-    Left = 416
-    Top = 83
+    Left = 520
+    Top = 104
   end
   object ImageList80x80: TImageList
-    Left = 301
-    Top = 141
+    Left = 376
+    Top = 176
   end
   object ImageList80x160: TImageList
-    Left = 416
-    Top = 141
+    Left = 520
+    Top = 176
   end
   object ImageList160x80: TImageList
-    Left = 301
-    Top = 83
+    Left = 376
+    Top = 104
   end
 end

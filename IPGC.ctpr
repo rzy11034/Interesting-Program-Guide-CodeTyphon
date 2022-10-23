@@ -141,9 +141,10 @@
     </CodeGeneration>
     <Linking>
       <Debugging>
-        <DebugInfoType Value="dsDwarf3"/>
+        <DebugInfoType Value="dsDwarf2Set"/>
         <UseHeaptrc Value="True"/>
         <TrashVariables Value="True"/>
+        <UseExternalDbgSyms Value="True"/>
       </Debugging>
       <Options>
         <Win32>
