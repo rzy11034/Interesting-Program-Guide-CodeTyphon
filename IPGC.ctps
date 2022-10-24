@@ -13,7 +13,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="11"/>
         <CursorPos X="24" Y="11"/>
-        <UsageCount Value="156"/>
+        <UsageCount Value="168"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -27,7 +27,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="58"/>
         <CursorPos X="9" Y="82"/>
-        <UsageCount Value="156"/>
+        <UsageCount Value="168"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case02\Case02.FrmMain.pas"/>
@@ -39,7 +39,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <CursorPos X="25" Y="143"/>
-        <UsageCount Value="156"/>
+        <UsageCount Value="168"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case02\Case02.Calculate.pas"/>
@@ -48,7 +48,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="102"/>
         <CursorPos X="23" Y="120"/>
-        <UsageCount Value="141"/>
+        <UsageCount Value="153"/>
       </Unit>
       <Unit>
         <Filename Value="Source\IPGC.Main.pas"/>
@@ -57,7 +57,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="13"/>
         <CursorPos X="14" Y="6"/>
-        <UsageCount Value="84"/>
+        <UsageCount Value="96"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -68,33 +68,32 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="4"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="149"/>
-        <CursorPos X="3" Y="158"/>
-        <FoldState Value=" TJlF3{mI"/>
-        <UsageCount Value="79"/>
+        <TopLine Value="78"/>
+        <CursorPos Y="94"/>
+        <FoldState Value=" TJlH3{m T3oW0m\"/>
+        <UsageCount Value="91"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case03\Case03.StrConsts.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="22"/>
+        <TopLine Value="12"/>
         <CursorPos X="18" Y="12"/>
-        <UsageCount Value="78"/>
+        <UsageCount Value="90"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case03\Case03.DragObject.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="7"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="37"/>
         <CursorPos X="29" Y="8"/>
-        <UsageCount Value="39"/>
+        <UsageCount Value="51"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -115,7 +114,7 @@
         <WindowIndex Value="0"/>
         <CursorPos X="13" Y="6"/>
         <SyntaxHighlighter Value="FreePascal"/>
-        <UsageCount Value="78"/>
+        <UsageCount Value="83"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
@@ -563,127 +562,147 @@
         <CursorPos X="3" Y="1800"/>
         <UsageCount Value="10"/>
       </Unit>
+      <Unit>
+        <Filename Value="..\DeepStar-Lib\Typhon\Package\Source\Utils\DeepStar.Utils.pas"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="6"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="305"/>
+        <CursorPos X="3" Y="324"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Case03\Case03.GameData.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="5"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="31"/>
+        <CursorPos Y="50"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="130" TopLine="123"/>
+        <Caret Line="125" Column="3" TopLine="111"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="133" TopLine="123"/>
+        <Caret Line="124" Column="3" TopLine="110"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="130" TopLine="123"/>
+        <Caret Line="130" Column="3" TopLine="111"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="134" TopLine="123"/>
+        <Caret Line="138" Column="24" TopLine="105"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="130" TopLine="123"/>
+        <Caret Line="124" TopLine="111"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="135" TopLine="123"/>
+        <Caret Line="366" TopLine="218"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="130" TopLine="123"/>
+        <Caret Line="368" TopLine="127"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="142" Column="32" TopLine="91"/>
+        <Caret Line="99" TopLine="81"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="143" Column="32" TopLine="34"/>
+        <Caret Line="100" TopLine="86"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="163" Column="65" TopLine="141"/>
+        <Caret Line="364" TopLine="353"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="72" Column="15" TopLine="58"/>
+        <Caret Line="365" TopLine="353"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="71" Column="71" TopLine="59"/>
+        <Caret Line="367" TopLine="353"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="274" Column="30" TopLine="274"/>
+        <Caret Line="368" TopLine="347"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="73" Column="70" TopLine="64"/>
+        <Caret Line="100" TopLine="89"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="154" Column="73" TopLine="144"/>
+        <Caret Line="364" TopLine="353"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="313" Column="66" TopLine="299"/>
+        <Caret Line="365" TopLine="353"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="316" Column="73" TopLine="166"/>
+        <Caret Line="367" TopLine="353"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="321" TopLine="178"/>
+        <Caret Line="370" TopLine="204"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="315" Column="68" TopLine="64"/>
+        <Caret Line="99" TopLine="95"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="321" Column="11" TopLine="178"/>
+        <Caret Line="93" Column="46" TopLine="92"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.GameData.pas"/>
+        <Caret Line="18" Column="42" TopLine="4"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.GameData.pas"/>
+        <Caret Line="13" Column="40"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="174" Column="11" TopLine="157"/>
+        <Caret Line="41" Column="13" TopLine="113"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="147" Column="11" TopLine="130"/>
+        <Caret Line="44" Column="5" TopLine="26"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="152" Column="11" TopLine="130"/>
+        <Caret Line="41" Column="26" TopLine="23"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.GameData.pas"/>
+        <Caret Line="25" Column="34"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.GameData.pas"/>
+        <Caret Line="22" Column="78" TopLine="12"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="163" Column="34" TopLine="139"/>
+        <Caret Line="77" Column="5" TopLine="55"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="151" Column="49" TopLine="134"/>
+        <Caret Line="339" Column="6" TopLine="183"/>
       </Position>
       <Position>
-        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="155" Column="30" TopLine="138"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="116" Column="9" TopLine="96"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="163" Column="91" TopLine="144"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="116" Column="3" TopLine="108"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="121" Column="12" TopLine="158"/>
+        <Filename Value="Source\Case03\Case03.GameData.pas"/>
+        <Caret Line="44" TopLine="16"/>
       </Position>
     </JumpHistory>
     <RunParams>
@@ -692,6 +711,15 @@
     </RunParams>
   </ProjectSession>
   <Debugging>
+    <BreakPoints>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="Source\Case03\Case03.GameData.pas"/>
+        <Line Value="50"/>
+      </Item>
+    </BreakPoints>
     <Watches>
       <Item ClassAutoCast="True">
         <Expression Value="Sender"/>

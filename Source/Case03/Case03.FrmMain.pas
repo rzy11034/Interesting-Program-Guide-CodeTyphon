@@ -8,22 +8,20 @@ interface
 uses
   Classes,
   SysUtils,
-  LResources,
+  Character,
   DeepStar.Utils,
   Forms,
   Controls,
   Graphics,
   Dialogs,
   StdCtrls,
-  ExtCtrls,
-  Buttons,
-  ButtonPanel;
+  ExtCtrls, Case03.GameData;
 
 type
   TCase03_FrmMain = class(TForm)
     Button1: TButton;
     Button2: TButton;
-    Image1: TImage;
+    Image2: TImage;
     ImageList160x160: TImageList;
     ImageList160x80: TImageList;
     ImageList80x80: TImageList;
@@ -33,20 +31,23 @@ type
     Panel2: TPanel;
     procedure Button2Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure Panel1DragOver(Sender, Source: TObject; X, Y: Integer; State: TDragState; var Accept: Boolean);
+    procedure Panel1DragDrop(Sender, Source: TObject; X, Y: integer);
+    procedure Panel1DragOver(Sender, Source: TObject; X, Y: integer;
+      State: TDragState; var Accept: boolean);
     procedure Panel1Paint(Sender: TObject);
 
-  private type
-    TDirection = (Up, Right, Down, Left);
-
   private
-    ax, ay:integer;
+    _GameData: TGameData;
+
+
+    ax, ay: integer;
 
     _Map: TArr2D_int;
     _Visited: TArr2D_bool;
 
     _Route: TDirection;
     _BeginPosition: TPoint;
+    _CurPosition: TPoint;
 
     _JpgCaocao: integer;
     _JpgBing: integer;
@@ -67,12 +68,13 @@ type
     _ImBing3: TImage;
     _ImBing4: TImage;
 
-    procedure __GameInit;
     procedure __LoadImage;
     procedure __InitCheckerBoard;
     procedure __ImageStartDrag(Sender: TObject; var DragObject: TDragObject);
     procedure __ImageDragDrop(Sender, Source: TObject; X, Y: integer);
     procedure __ImageEndDrag(Sender, Target: TObject; X, Y: integer);
+
+
   public
 
   end;
@@ -97,23 +99,37 @@ end;
 
 procedure TCase03_FrmMain.FormCreate(Sender: TObject);
 begin
-  __GameInit;
   __LoadImage;
   __InitCheckerBoard;
 
   Panel1.Width := FIX_PIXEL * 4;
   Panel1.Height := FIX_PIXEL * 5;
-  Panel1.Top := 5;
-  Panel1.Left := 5;
+  Panel1.Top := 10;
+  Panel1.Left := 10;
 
-  Panel2.Width := Panel1.Width + 15;
-  Panel2.Height := Panel1.Height + 15;
+  Panel2.Width := Panel1.Width + 20;
+  Panel2.Height := Panel1.Height + 20;
 end;
 
-procedure TCase03_FrmMain.Panel1DragOver(Sender, Source: TObject; X, Y: Integer; State: TDragState; var Accept: Boolean);
+procedure TCase03_FrmMain.Panel1DragDrop(Sender, Source: TObject; X, Y: integer);
 begin
-  ax:=x;
-  ay:=y;
+  _CurPosition := Point(x, y);
+end;
+
+procedure TCase03_FrmMain.Panel1DragOver(Sender, Source: TObject; X, Y: integer;
+  State: TDragState; var Accept: boolean);
+var
+  Control: TControl;
+begin
+  if Source is TControl then
+    Control := Source as TControl
+  else
+  if Source is TDragControlObject then
+    Control := (Source as TDragControlObject).Control
+  else
+    Control := nil;
+
+  Accept := Control is TImage;
 end;
 
 procedure TCase03_FrmMain.Panel1Paint(Sender: TObject);
@@ -134,42 +150,28 @@ begin
   end;
 end;
 
-procedure TCase03_FrmMain.__GameInit;
-var
-  i, j: integer;
-begin
-  _Map := [
-    [2, 4, 4, 2],
-    [2, 4, 4, 2],
-    [2, 3, 3, 2],
-    [2, 1, 1, 2],
-    [1, 0, 0, 1]];
-
-  SetLength(_Visited, 5, 4);
-
-  for i := 0 to High(_Map) do
-    for j := 0 to High(_Map[i]) do
-      if _Map[i, j] <> 0 then
-        _Visited[i, j] := true;
-end;
-
 procedure TCase03_FrmMain.__ImageDragDrop(Sender, Source: TObject; X, Y: integer);
 begin
-
+  _CurPosition := Point(ax, ay);
 end;
 
 procedure TCase03_FrmMain.__ImageEndDrag(Sender, Target: TObject; X, Y: integer);
 begin
-  Caption := Format('X:%d, Y:%d, ax:%d, ay:%d', [_BeginPosition.X, _BeginPosition.Y, ax, ay]);
+  Caption := Format('X:%d, Y:%d, ax:%d, ay:%d',
+    [_BeginPosition.X, _BeginPosition.Y, _CurPosition.X, _CurPosition.Y]);
 end;
 
 procedure TCase03_FrmMain.__ImageStartDrag(Sender: TObject; var DragObject: TDragObject);
 var
   bmp: TBitmap;
   im: TImage;
+  x, y: integer;
 begin
   im := (Sender as TImage);
-  _BeginPosition := Point(im.Left, im.Top);
+  x := im.Left + im.Width div 2;
+  y := im.Top + im.Height div 2;
+
+  _BeginPosition := Point(x, y);
 
   bmp := TBitmap.Create;
   try
@@ -185,7 +187,7 @@ procedure TCase03_FrmMain.__InitCheckerBoard;
 var
   i: integer;
 begin
-  {$REGION '棋字初始化'}
+  {$REGION '棋子初始化'}
   _ImMachao := TImage.Create(Self.Panel1);
   with _ImMachao do
   begin
@@ -320,8 +322,9 @@ begin
   begin
     if Panel1.Controls[i] is TImage then
     begin
+      (Panel1.Controls[i] as TImage).AutoSize := true;
       (Panel1.Controls[i] as TImage).OnStartDrag := @__ImageStartDrag;
-      (Panel1.Controls[i] as TImage).OnDragDrop := @__ImageDragDrop;
+      //(Panel1.Controls[i] as TImage).OnDragDrop := @__ImageDragDrop;
       (Panel1.Controls[i] as TImage).OnEndDrag := @__ImageEndDrag;
       (Panel1.Controls[i] as TImage).DragMode := TDragMode.dmAutomatic;
     end;
