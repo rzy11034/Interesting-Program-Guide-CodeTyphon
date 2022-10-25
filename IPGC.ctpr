@@ -149,11 +149,6 @@
         <UseHeaptrc Value="True"/>
         <TrashVariables Value="True"/>
       </Debugging>
-      <Options>
-        <Win32>
-          <GraphicApplication Value="True"/>
-        </Win32>
-      </Options>
     </Linking>
     <Other>
       <CompilerMessages>

@@ -19,6 +19,7 @@ uses
 {$R *.res}
 
 begin
+  Main;
   TranslateLCL;
   RequireDerivedFormResource := true;
   Application.Scaled:=True;

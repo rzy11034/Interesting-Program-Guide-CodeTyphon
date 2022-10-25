@@ -8,6 +8,8 @@ interface
 uses
   Classes,
   SysUtils,
+  {%H-}DeepStar.Utils,
+  {%H-}Math,
   Translations,
   LCLType;
 
@@ -18,6 +20,7 @@ implementation
 
 procedure Main;
 begin
+
 end;
 
 procedure TranslateLCL;

@@ -12,12 +12,13 @@ object Case03_FrmMain: TCase03_FrmMain
   Font.Pitch = fpVariable
   Font.Quality = fqDraft
   KeyPreview = True
+  OnClose = FormClose
   OnCreate = FormCreate
   Position = poScreenCenter
   LCLVersion = '7.9'
   object Label1: TLabel
     Left = 448
-    Height = 302
+    Height = 86
     Top = 19
     Width = 220
     AutoSize = False
@@ -25,10 +26,10 @@ object Case03_FrmMain: TCase03_FrmMain
     WordWrap = True
   end
   object Button1: TButton
-    Left = 480
-    Height = 25
-    Top = 464
-    Width = 75
+    Left = 500
+    Height = 50
+    Top = 200
+    Width = 100
     Caption = 'Button1'
     TabOrder = 0
   end
@@ -49,8 +50,8 @@ object Case03_FrmMain: TCase03_FrmMain
     BevelOuter = bvNone
     BorderStyle = bsSingle
     Caption = 'Panel2'
-    ClientHeight = 516
-    ClientWidth = 416
+    ClientHeight = 518
+    ClientWidth = 418
     Color = 4227327
     ParentColor = False
     TabOrder = 2
@@ -68,11 +69,21 @@ object Case03_FrmMain: TCase03_FrmMain
     end
   end
   object Image2: TImage
-    Left = 448
-    Height = 110
-    Top = 336
-    Width = 110
+    Left = 744
+    Height = 100
+    Top = 360
+    Width = 100
     AutoSize = True
+  end
+  object Panel3: TPanel
+    Left = 520
+    Height = 100
+    Top = 256
+    Width = 100
+    Caption = 'Panel3'
+    Color = clBlue
+    ParentColor = False
+    TabOrder = 3
   end
   object ImageList160x160: TImageList
     Left = 416

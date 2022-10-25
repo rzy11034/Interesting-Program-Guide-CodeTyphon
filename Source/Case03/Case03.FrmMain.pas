@@ -8,14 +8,15 @@ interface
 uses
   Classes,
   SysUtils,
-  Character,
+  TypInfo,
   DeepStar.Utils,
   Forms,
   Controls,
   Graphics,
   Dialogs,
   StdCtrls,
-  ExtCtrls, Case03.GameData;
+  ExtCtrls,
+  Case03.GameData;
 
 type
   TCase03_FrmMain = class(TForm)
@@ -29,25 +30,20 @@ type
     Label1: TLabel;
     Panel1: TPanel;
     Panel2: TPanel;
+    Panel3: TPanel;
     procedure Button2Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
-    procedure Panel1DragDrop(Sender, Source: TObject; X, Y: integer);
+    procedure Panel1DragDrop(Sender, Source: TObject; X, Y: Integer);
     procedure Panel1DragOver(Sender, Source: TObject; X, Y: integer;
       State: TDragState; var Accept: boolean);
     procedure Panel1Paint(Sender: TObject);
-
   private
     _GameData: TGameData;
-
-
-    ax, ay: integer;
-
-    _Map: TArr2D_int;
-    _Visited: TArr2D_bool;
-
-    _Route: TDirection;
-    _BeginPosition: TPoint;
-    _CurPosition: TPoint;
+    _ImX: integer;
+    _ImY: integer;
+    _PnX: integer;
+    _PnY: integer;
 
     _JpgCaocao: integer;
     _JpgBing: integer;
@@ -71,9 +67,9 @@ type
     procedure __LoadImage;
     procedure __InitCheckerBoard;
     procedure __ImageStartDrag(Sender: TObject; var DragObject: TDragObject);
-    procedure __ImageDragDrop(Sender, Source: TObject; X, Y: integer);
     procedure __ImageEndDrag(Sender, Target: TObject; X, Y: integer);
-
+    procedure __ImageMouseLeave(Sender: TObject);
+    procedure __ImageMouseMove(Sender: TObject; Shift: TShiftState; X, Y: integer);
 
   public
 
@@ -97,8 +93,14 @@ begin
   Label1.Caption := GAME_INTRODUCE_STR;
 end;
 
+procedure TCase03_FrmMain.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+begin
+  _GameData.Free;
+end;
+
 procedure TCase03_FrmMain.FormCreate(Sender: TObject);
 begin
+  _GameData := TGameData.Create;
   __LoadImage;
   __InitCheckerBoard;
 
@@ -111,9 +113,10 @@ begin
   Panel2.Height := Panel1.Height + 20;
 end;
 
-procedure TCase03_FrmMain.Panel1DragDrop(Sender, Source: TObject; X, Y: integer);
+procedure TCase03_FrmMain.Panel1DragDrop(Sender, Source: TObject; X, Y: Integer);
 begin
-  _CurPosition := Point(x, y);
+  _PnX := x;
+  _PnY := y;
 end;
 
 procedure TCase03_FrmMain.Panel1DragOver(Sender, Source: TObject; X, Y: integer;
@@ -150,15 +153,27 @@ begin
   end;
 end;
 
-procedure TCase03_FrmMain.__ImageDragDrop(Sender, Source: TObject; X, Y: integer);
+procedure TCase03_FrmMain.__ImageEndDrag(Sender, Target: TObject; X, Y: integer);
+var
+  dt: TDirection;
+  im: TImage;
 begin
-  _CurPosition := Point(ax, ay);
+  //im := (Sender as TImage);
+  //
+  //_GameData.MoveOut(im.ClientRect, _ImX, _ImY, im.Tag);
+  //dt := _GameData.Direction;
+  //
+  //Caption := GetEnumName(TypeInfo(TDirection), Ord(dt));
 end;
 
-procedure TCase03_FrmMain.__ImageEndDrag(Sender, Target: TObject; X, Y: integer);
+procedure TCase03_FrmMain.__ImageMouseLeave(Sender: TObject);
 begin
-  Caption := Format('X:%d, Y:%d, ax:%d, ay:%d',
-    [_BeginPosition.X, _BeginPosition.Y, _CurPosition.X, _CurPosition.Y]);
+end;
+
+procedure TCase03_FrmMain.__ImageMouseMove(Sender: TObject; Shift: TShiftState; X, Y: integer);
+begin
+  _ImX := X;
+  _ImY := Y;
 end;
 
 procedure TCase03_FrmMain.__ImageStartDrag(Sender: TObject; var DragObject: TDragObject);
@@ -171,7 +186,7 @@ begin
   x := im.Left + im.Width div 2;
   y := im.Top + im.Height div 2;
 
-  _BeginPosition := Point(x, y);
+  _GameData.BeginPosition := Point(x, y);
 
   bmp := TBitmap.Create;
   try
@@ -324,9 +339,11 @@ begin
     begin
       (Panel1.Controls[i] as TImage).AutoSize := true;
       (Panel1.Controls[i] as TImage).OnStartDrag := @__ImageStartDrag;
-      //(Panel1.Controls[i] as TImage).OnDragDrop := @__ImageDragDrop;
       (Panel1.Controls[i] as TImage).OnEndDrag := @__ImageEndDrag;
       (Panel1.Controls[i] as TImage).DragMode := TDragMode.dmAutomatic;
+
+      (Panel1.Controls[i] as TImage).OnMouseLeave := @__ImageMouseLeave;
+      (Panel1.Controls[i] as TImage).OnMouseMove := @__ImageMouseMove;
     end;
   end;
 end;
