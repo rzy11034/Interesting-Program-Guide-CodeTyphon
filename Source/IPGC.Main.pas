@@ -19,8 +19,17 @@ procedure TranslateLCL;
 implementation
 
 procedure Main;
+var
+  map: TArr2D_int;
 begin
+  Map := [
+    [2, 4, 4, 2],
+    [2, 4, 4, 2],
+    [2, 3, 3, 2],
+    [2, 1, 1, 2],
+    [1, 0, 0, 1]];
 
+  TArrayUtils_int.Print2D(Map);
 end;
 
 procedure TranslateLCL;

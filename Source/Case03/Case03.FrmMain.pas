@@ -34,7 +34,7 @@ type
     procedure Button2Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
-    procedure Panel1DragDrop(Sender, Source: TObject; X, Y: Integer);
+    procedure Panel1DragDrop(Sender, Source: TObject; X, Y: integer);
     procedure Panel1DragOver(Sender, Source: TObject; X, Y: integer;
       State: TDragState; var Accept: boolean);
     procedure Panel1Paint(Sender: TObject);
@@ -113,7 +113,7 @@ begin
   Panel2.Height := Panel1.Height + 20;
 end;
 
-procedure TCase03_FrmMain.Panel1DragDrop(Sender, Source: TObject; X, Y: Integer);
+procedure TCase03_FrmMain.Panel1DragDrop(Sender, Source: TObject; X, Y: integer);
 begin
   _PnX := x;
   _PnY := y;
@@ -157,13 +157,16 @@ procedure TCase03_FrmMain.__ImageEndDrag(Sender, Target: TObject; X, Y: integer)
 var
   dt: TDirection;
   im: TImage;
+  p: TPoint;
 begin
-  //im := (Sender as TImage);
-  //
-  //_GameData.MoveOut(im.ClientRect, _ImX, _ImY, im.Tag);
-  //dt := _GameData.Direction;
-  //
-  //Caption := GetEnumName(TypeInfo(TDirection), Ord(dt));
+  im := (Sender as TImage);
+
+  p := _GameData.MoveOut(im.Parent, im, _ImX, _ImY);
+  dt := _GameData.Direction;
+  im.Top := p.Y;
+  im.Left := p.X;
+
+  Caption := GetEnumName(TypeInfo(TDirection), Ord(dt));
 end;
 
 procedure TCase03_FrmMain.__ImageMouseLeave(Sender: TObject);
@@ -180,13 +183,8 @@ procedure TCase03_FrmMain.__ImageStartDrag(Sender: TObject; var DragObject: TDra
 var
   bmp: TBitmap;
   im: TImage;
-  x, y: integer;
 begin
   im := (Sender as TImage);
-  x := im.Left + im.Width div 2;
-  y := im.Top + im.Height div 2;
-
-  _GameData.BeginPosition := Point(x, y);
 
   bmp := TBitmap.Create;
   try
