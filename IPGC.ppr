@@ -14,7 +14,7 @@ uses
   IPGC.Main,
   Case01.FrmMain,
   Case02.FrmMain,
-  Case02.Calculate, Case03.FrmMain, Case03.StrConsts, Case03.DragObject, Case03.GameData;
+  Case02.Calculate, Case03.FrmMain, Case03.StrConsts, Case03.DragObject, Case03.GameData, Case03.FrmSplash;
 
 {$R *.res}
 
@@ -25,5 +25,6 @@ begin
   Application.Scaled:=True;
   Application.Initialize;
   Application.CreateForm(TCase03_FrmMain, Case03_FrmMain);
+  Application.CreateForm(TForm1, Form1);
   Application.Run;
 end.

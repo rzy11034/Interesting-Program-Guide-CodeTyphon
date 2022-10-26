@@ -1,15 +1,14 @@
 object Case03_FrmMain: TCase03_FrmMain
   Left = 86
-  Height = 736
+  Height = 589
   Top = 85
-  Width = 1245
+  Width = 737
   BorderStyle = bsDialog
   Caption = '华容道'
-  ClientHeight = 736
-  ClientWidth = 1245
-  DesignTimePPI = 120
+  ClientHeight = 589
+  ClientWidth = 737
   Font.CharSet = ANSI_CHARSET
-  Font.Height = -18
+  Font.Height = -14
   Font.Pitch = fpVariable
   Font.Quality = fqDraft
   KeyPreview = True
@@ -18,48 +17,31 @@ object Case03_FrmMain: TCase03_FrmMain
   Position = poScreenCenter
   LCLVersion = '7.9'
   object Label1: TLabel
-    Left = 560
-    Height = 108
-    Top = 24
-    Width = 275
+    Left = 448
+    Height = 461
+    Top = 19
+    Width = 256
     AutoSize = False
     Caption = 'Label1'
     WordWrap = True
   end
-  object Button1: TButton
-    Left = 625
-    Height = 62
-    Top = 250
-    Width = 125
-    Caption = 'Button1'
-    TabOrder = 0
-  end
-  object Button2: TButton
-    Left = 784
-    Height = 31
-    Top = 580
-    Width = 94
-    Caption = 'Button2'
-    OnClick = Button2Click
-    TabOrder = 1
-  end
   object Panel2: TPanel
-    Left = 16
-    Height = 650
-    Top = 19
-    Width = 525
+    Left = 13
+    Height = 520
+    Top = 15
+    Width = 420
     BevelOuter = bvNone
     BorderStyle = bsSingle
     Caption = 'Panel2'
-    ClientHeight = 646
-    ClientWidth = 521
+    ClientHeight = 518
+    ClientWidth = 418
     Color = 4227327
     ParentColor = False
-    TabOrder = 2
+    TabOrder = 0
     object Panel1: TPanel
-      Left = 30
+      Left = 24
       Height = 1
-      Top = 30
+      Top = 24
       Width = 1
       BevelOuter = bvNone
       ParentColor = False
@@ -69,37 +51,45 @@ object Case03_FrmMain: TCase03_FrmMain
       OnPaint = Panel1Paint
     end
   end
-  object Image2: TImage
-    Left = 930
-    Height = 100
-    Top = 450
-    Width = 100
-    AutoSize = True
+  object Label2: TLabel
+    Left = 26
+    Height = 17
+    Top = 549
+    Width = 42
+    Caption = 'Label2'
   end
-  object Panel3: TPanel
-    Left = 650
-    Height = 125
-    Top = 320
-    Width = 125
-    Caption = 'Panel3'
-    Color = clBlue
-    ParentColor = False
-    TabOrder = 3
+  object Button1: TButton
+    Left = 448
+    Height = 25
+    Top = 505
+    Width = 75
+    Caption = '重新开始'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+  object Button2: TButton
+    Left = 629
+    Height = 25
+    Top = 504
+    Width = 75
+    Caption = '退出游戏'
+    OnClick = Button2Click
+    TabOrder = 2
   end
   object ImageList160x160: TImageList
-    Left = 520
-    Top = 104
+    Left = 264
+    Top = 83
   end
   object ImageList80x80: TImageList
-    Left = 376
-    Top = 176
+    Left = 104
+    Top = 136
   end
   object ImageList80x160: TImageList
-    Left = 520
-    Top = 176
+    Left = 264
+    Top = 152
   end
   object ImageList160x80: TImageList
-    Left = 376
-    Top = 104
+    Left = 104
+    Top = 83
   end
 end

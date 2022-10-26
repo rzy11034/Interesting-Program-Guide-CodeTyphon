@@ -22,15 +22,15 @@ type
   TCase03_FrmMain = class(TForm)
     Button1: TButton;
     Button2: TButton;
-    Image2: TImage;
     ImageList160x160: TImageList;
     ImageList160x80: TImageList;
     ImageList80x80: TImageList;
     ImageList80x160: TImageList;
     Label1: TLabel;
+    Label2: TLabel;
     Panel1: TPanel;
     Panel2: TPanel;
-    Panel3: TPanel;
+    procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
@@ -68,7 +68,6 @@ type
     procedure __InitCheckerBoard;
     procedure __ImageStartDrag(Sender: TObject; var DragObject: TDragObject);
     procedure __ImageEndDrag(Sender, Target: TObject; X, Y: integer);
-    procedure __ImageMouseLeave(Sender: TObject);
     procedure __ImageMouseMove(Sender: TObject; Shift: TShiftState; X, Y: integer);
 
   public
@@ -88,9 +87,30 @@ uses
 
 { TCase03_FrmMain }
 
+procedure TCase03_FrmMain.Button1Click(Sender: TObject);
+var
+  i: integer;
+  im: TImage;
+begin
+  if _GameData <> nil then
+    FreeAndNil(_GameData);
+  _GameData := TGameData.Create;
+
+  for i := Panel1.ControlCount - 1 downto 0 do
+  begin
+    if Panel1.Controls[i] is TImage then
+    begin
+      im := Panel1.Controls[i] as TImage;
+      FreeAndNil(im);
+    end;
+  end;
+
+  __InitCheckerBoard;
+end;
+
 procedure TCase03_FrmMain.Button2Click(Sender: TObject);
 begin
-  Label1.Caption := GAME_INTRODUCE_STR;
+  Close;
 end;
 
 procedure TCase03_FrmMain.FormClose(Sender: TObject; var CloseAction: TCloseAction);
@@ -111,6 +131,8 @@ begin
 
   Panel2.Width := Panel1.Width + 20;
   Panel2.Height := Panel1.Height + 20;
+
+  Label2.Caption := '所花时间：0:00:00';
 end;
 
 procedure TCase03_FrmMain.Panel1DragDrop(Sender, Source: TObject; X, Y: integer);
@@ -167,10 +189,6 @@ begin
   im.Left := p.X;
 
   Caption := GetEnumName(TypeInfo(TDirection), Ord(dt));
-end;
-
-procedure TCase03_FrmMain.__ImageMouseLeave(Sender: TObject);
-begin
 end;
 
 procedure TCase03_FrmMain.__ImageMouseMove(Sender: TObject; Shift: TShiftState; X, Y: integer);
@@ -336,12 +354,10 @@ begin
     if Panel1.Controls[i] is TImage then
     begin
       (Panel1.Controls[i] as TImage).AutoSize := true;
+      (Panel1.Controls[i] as TImage).OnMouseMove := @__ImageMouseMove;
       (Panel1.Controls[i] as TImage).OnStartDrag := @__ImageStartDrag;
       (Panel1.Controls[i] as TImage).OnEndDrag := @__ImageEndDrag;
       (Panel1.Controls[i] as TImage).DragMode := TDragMode.dmAutomatic;
-
-      (Panel1.Controls[i] as TImage).OnMouseLeave := @__ImageMouseLeave;
-      (Panel1.Controls[i] as TImage).OnMouseMove := @__ImageMouseMove;
     end;
   end;
 end;

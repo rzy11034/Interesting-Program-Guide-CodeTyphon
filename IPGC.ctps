@@ -13,7 +13,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="11"/>
         <CursorPos X="23" Y="27"/>
-        <UsageCount Value="194"/>
+        <UsageCount Value="200"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -27,7 +27,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="58"/>
         <CursorPos X="9" Y="82"/>
-        <UsageCount Value="194"/>
+        <UsageCount Value="200"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case02\Case02.FrmMain.pas"/>
@@ -39,7 +39,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <CursorPos X="25" Y="143"/>
-        <UsageCount Value="194"/>
+        <UsageCount Value="200"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case02\Case02.Calculate.pas"/>
@@ -48,7 +48,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="102"/>
         <CursorPos X="23" Y="120"/>
-        <UsageCount Value="179"/>
+        <UsageCount Value="185"/>
       </Unit>
       <Unit>
         <Filename Value="Source\IPGC.Main.pas"/>
@@ -56,8 +56,8 @@
         <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
         <TopLine Value="15"/>
-        <CursorPos X="30" Y="32"/>
-        <UsageCount Value="122"/>
+        <CursorPos X="6" Y="22"/>
+        <UsageCount Value="128"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -67,43 +67,44 @@
         <ComponentName Value="Case03_FrmMain"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="163"/>
-        <CursorPos Y="169"/>
-        <FoldState Value=" TJlU3{m T3p40mq"/>
-        <UsageCount Value="117"/>
+        <TopLine Value="89"/>
+        <CursorPos X="11" Y="106"/>
+        <FoldState Value=" TJm53{m T3pK0m)"/>
+        <UsageCount Value="123"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case03\Case03.StrConsts.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
+        <EditorIndex Value="5"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="12"/>
+        <TopLine Value="18"/>
         <CursorPos X="18" Y="12"/>
-        <UsageCount Value="116"/>
+        <UsageCount Value="122"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case03\Case03.DragObject.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="7"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="22"/>
+        <TopLine Value="8"/>
         <CursorPos X="29" Y="8"/>
-        <UsageCount Value="77"/>
+        <UsageCount Value="83"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case03\Case03.GameData.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="6"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="237"/>
-        <CursorPos X="11" Y="237"/>
-        <UsageCount Value="47"/>
+        <TopLine Value="47"/>
+        <CursorPos X="34" Y="52"/>
+        <UsageCount Value="53"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -124,7 +125,7 @@
         <WindowIndex Value="0"/>
         <CursorPos X="13" Y="6"/>
         <SyntaxHighlighter Value="FreePascal"/>
-        <UsageCount Value="96"/>
+        <UsageCount Value="100"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
@@ -213,12 +214,11 @@
       <Unit>
         <Filename Value="C:\codetyphon\typhon\lcl\include\control.inc"/>
         <FRMtype Value="0"/>
-        <EditorIndex Value="6"/>
+        <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="2132"/>
         <CursorPos Y="2139"/>
         <UsageCount Value="14"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\BaseUtils\translations.pas"/>
@@ -576,12 +576,11 @@
       <Unit>
         <Filename Value="..\DeepStar-Lib\Typhon\Package\Source\Utils\DeepStar.Utils.pas"/>
         <FRMtype Value="0"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="410"/>
-        <CursorPos X="20" Y="465"/>
+        <TopLine Value="473"/>
+        <CursorPos X="31" Y="469"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\math.pp"/>
@@ -667,127 +666,159 @@
         <CursorPos X="10" Y="531"/>
         <UsageCount Value="11"/>
       </Unit>
+      <Unit>
+        <Filename Value="..\..\..\..\..\usr\local\codetyphon\typhon\components\BaseUtils\laztracer.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="LazTracer"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="41"/>
+        <CursorPos X="18" Y="51"/>
+        <UsageCount Value="11"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Case03\Case03.FrmSplash.pas"/>
+        <FRMtype Value="200"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="0"/>
+        <CursorPos X="24" Y="4"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\..\..\usr\local\codetyphon\fpcsrc\rtl\objpas\sysutils\sysutils.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="154"/>
+        <CursorPos X="9" Y="158"/>
+        <UsageCount Value="10"/>
+      </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="164" TopLine="158"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case03\Case03.GameData.pas"/>
-        <Caret Line="154" TopLine="147"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case03\Case03.GameData.pas"/>
-        <Caret Line="144" TopLine="136"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case03\Case03.GameData.pas"/>
-        <Caret Line="145" TopLine="136"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case03\Case03.GameData.pas"/>
-        <Caret Line="146" TopLine="136"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case03\Case03.GameData.pas"/>
-        <Caret Line="154" TopLine="147"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case03\Case03.GameData.pas"/>
-        <Caret Line="155" TopLine="147"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case03\Case03.GameData.pas"/>
-        <Caret Line="127" TopLine="121"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case03\Case03.GameData.pas"/>
-        <Caret Line="157" Column="15" TopLine="142"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case03\Case03.GameData.pas"/>
-        <Caret Line="44" Column="14" TopLine="30"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case03\Case03.GameData.pas"/>
-        <Caret Line="161" Column="29" TopLine="147"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case03\Case03.GameData.pas"/>
-        <Caret Line="85" Column="27" TopLine="68"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case03\Case03.GameData.pas"/>
-        <Caret Line="120" Column="22" TopLine="95"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case03\Case03.GameData.pas"/>
-        <Caret Line="129" Column="20" TopLine="109"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case03\Case03.GameData.pas"/>
-        <Caret Line="182" Column="20" TopLine="160"/>
+        <Caret Line="97" Column="7" TopLine="81"/>
       </Position>
       <Position>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="167" Column="18" TopLine="127"/>
+        <Caret Line="103" Column="21" TopLine="81"/>
       </Position>
       <Position>
-        <Filename Value="Source\Case03\Case03.GameData.pas"/>
-        <Caret Line="205" Column="38" TopLine="179"/>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="216" Column="3" TopLine="191"/>
       </Position>
       <Position>
-        <Filename Value="Source\Case03\Case03.GameData.pas"/>
-        <Caret Line="250" Column="31" TopLine="230"/>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="99" Column="29" TopLine="80"/>
       </Position>
       <Position>
-        <Filename Value="..\DeepStar-Lib\Typhon\Package\Source\Utils\DeepStar.Utils.pas"/>
-        <Caret Line="473" Column="18" TopLine="466"/>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="94" TopLine="81"/>
       </Position>
       <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="23" TopLine="16"/>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="95" TopLine="81"/>
       </Position>
       <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="24" TopLine="16"/>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="97" TopLine="81"/>
       </Position>
       <Position>
-        <Filename Value="..\DeepStar-Lib\Typhon\Package\Source\Utils\DeepStar.Utils.pas"/>
-        <Caret Line="473" TopLine="466"/>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="99" TopLine="81"/>
       </Position>
       <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="25" Column="4" TopLine="16"/>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="100" TopLine="82"/>
       </Position>
       <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="32" Column="27" TopLine="8"/>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="97" TopLine="82"/>
       </Position>
       <Position>
-        <Filename Value="..\DeepStar-Lib\Typhon\Package\Source\Utils\DeepStar.Utils.pas"/>
-        <Caret Line="451" TopLine="447"/>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="99" TopLine="82"/>
       </Position>
       <Position>
-        <Filename Value="..\DeepStar-Lib\Typhon\Package\Source\Utils\DeepStar.Utils.pas"/>
-        <Caret Line="454" TopLine="447"/>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="100" TopLine="82"/>
       </Position>
       <Position>
-        <Filename Value="..\DeepStar-Lib\Typhon\Package\Source\Utils\DeepStar.Utils.pas"/>
-        <Caret Line="473" TopLine="466"/>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="97" TopLine="82"/>
       </Position>
       <Position>
-        <Filename Value="..\DeepStar-Lib\Typhon\Package\Source\Utils\DeepStar.Utils.pas"/>
-        <Caret Line="472" Column="38" TopLine="456"/>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="99" TopLine="82"/>
       </Position>
       <Position>
-        <Filename Value="Source\Case03\Case03.GameData.pas"/>
-        <Caret Line="254" Column="41" TopLine="242"/>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="100" TopLine="82"/>
       </Position>
       <Position>
-        <Filename Value="Source\Case03\Case03.GameData.pas"/>
-        <Caret Line="250" Column="7" TopLine="233"/>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="97" TopLine="82"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="99" TopLine="82"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="100" TopLine="82"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="97" TopLine="82"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="99" TopLine="82"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="100" TopLine="82"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="97" TopLine="82"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="100" Column="14" TopLine="81"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="103" Column="22" TopLine="81"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="95" TopLine="83"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="97" TopLine="83"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="95" TopLine="83"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="97" TopLine="83"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="95" TopLine="83"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
+        <Caret Line="97" TopLine="83"/>
       </Position>
     </JumpHistory>
     <RunParams>
@@ -797,6 +828,12 @@
   </ProjectSession>
   <Debugging>
     <Watches>
+      <Item ClassAutoCast="True">
+        <Expression Value="curX"/>
+      </Item>
+      <Item ClassAutoCast="True">
+        <Expression Value="curY"/>
+      </Item>
       <Item ClassAutoCast="True">
         <Expression Value="_GameData"/>
       </Item>
