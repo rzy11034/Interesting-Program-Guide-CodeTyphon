@@ -12,8 +12,8 @@ object Case03_FrmMain: TCase03_FrmMain
   Font.Pitch = fpVariable
   Font.Quality = fqDraft
   KeyPreview = True
-  OnClose = FormClose
   OnCreate = FormCreate
+  OnDestroy = FormDestroy
   Position = poScreenCenter
   LCLVersion = '7.9'
   object Label1: TLabel

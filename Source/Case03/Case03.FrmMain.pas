@@ -32,8 +32,8 @@ type
     Panel2: TPanel;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
-    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
     procedure Panel1DragDrop(Sender, Source: TObject; X, Y: integer);
     procedure Panel1DragOver(Sender, Source: TObject; X, Y: integer;
       State: TDragState; var Accept: boolean);
@@ -113,11 +113,6 @@ begin
   Close;
 end;
 
-procedure TCase03_FrmMain.FormClose(Sender: TObject; var CloseAction: TCloseAction);
-begin
-  _GameData.Free;
-end;
-
 procedure TCase03_FrmMain.FormCreate(Sender: TObject);
 begin
   _GameData := TGameData.Create;
@@ -132,7 +127,13 @@ begin
   Panel2.Width := Panel1.Width + 20;
   Panel2.Height := Panel1.Height + 20;
 
+  Label1.Caption := GAME_OVER_STR;
   Label2.Caption := '所花时间：0:00:00';
+end;
+
+procedure TCase03_FrmMain.FormDestroy(Sender: TObject);
+begin
+  _GameData.Free;
 end;
 
 procedure TCase03_FrmMain.Panel1DragDrop(Sender, Source: TObject; X, Y: integer);

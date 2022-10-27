@@ -21,10 +21,10 @@ uses
 begin
   Main;
   TranslateLCL;
+
   RequireDerivedFormResource := true;
   Application.Scaled:=True;
   Application.Initialize;
-  Application.CreateForm(TCase03_FrmMain, Case03_FrmMain);
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TCase03_FrmSplash, Case03_FrmSplash);
   Application.Run;
 end.
