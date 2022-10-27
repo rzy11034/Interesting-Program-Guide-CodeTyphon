@@ -43,7 +43,7 @@ resourcestring
     '道。                          ' + LineEnding +
     '    华容道游戏作为一个经典的游' + LineEnding +
     '戏，各部分设计都恰到好处，非常' + LineEnding +
-    '巧妙，世界游戏界的一大不可思议。';
+    '巧妙，世界游戏界的三大不可思议。';
 
 
 implementation

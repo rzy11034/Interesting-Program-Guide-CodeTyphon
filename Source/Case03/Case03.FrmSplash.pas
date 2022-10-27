@@ -8,6 +8,8 @@ interface
 uses
   Classes,
   SysUtils,
+  Types,
+  FPCanvas,
   DeepStar.Utils,
   Forms,
   Controls,
@@ -19,9 +21,12 @@ uses
 type
   TCase03_FrmSplash = class(TForm)
     Button1: TButton;
+    Button2: TButton;
+    Label1: TLabel;
     PaintBox1: TPaintBox;
     Timer1: TTimer;
     procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
@@ -35,6 +40,8 @@ type
     WorkSpaceBitmap: TBitmap;
     Progress: integer;
     procedure ProcessFadeFromBlackStep; //淡出
+
+    procedure __Init;
   public
 
   end;
@@ -59,11 +66,77 @@ begin
   Close;
 end;
 
+procedure TCase03_FrmSplash.Button2Click(Sender: TObject);
+begin
+  Label1.Font.Color := clRed;
+end;
+
 procedure TCase03_FrmSplash.FormCreate(Sender: TObject);
+begin
+  Label1.Caption := GAME_OVER_STR;
+end;
+
+procedure TCase03_FrmSplash.FormDestroy(Sender: TObject);
+var
+  i: integer;
+begin
+  //for i := 0 to BRUSHCOUNT - 1 do
+  //begin
+  //  PositiveMasks[i].Bitmap.Free;
+  //  NegativeMasks[i].Bitmap.Free;
+  //  PositiveMasks[i].Free;
+  //  NegativeMasks[i].Free;
+  //end;
+  //SolidBlackBrush.Free;
+  //FadeBitmap.Free;
+  //WorkSpaceBitmap.Free;
+end;
+
+procedure TCase03_FrmSplash.ProcessFadeFromBlackStep;
+begin
+  if (Progress = BRUSHCOUNT) then
+  begin
+    Progress := 0;
+    Timer1.Enabled := false;
+    WorkSpaceBitmap.Canvas.CopyMode := cmSrcCopy;
+    WorkSpaceBitmap.Canvas.Draw(0, 0, FadeBitmap);
+  end
+  else
+  begin
+    WorkSpaceBitmap.Canvas.Brush := NegativeMasks[Progress];
+    WorkSpaceBitmap.Canvas.CopyMode := cmMergeCopy;
+    WorkSpaceBitmap.Canvas.Draw(0, 0, FadeBitmap);
+    Progress := Progress + 1;
+  end;
+  PaintBox1.Canvas.Draw(0, 0, WorkSpaceBitmap);
+end;
+
+var
+  r, g, b: integer;
+
+procedure TCase03_FrmSplash.Timer1Timer(Sender: TObject);
+var
+  i: integer;
+begin
+  //Randomize;
+
+  //改变文字颜色
+  for i := 0 to 1000 do
+  begin
+    r := Random($FF);
+    g := Random($FF);
+    b := Random($FF);
+
+    Label1.Font.Color := RGBToColor(r, g, b);
+  end;
+end;
+
+procedure TCase03_FrmSplash.__Init;
 var
   i, j: integer;
   BrushRect: TRect;
 begin
+  Randomize();
   BrushRect := Rect(0, 0, 8, 8);
   setLength(PositiveMasks, BRUSHCOUNT);
   setLength(NegativeMasks, BRUSHCOUNT);
@@ -76,7 +149,7 @@ begin
     NegativeMasks[j].Bitmap := TBitmap.Create;
     PositiveMasks[j].Bitmap.Width := 8;
     PositiveMasks[j].Bitmap.Height := 8;
-    Randomize();
+
 
     for i := 0 to 8 * j - 1 do
     begin
@@ -104,55 +177,13 @@ begin
       jpg := TJPEGImage.Create;
     jpg.LoadFromFile(CrossFixFileName(JPG_BACKGROUND_FILE));
     FadeBitmap.Assign(jpg);
-    jpg.FreeImage;
+    FreeAndNil(jpg);
 
     WorkSpaceBitmap.Width := FadeBitmap.Width;
     WorkSpaceBitmap.Height := FadeBitmap.Height;
     WorkSpaceBitmap.Canvas.Draw(0, 0, FadeBitmap);
     BitmapRect := Rect(0, 0, FadeBitmap.Width, FadeBitmap.Height);
   end;
-
-  Exit;
-end;
-
-procedure TCase03_FrmSplash.FormDestroy(Sender: TObject);
-var
-  i: integer;
-begin
-  for i := 0 to BRUSHCOUNT - 1 do
-  begin
-    PositiveMasks[i].Bitmap.Free;
-    NegativeMasks[i].Bitmap.Free;
-    PositiveMasks[i].Free;
-    NegativeMasks[i].Free;
-  end;
-  SolidBlackBrush.Free;
-  FadeBitmap.Free;
-  WorkSpaceBitmap.Free;
-end;
-
-procedure TCase03_FrmSplash.ProcessFadeFromBlackStep;
-begin
-  if (Progress = BRUSHCOUNT) then
-  begin
-    Progress := 0;
-    Timer1.Enabled := false;
-    WorkSpaceBitmap.Canvas.CopyMode := cmSrcCopy;
-    WorkSpaceBitmap.Canvas.Draw(0, 0, FadeBitmap);
-  end
-  else
-  begin
-    WorkSpaceBitmap.Canvas.Brush := NegativeMasks[Progress];
-    WorkSpaceBitmap.Canvas.CopyMode := cmMergeCopy;
-    WorkSpaceBitmap.Canvas.Draw(0, 0, FadeBitmap);
-    Progress := Progress + 1;
-  end;
-  PaintBox1.Canvas.Draw(0, 0, WorkSpaceBitmap);
-end;
-
-procedure TCase03_FrmSplash.Timer1Timer(Sender: TObject);
-begin
-  ProcessFadeFromBlackStep;
 end;
 
 end.
