@@ -11,6 +11,7 @@ uses
 const
   FIX_PIXEL = 100;
 
+  PNG_DIALOGBACK = '..\..\Source\Case03\Resource\dialogback.png';
   JPG_BACKGROUND_FILE = '..\..\Source\Case03\Resource\Background.JPG';
   JPG_BING_FILE = '..\..\Source\Case03\Resource\bing.JPG';
   JPG_CAOCAO_FILE = '..\..\Source\Case03\Resource\Caocao.JPG';
