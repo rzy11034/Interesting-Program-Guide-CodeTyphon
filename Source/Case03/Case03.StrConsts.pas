@@ -10,19 +10,32 @@ uses
 
 const
   FIX_PIXEL = 100;
+  FRM_COLOR = $004080FF;
 
+resourcestring
   PNG_DIALOGBACK = '..\..\Source\Case03\Resource\dialogback.png';
   JPG_BACKGROUND_FILE = '..\..\Source\Case03\Resource\Background.JPG';
   JPG_BING_FILE = '..\..\Source\Case03\Resource\bing.JPG';
   JPG_CAOCAO_FILE = '..\..\Source\Case03\Resource\Caocao.JPG';
-  JPG_GUANYU_FILE = '..\..\Source\Case03\Resource\guanyu.JPG';
-  JPG_HUANGZHONG_FILE = '..\..\Source\Case03\Resource\huangzhong_s.JPG';
-  JPG_MACHAO_FILE = '..\..\Source\Case03\Resource\machao_s.JPG';
-  JPG_ZHANGFEI_FILE = '..\..\Source\Case03\Resource\zhangfei_s.JPG';
-  JPG_ZHAOYUN_FILE = '..\..\Source\Case03\Resource\zhaoyun_s.JPG';
+
+  JPG_GUANYU_FILE_S = '..\..\Source\Case03\Resource\guanyu_s.JPG';
+  JPG_HUANGZHONG_FILE_S = '..\..\Source\Case03\Resource\huangzhong_s.JPG';
+  JPG_MACHAO_FILE_S = '..\..\Source\Case03\Resource\machao_s.JPG';
+  JPG_ZHANGFEI_FILE_S = '..\..\Source\Case03\Resource\zhangfei_s.JPG';
+  JPG_ZHAOYUN_FILE_S = '..\..\Source\Case03\Resource\zhaoyun_s.JPG';
+
+  JPG_GUANYU_FILE_H = '..\..\Source\Case03\Resource\guanyu_h.JPG';
+  JPG_HUANGZHONG_FILE_H = '..\..\Source\Case03\Resource\huangzhong_h.JPG';
+  JPG_MACHAO_FILE_H = '..\..\Source\Case03\Resource\machao_h.JPG';
+  JPG_ZHANGFEI_FILE_H = '..\..\Source\Case03\Resource\zhangfei_h.JPG';
+  JPG_ZHAOYUN_FILE_H = '..\..\Source\Case03\Resource\zhaoyun_h.JPG';
 
 resourcestring
-  GAME_OVER_STR =
+  STR_GAME_NAME = '华容道';
+  STR_GAME_COMPLETED = '恭喜，你已经顺利通关，是否再来一次?';
+  STR_GAME_TIME = '所花时间：%s';
+
+  STR_GAME_BEGIN =
     '华容小径' + LineEnding +
     '兵不在多，四个则行' + LineEnding +
     '将不在广，五虎则灵' + LineEnding +
@@ -33,7 +46,7 @@ resourcestring
     '私放曹操，报答恩情' + LineEnding +
     '有诗云：华容游戏见真情' + LineEnding;
 
-  GAME_INTRODUCE_STR =
+  STR_GAME_INTRODUCE_STR =
     '华容道' + LineEnding +
     '    华容道游戏源于三国时期著名' + LineEnding +
     '的历史故事。车汉末年，曹操、孙' + LineEnding +

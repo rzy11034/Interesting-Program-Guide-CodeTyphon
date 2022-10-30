@@ -30,14 +30,17 @@ type
     Label2: TLabel;
     Panel1: TPanel;
     Panel2: TPanel;
+    Timer1: TTimer;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure Panel1DragDrop(Sender, Source: TObject; X, Y: integer);
     procedure Panel1DragOver(Sender, Source: TObject; X, Y: integer;
       State: TDragState; var Accept: boolean);
     procedure Panel1Paint(Sender: TObject);
+    procedure Timer1Timer(Sender: TObject);
   private
     _GameData: TGameData;
     _ImX: integer;
@@ -63,6 +66,7 @@ type
     _ImBing2: TImage;
     _ImBing3: TImage;
     _ImBing4: TImage;
+    _startDate: TTime;
 
     procedure __LoadImage;
     procedure __InitCheckerBoard;
@@ -81,7 +85,8 @@ implementation
 
 uses
   Case03.DragObject,
-  Case03.StrConsts;
+  Case03.StrConsts,
+  Case03.FrmSplash;
 
 {$R *.frm}
 
@@ -92,6 +97,9 @@ var
   i: integer;
   im: TImage;
 begin
+  _startDate := now;
+  Timer1.Enabled := true;
+
   if _GameData <> nil then
     FreeAndNil(_GameData);
   _GameData := TGameData.Create;
@@ -113,8 +121,16 @@ begin
   Close;
 end;
 
+procedure TCase03_FrmMain.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+begin
+  Case03_FrmSplash.Close;
+end;
+
 procedure TCase03_FrmMain.FormCreate(Sender: TObject);
 begin
+  Self.Color := FRM_COLOR;
+  Self.Caption := STR_GAME_NAME;
+
   _GameData := TGameData.Create;
   __LoadImage;
   __InitCheckerBoard;
@@ -127,8 +143,23 @@ begin
   Panel2.Width := Panel1.Width + 20;
   Panel2.Height := Panel1.Height + 20;
 
-  Label1.Caption := GAME_OVER_STR;
-  Label2.Caption := '所花时间：0:00:00';
+  Label1.Top := Panel2.Top;
+  Label1.Left := Panel2.BaseBounds.Right + 10;
+  Label1.Caption := STR_GAME_BEGIN;
+
+  Label2.Top := Panel2.BaseBounds.Bottom + 10;
+  Label2.Caption := Format(STR_GAME_TIME, [TimeToStr(0)]);
+
+  Button1.Left := Label1.Left + 30;
+  Button1.Top := Label2.Top - 20;
+
+  Button2.Top := Button1.Top;
+  Button2.Left := Button1.BaseBounds.Right + 10;
+
+  Self.Width := Label1.BaseBounds.Right + 10;
+  Self.Height := Button1.BaseBounds.Bottom + 25;
+
+  _startDate := Now;
 end;
 
 procedure TCase03_FrmMain.FormDestroy(Sender: TObject);
@@ -173,6 +204,23 @@ begin
     cvs.StretchDraw(rect, jpg);
   finally
     jpg.Free;
+  end;
+end;
+
+procedure TCase03_FrmMain.Timer1Timer(Sender: TObject);
+var
+  s: string;
+begin
+  s := TimeToStr(now - _startDate);
+  Label2.Caption := Format(STR_GAME_TIME, [s]);
+
+  if _GameData.Completed then
+  begin
+    Timer1.Enabled := false;
+
+    case MessageDlg(STR_GAME_COMPLETED, mtInformation, [mbYes, mbNo], 0) of
+      mrYes: Button1Click(Sender);
+    end;
   end;
 end;
 
@@ -389,23 +437,23 @@ begin
     _JpgBing := ImageList80x80.Add(jpg, nil);
     jpg.FreeImage;
 
-    jpg.LoadFromFile(CrossFixFileName(JPG_GUANYU_FILE));
+    jpg.LoadFromFile(CrossFixFileName(JPG_GUANYU_FILE_H));
     _JpgGuanyu := ImageList160x80.add(jpg, nil);
     jpg.FreeImage;
 
-    jpg.LoadFromFile(CrossFixFileName(JPG_HUANGZHONG_FILE));
+    jpg.LoadFromFile(CrossFixFileName(JPG_HUANGZHONG_FILE_S));
     _JpgHuangzhong := ImageList80x160.Add(jpg, nil);
     jpg.FreeImage;
 
-    jpg.LoadFromFile(CrossFixFileName(JPG_MACHAO_FILE));
+    jpg.LoadFromFile(CrossFixFileName(JPG_MACHAO_FILE_S));
     _JpgMachao := ImageList80x160.Add(jpg, nil);
     jpg.FreeImage;
 
-    jpg.LoadFromFile(CrossFixFileName(JPG_ZHANGFEI_FILE));
+    jpg.LoadFromFile(CrossFixFileName(JPG_ZHANGFEI_FILE_S));
     _JpgZhangfei := ImageList80x160.Add(jpg, nil);
     jpg.FreeImage;
 
-    jpg.LoadFromFile(CrossFixFileName(JPG_ZHAOYUN_FILE));
+    jpg.LoadFromFile(CrossFixFileName(JPG_ZHAOYUN_FILE_S));
     _JpgZhaoyun := ImageList80x160.Add(jpg, nil);
     jpg.FreeImage;
   finally

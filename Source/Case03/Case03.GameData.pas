@@ -53,12 +53,19 @@ constructor TGameData.Create;
 var
   i, j: integer;
 begin
+  //_Map := [
+  //  [2, 4, 4, 2],
+  //  [2, 4, 4, 2],
+  //  [2, 3, 3, 2],
+  //  [2, 1, 1, 2],
+  //  [1, 0, 0, 1]];
+
   _Map := [
-    [2, 4, 4, 2],
-    [2, 4, 4, 2],
-    [2, 3, 3, 2],
-    [2, 1, 1, 2],
-    [1, 0, 0, 1]];
+    [0, 4, 4, 0],
+    [0, 4, 4, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0]];
 
   SetLength(_Visited, 5, 4);
 
@@ -70,7 +77,7 @@ end;
 
 function TGameData.Completed: boolean;
 begin
-  Result := _Visited[4, 1] and _Visited[4, 2];
+  Result := (_Map[4, 1] = 4) and (_Map[4, 2] = 4);
 end;
 
 destructor TGameData.Destroy;
@@ -441,10 +448,12 @@ begin
     end;
   end;
 
+  {$IFDEF DEBUG}
   TArrayUtils_int.Print2D(_Map);
   WriteLn;
   TArrayUtils_bool.Print2D(_Visited);
   DrawLineBlockEnd;
+  {$ENDIF}
 
   Result := res;
 end;

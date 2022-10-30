@@ -162,6 +162,10 @@
       <CompilerMessages>
         <IgnoredMessages idx4105="True" idx4104="True"/>
       </CompilerMessages>
+      <CustomOptions Value="-dDebug"/>
+      <OtherDefines Count="1">
+        <Define0 Value="Debug"/>
+      </OtherDefines>
     </Other>
   </CompilerOptions>
   <Debugging>

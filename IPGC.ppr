@@ -9,14 +9,41 @@ uses
  {$IFDEF HASAMIGA}
   athreads,
  {$ENDIF}
+  Classes,
+  SysUtils,
   Interfaces, // this includes the CT adLCL widgetset
+  Translations,
+  LCLType,
   Forms,
   IPGC.Main,
   Case01.FrmMain,
   Case02.FrmMain,
-  Case02.Calculate, Case03.FrmMain, Case03.StrConsts, Case03.DragObject, Case03.GameData, Case03.FrmSplash;
+  Case02.Calculate,
+  Case03.FrmMain,
+  Case03.StrConsts,
+  Case03.DragObject,
+  Case03.GameData,
+  Case03.FrmSplash;
 
 {$R *.res}
+
+  procedure TranslateLCL;
+  var
+    po: TPOFile;
+    stm: TResourceStream;
+  begin
+    stm := TResourceStream.Create(HINSTANCE, 'LCLSTRCONSTS.ZH_CN', RT_RCDATA);
+    try
+      try
+        po := TPOFile.Create(stm);
+        Translations.TranslateUnitResourceStrings('LCLStrConsts', po);
+      finally
+        po.Free;
+      end;
+    finally
+      stm.Free;
+    end;
+  end;
 
 begin
   Main;

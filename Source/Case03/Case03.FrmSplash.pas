@@ -8,7 +8,6 @@ interface
 uses
   Classes,
   SysUtils,
-  Types,
   FPCanvas,
   DeepStar.Utils,
   Forms,
@@ -21,12 +20,17 @@ uses
 type
   TCase03_FrmSplash = class(TForm)
     Button1: TButton;
-    Button2: TButton;
     Image1: TImage;
     Label1: TLabel;
+    PaintBox1: TPaintBox;
     Timer1: TTimer;
+    procedure Button1Click(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
   private
+    _Bitmap: TBitmap;
+
     procedure __FadeIn(bmp: TBitmap);
     procedure __LoadBitamp;
 
@@ -41,81 +45,154 @@ implementation
 
 uses
   IntfGraphics,
-  FPImage,LazCanvas,
-  Case03.StrConsts;
+  FPImage,
+  LazCanvas,
+  Case03.StrConsts,
+  Case03.FrmMain;
 
 {$R *.frm}
 
 { TCase03_FrmSplash }
 
+procedure TCase03_FrmSplash.Button1Click(Sender: TObject);
+begin
+  Case03_FrmMain := TCase03_FrmMain.Create(Self);
+  Case03_FrmMain.Show;
+
+  Self.Hide;
+end;
+
+procedure TCase03_FrmSplash.FormActivate(Sender: TObject);
+begin
+  __FadeIn(_Bitmap);
+  Image1.Picture.Assign(_Bitmap);
+end;
+
 procedure TCase03_FrmSplash.FormCreate(Sender: TObject);
 begin
+  Self.Color := FRM_COLOR;
+  Self.Caption := STR_GAME_NAME;
+
+  Self.PaintBox1.SetBounds(20, 20, 400, 600);
+  Self.Image1.SetBounds(20, 20, 400, 600);
+
+  _Bitmap := TBitmap.Create;
+
+  Label1.Caption := STR_GAME_INTRODUCE_STR;
+
   __LoadBitamp;
+end;
+
+procedure TCase03_FrmSplash.FormDestroy(Sender: TObject);
+begin
+  _Bitmap.Free;
 end;
 
 procedure TCase03_FrmSplash.__FadeIn(bmp: TBitmap);
 var
   scrIntfImg, destIntfImg: TLazIntfImage;
-  fade, px, py: integer;
+  tempBmp: TBitmap;
+  fadeStep, px, py: integer;
   curColor: TFPColor;
 begin
   scrIntfImg := bmp.CreateIntfImage;
   destIntfImg := bmp.CreateIntfImage;
+  tempBmp := TBitmap.Create;
   try
-    for fade := 1 to 32 do
+    for fadeStep := 1 to 32 do
     begin
-      for px := 0 to scrIntfImg.Width - 1 do
+      Application.ProcessMessages;
+
+      for py := 0 to scrIntfImg.Height - 1 do
       begin
-        for py := 0 to scrIntfImg.Height - 1 do
+        for px := 0 to scrIntfImg.Width - 1 do
         begin
           curColor := scrIntfImg.Colors[px, py];
-          curColor.Red := (curColor.Red * fade) >> 5;
-          curColor.Blue := (curColor.Blue * fade) >> 5;
-          curColor.Green := (curColor.Green * fade) >> 5;
+          curColor.Red := (curColor.Red * fadeStep) shr 5;
+          curColor.Blue := (curColor.Blue * fadeStep) shr 5;
+          curColor.Green := (curColor.Green * fadeStep) shr 5;
           destIntfImg.Colors[px, py] := curColor;
         end;
       end;
-      bmp.LoadFromIntfImage(destIntfImg);
+      tempBmp.LoadFromIntfImage(destIntfImg);
+      Self.PaintBox1.Canvas.Draw(0, 0, tempBmp);
+
+      Sleep(20);
     end;
+
+    bmp.Assign(tempBmp);
   finally
     destIntfImg.Free;
     scrIntfImg.Free;
+    tempBmp.Free;
   end;
 end;
 
 procedure TCase03_FrmSplash.__LoadBitamp;
 var
-  tempIntfImg: TLazIntfImage;
+  tempIntfImg, destIntfImg: TLazIntfImage;
   cvs: TLazCanvas;
   png: TPNGImage;
   jpg: TJPEGImage;
-  bmp, tempBmp: TBitmap;
-  w, h: integer;
 begin
-  w := Image1.Width;
-  h := Image1.Height;
+  destIntfImg := TLazIntfImage.Create(0, 0);
+  tempIntfImg := TLazIntfImage.Create(0, 0);
 
-  bmp := TBitmap.Create;
-  tempBmp := TBitmap.Create;
-  tempIntfImg := bmp.CreateIntfImage;
-  cvs := TLazCanvas.create(tempIntfImg);
+  png := TPNGImage.Create();
   try
-    bmp.SetSize(w, h);
-
-    png := TPNGImage.Create();
-    try
-      png.LoadFromFile(CrossFixFileName(PNG_DIALOGBACK));
-      bmp.Canvas.StretchDraw(rect(0, 0, w, h), png);
-    finally
-      png.Free;
-    end;
-
-    //.SetSize(200, 300);
-    Image1.Picture.Assign(bmp);
-    Image1.Stretch
+    png.LoadFromFile(CrossFixFileName(PNG_DIALOGBACK));
+    destIntfImg.LoadFromBitmap(png.Handle, png.MaskHandle);
   finally
-    bmp.Free;
+    FreeAndNil(png);
   end;
+
+  cvs := TLazCanvas.Create(destIntfImg);
+
+  jpg := TJPEGImage.Create();
+  try
+    jpg.LoadFromFile(CrossFixFileName(JPG_CAOCAO_FILE));
+    tempIntfImg.LoadFromBitmap(jpg.Handle, jpg.MaskHandle);
+    cvs.StretchDraw(150, 150, 100, 100, tempIntfImg);
+    jpg.FreeImage;
+
+    jpg.LoadFromFile(CrossFixFileName(JPG_GUANYU_FILE_H));
+    tempIntfImg.LoadFromBitmap(jpg.Handle, jpg.MaskHandle);
+    cvs.StretchDraw(13, 280, 120, 60, tempIntfImg);
+    jpg.FreeImage;
+
+    jpg.LoadFromFile(CrossFixFileName(JPG_ZHANGFEI_FILE_H));
+    tempIntfImg.LoadFromBitmap(jpg.Handle, jpg.MaskHandle);
+    cvs.StretchDraw(140, 280, 120, 60, tempIntfImg);
+    jpg.FreeImage;
+
+    jpg.LoadFromFile(CrossFixFileName(JPG_ZHAOYUN_FILE_H));
+    tempIntfImg.LoadFromBitmap(jpg.Handle, jpg.MaskHandle);
+    cvs.StretchDraw(270, 280, 120, 60, tempIntfImg);
+    jpg.FreeImage;
+
+    jpg.LoadFromFile(CrossFixFileName(JPG_MACHAO_FILE_H));
+    tempIntfImg.LoadFromBitmap(jpg.Handle, jpg.MaskHandle);
+    cvs.StretchDraw(63, 365, 120, 60, tempIntfImg);
+    jpg.FreeImage;
+
+    jpg.LoadFromFile(CrossFixFileName(JPG_HUANGZHONG_FILE_H));
+    tempIntfImg.LoadFromBitmap(jpg.Handle, jpg.MaskHandle);
+    cvs.StretchDraw(193, 365, 120, 60, tempIntfImg);
+    jpg.FreeImage;
+
+    jpg.LoadFromFile(CrossFixFileName(JPG_BING_FILE));
+    tempIntfImg.LoadFromBitmap(jpg.Handle, jpg.MaskHandle);
+    cvs.StretchDraw(160, 440, 60, 60, tempIntfImg);
+    jpg.FreeImage;
+  finally
+    FreeAndNil(jpg);
+  end;
+
+  _Bitmap.LoadFromIntfImage(destIntfImg);
+
+  FreeAndNil(cvs);
+  FreeAndNil(tempIntfImg);
+  FreeAndNil(destIntfImg);
 end;
 
 end.
