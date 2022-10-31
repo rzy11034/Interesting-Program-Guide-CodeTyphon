@@ -11,23 +11,30 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="29"/>
-        <CursorPos X="21" Y="39"/>
+        <CursorPos X="18" Y="27"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
-        <Filename Value="Source\Case01\Case01.FrmMain.pas"/>
+        <Filename Value="Source\IPGC.Main.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <CursorPos X="22" Y="7"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Case05\Case05.FrmMain.pas"/>
         <FRMtype Value="200"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="Case01_FrmMain"/>
+        <ComponentName Value="Case05_FrmMain"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="58"/>
-        <CursorPos X="9" Y="82"/>
-        <UsageCount Value="200"/>
+        <CursorPos X="18" Y="3"/>
+        <UsageCount Value="21"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case02\Case02.FrmMain.pas"/>
@@ -38,27 +45,17 @@
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="125"/>
-        <CursorPos X="3" Y="135"/>
-        <UsageCount Value="200"/>
+        <TopLine Value="31"/>
+        <CursorPos X="23" Y="9"/>
+        <UsageCount Value="20"/>
       </Unit>
       <Unit>
-        <Filename Value="Source\Case02\Case02.Calculate.pas"/>
+        <Filename Value="Source\Case03\Case03.Calculate.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="102"/>
-        <CursorPos X="23" Y="120"/>
-        <UsageCount Value="221"/>
-      </Unit>
-      <Unit>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <IsPartOfProject Value="True"/>
-        <EditorIndex Value="2"/>
-        <WindowIndex Value="0"/>
-        <CursorPos X="7" Y="19"/>
-        <UsageCount Value="200"/>
-        <Loaded Value="True"/>
+        <CursorPos X="28" Y="10"/>
+        <UsageCount Value="20"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
@@ -67,19 +64,105 @@
         <ComponentName Value="Case03_FrmMain"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="43"/>
+        <CursorPos X="34" Y="55"/>
+        <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Case04\Case04.DragObject.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Case04\Case04.GameData.pas"/>
+        <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="46"/>
+        <CursorPos X="39" Y="56"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Case04\Case04.StrConsts.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="6"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="7"/>
+        <CursorPos X="40" Y="27"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Case04\Case04.FrmMain.pas"/>
+        <FRMtype Value="200"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Case04_FrmMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="256"/>
-        <CursorPos X="52" Y="259"/>
-        <FoldState Value=" TJnB3{m T3qQ0mM"/>
-        <UsageCount Value="200"/>
+        <TopLine Value="230"/>
+        <CursorPos X="30" Y="269"/>
+        <FoldState Value=" TJnI3{m T3qX0mk"/>
+        <UsageCount Value="20"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
-        <Filename Value="Source\Case03\Case03.StrConsts.pas"/>
+        <Filename Value="Source\Case04\Case04.FrmSplash.pas"/>
+        <FRMtype Value="200"/>
         <IsPartOfProject Value="True"/>
+        <ComponentName Value="Case04_FrmSplash"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="5"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="42"/>
+        <CursorPos X="25" Y="46"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Case01\Case01.FrmMain.pas"/>
+        <FRMtype Value="200"/>
+        <ComponentName Value="Case01_FrmMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="58"/>
+        <CursorPos X="9" Y="82"/>
+        <UsageCount Value="200"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Case02\Case02.Calculate.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="102"/>
+        <CursorPos X="23" Y="120"/>
+        <UsageCount Value="221"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Case03\Case04.FrmMain.pas"/>
+        <FRMtype Value="200"/>
+        <ComponentName Value="Case03_FrmMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="256"/>
+        <CursorPos X="15" Y="260"/>
+        <FoldState Value=" TJnB3{m T3qQ0mM"/>
+        <UsageCount Value="200"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Case03\Case03.StrConsts.pas"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="21"/>
@@ -88,38 +171,32 @@
       </Unit>
       <Unit>
         <Filename Value="Source\Case03\Case03.DragObject.pas"/>
-        <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="8"/>
         <CursorPos X="29" Y="8"/>
-        <UsageCount Value="182"/>
+        <UsageCount Value="183"/>
       </Unit>
       <Unit>
-        <Filename Value="Source\Case03\Case03.GameData.pas"/>
-        <IsPartOfProject Value="True"/>
-        <EditorIndex Value="4"/>
+        <Filename Value="Source\Case03\Case04.GameData.pas"/>
+        <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="443"/>
-        <CursorPos X="33" Y="452"/>
-        <UsageCount Value="152"/>
-        <Loaded Value="True"/>
+        <CursorPos X="39" Y="444"/>
+        <UsageCount Value="153"/>
       </Unit>
       <Unit>
-        <Filename Value="Source\Case03\Case03.FrmSplash.pas"/>
+        <Filename Value="Source\Case03\Case04.FrmSplash.pas"/>
         <FRMtype Value="200"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="Case03_FrmSplash"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="94"/>
-        <CursorPos X="21" Y="82"/>
+        <TopLine Value="82"/>
+        <CursorPos X="37" Y="89"/>
         <FoldState Value=" T3k10:~"/>
-        <UsageCount Value="120"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
+        <UsageCount Value="121"/>
       </Unit>
       <Unit>
         <Filename Value="Case01\Source\Luck50.FrmMain.pas"/>
@@ -137,7 +214,7 @@
         <FRMtype Value="0"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <CursorPos X="13" Y="6"/>
+        <CursorPos X="10" Y="5"/>
         <SyntaxHighlighter Value="FreePascal"/>
         <UsageCount Value="100"/>
         <Loaded Value="True"/>
@@ -562,11 +639,12 @@
       <Unit>
         <Filename Value="C:\codetyphon\typhon\lcl\include\customform.inc"/>
         <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
+        <EditorIndex Value="7"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="914"/>
-        <CursorPos Y="924"/>
-        <UsageCount Value="7"/>
+        <TopLine Value="2960"/>
+        <CursorPos X="15" Y="2960"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="C:\usr\local\codetyphon\typhon\lcl\intfgraphics.pas"/>
@@ -651,39 +729,48 @@
         <CursorPos Y="226"/>
         <UsageCount Value="10"/>
       </Unit>
+      <Unit>
+        <Filename Value="Source\Case03\Case02.Calculate.pas"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Case03\Case02.FrmMain.pas"/>
+        <FRMtype Value="200"/>
+        <ComponentName Value="Case02_FrmMain"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Case04\Case04.FrmMain.frm"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="FRM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Case04\Case04.FrmSplash.frm"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="FRM"/>
+      </Unit>
     </Units>
     <OtherDefines Count="1">
       <Define0 Value="Debug"/>
     </OtherDefines>
     <JumpHistory HistoryIndex="24">
-      <Position>
-        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="194" TopLine="186"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="211" TopLine="205"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="211" TopLine="117"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="236" Column="11" TopLine="207"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="213" Column="12" TopLine="200"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="220" Column="12" TopLine="207"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="198" Column="3" TopLine="154"/>
-      </Position>
       <Position>
         <Filename Value="IPGC.ppr"/>
         <Caret Line="45" TopLine="27"/>
@@ -733,28 +820,56 @@
         <Caret Line="24" TopLine="16"/>
       </Position>
       <Position>
-        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="201" Column="45" TopLine="187"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="148" TopLine="142"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="149" TopLine="142"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="150" Column="41" TopLine="129"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
-        <Caret Line="154" Column="32" TopLine="137"/>
-      </Position>
-      <Position>
         <Filename Value="Source\IPGC.Main.pas"/>
         <Caret Line="20" Column="20" TopLine="9"/>
+      </Position>
+      <Position>
+        <Filename Value="IPGC.ppr"/>
+        <Caret Line="35" Column="21" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="IPGC.ppr"/>
+        <Caret Line="28" Column="26"/>
+      </Position>
+      <Position>
+        <Filename Value="IPGC.ppr"/>
+        <Caret Line="19" Column="18" TopLine="2"/>
+      </Position>
+      <Position>
+        <Filename Value="IPGC.ppr"/>
+        <Caret Line="18" Column="13" TopLine="2"/>
+      </Position>
+      <Position>
+        <Filename Value="IPGC.ppr"/>
+        <Caret Line="19" Column="18" TopLine="6"/>
+      </Position>
+      <Position>
+        <Filename Value="IPGC.ppr"/>
+        <Caret Line="27" Column="18"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case04\Case04.FrmSplash.pas"/>
+        <Caret Line="59" Column="28" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case04\Case04.FrmMain.pas"/>
+        <Caret Line="116" Column="41" TopLine="107"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case04\Case04.StrConsts.pas"/>
+        <Caret Line="27" Column="40" TopLine="7"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case04\Case04.FrmMain.pas"/>
+        <Caret Line="117" Column="41" TopLine="108"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case04\Case04.FrmMain.pas"/>
+        <Caret Line="172" Column="13" TopLine="157"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case04\Case04.FrmMain.pas"/>
+        <Caret Line="171" Column="40" TopLine="154"/>
       </Position>
     </JumpHistory>
     <RunParams>

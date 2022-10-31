@@ -1,4 +1,4 @@
-﻿unit Case03.FrmSplash;
+﻿unit Case04.FrmSplash;
 
 {$mode ObjFPC}{$H+}
 {$ModeSwitch unicodestrings}
@@ -18,7 +18,7 @@ uses
   StdCtrls;
 
 type
-  TCase03_FrmSplash = class(TForm)
+  TCase04_FrmSplash = class(TForm)
     Button1: TButton;
     Image1: TImage;
     Label1: TLabel;
@@ -39,7 +39,7 @@ type
   end;
 
 var
-  Case03_FrmSplash: TCase03_FrmSplash;
+  Case04_FrmSplash: TCase04_FrmSplash;
 
 implementation
 
@@ -47,28 +47,27 @@ uses
   IntfGraphics,
   FPImage,
   LazCanvas,
-  Case03.StrConsts,
-  Case03.FrmMain;
+  case04.StrConsts,
+  Case04.FrmMain;
 
 {$R *.frm}
 
-{ TCase03_FrmSplash }
+{ TCase04_FrmSplash }
 
-procedure TCase03_FrmSplash.Button1Click(Sender: TObject);
+procedure TCase04_FrmSplash.Button1Click(Sender: TObject);
 begin
-  Case03_FrmMain := TCase03_FrmMain.Create(Self);
-  Case03_FrmMain.Show;
+  Case04_FrmMain.Show;
 
   Self.Hide;
 end;
 
-procedure TCase03_FrmSplash.FormActivate(Sender: TObject);
+procedure TCase04_FrmSplash.FormActivate(Sender: TObject);
 begin
   __FadeIn(_Bitmap);
   Image1.Picture.Assign(_Bitmap);
 end;
 
-procedure TCase03_FrmSplash.FormCreate(Sender: TObject);
+procedure TCase04_FrmSplash.FormCreate(Sender: TObject);
 begin
   Self.Color := FRM_COLOR;
   Self.Caption := STR_GAME_NAME;
@@ -83,12 +82,12 @@ begin
   __LoadBitamp;
 end;
 
-procedure TCase03_FrmSplash.FormDestroy(Sender: TObject);
+procedure TCase04_FrmSplash.FormDestroy(Sender: TObject);
 begin
   _Bitmap.Free;
 end;
 
-procedure TCase03_FrmSplash.__FadeIn(bmp: TBitmap);
+procedure TCase04_FrmSplash.__FadeIn(bmp: TBitmap);
 var
   scrIntfImg, destIntfImg: TLazIntfImage;
   tempBmp: TBitmap;
@@ -128,7 +127,7 @@ begin
   end;
 end;
 
-procedure TCase03_FrmSplash.__LoadBitamp;
+procedure TCase04_FrmSplash.__LoadBitamp;
 var
   tempIntfImg, destIntfImg: TLazIntfImage;
   cvs: TLazCanvas;

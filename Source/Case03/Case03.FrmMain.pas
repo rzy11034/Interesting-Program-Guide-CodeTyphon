@@ -1,6 +1,6 @@
 ﻿unit Case03.FrmMain;
 
-{$mode objfpc}{$H+}
+{$mode ObjFPC}{$H+}
 {$ModeSwitch unicodestrings}
 
 interface
@@ -8,72 +8,45 @@ interface
 uses
   Classes,
   SysUtils,
-  TypInfo,
   DeepStar.Utils,
   Forms,
   Controls,
   Graphics,
   Dialogs,
-  StdCtrls,
   ExtCtrls,
-  Case03.GameData;
+  StdCtrls,
+  LCLType;
 
 type
   TCase03_FrmMain = class(TForm)
     Button1: TButton;
     Button2: TButton;
-    ImageList160x160: TImageList;
-    ImageList160x80: TImageList;
-    ImageList80x80: TImageList;
-    ImageList80x160: TImageList;
+    Button3: TButton;
+    Edit1: TEdit;
+    Image1: TImage;
+    Image2: TImage;
+    Image3: TImage;
+    Image4: TImage;
     Label1: TLabel;
     Label2: TLabel;
-    Panel1: TPanel;
-    Panel2: TPanel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
     Timer1: TTimer;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
-    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
+    procedure Button3Click(Sender: TObject);
+    procedure Edit1KeyPress(Sender: TObject; var Key: char);
     procedure FormCreate(Sender: TObject);
-    procedure FormDestroy(Sender: TObject);
-    procedure Panel1DragDrop(Sender, Source: TObject; X, Y: integer);
-    procedure Panel1DragOver(Sender, Source: TObject; X, Y: integer;
-      State: TDragState; var Accept: boolean);
-    procedure Panel1Paint(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
   private
-    _GameData: TGameData;
-    _ImX: integer;
-    _ImY: integer;
-    _PnX: integer;
-    _PnY: integer;
+    _RandomData, _CardValue: TArr_int;
+    _CardKind: TArr_str;
+    _SpendTime: integer;
+    _StartTime: TTime;
 
-    _JpgCaocao: integer;
-    _JpgBing: integer;
-    _JpgGuanyu: integer;
-    _JpgHuangzhong: integer;
-    _JpgMachao: integer;
-    _JpgZhangfei: integer;
-    _JpgZhaoyun: integer;
-
-    _ImCaocao: TImage;
-    _ImGuanyu: TImage;
-    _ImHuangzhong: TImage;
-    _ImMachao: TImage;
-    _ImZhangfei: TImage;
-    _ImZhaoyun: TImage;
-    _ImBing1: TImage;
-    _ImBing2: TImage;
-    _ImBing3: TImage;
-    _ImBing4: TImage;
-    _startDate: TTime;
-
-    procedure __LoadImage;
-    procedure __InitCheckerBoard;
-    procedure __ImageStartDrag(Sender: TObject; var DragObject: TDragObject);
-    procedure __ImageEndDrag(Sender, Target: TObject; X, Y: integer);
-    procedure __ImageMouseMove(Sender: TObject; Shift: TShiftState; X, Y: integer);
-
+    function __GetFileName: TArr_str;
   public
 
   end;
@@ -84,9 +57,12 @@ var
 implementation
 
 uses
-  Case03.DragObject,
-  Case03.StrConsts,
-  Case03.FrmSplash;
+  Case03.Calculate;
+
+const
+  FILE_PATH = '../../Source/Case02/Resource/';
+  CARD_BLACK = 'BACKY.png';
+  VALID_CHAR = TCalculate.DIGIT_CHAR + TCalculate.OPERATIONAL_CHAR;
 
 {$R *.frm}
 
@@ -94,371 +70,153 @@ uses
 
 procedure TCase03_FrmMain.Button1Click(Sender: TObject);
 var
+  temp: TArr_str;
   i: integer;
-  im: TImage;
 begin
-  _startDate := now;
+  temp := __GetFileName;
+
+  for i := 0 to High(temp) do
+    temp[i] := CrossFixFileName(FILE_PATH + temp[i]);
+
+  Image1.Picture.LoadFromFile(temp[0]);
+  Image2.Picture.LoadFromFile(temp[1]);
+  Image3.Picture.LoadFromFile(temp[2]);
+  Image4.Picture.LoadFromFile(temp[3]);
+
+  Edit1.Text := '';
+  _StartTime := Now;
   Timer1.Enabled := true;
-
-  if _GameData <> nil then
-    FreeAndNil(_GameData);
-  _GameData := TGameData.Create;
-
-  for i := Panel1.ControlCount - 1 downto 0 do
-  begin
-    if Panel1.Controls[i] is TImage then
-    begin
-      im := Panel1.Controls[i] as TImage;
-      FreeAndNil(im);
-    end;
-  end;
-
-  __InitCheckerBoard;
 end;
 
 procedure TCase03_FrmMain.Button2Click(Sender: TObject);
+var
+  clt: TCalculate;
+  res: integer;
+begin
+  if Edit1.Text = '' then Exit;
+
+  clt := TCalculate.Create(Edit1.Text + '#');
+  try
+    res := clt.Calc24;
+
+    if res <> 24 then
+    begin
+      MessageDlg('错了，请重新计算。', mtError, [mbOK], 0);
+      Exit;
+    end
+    else
+    begin
+      MessageDlg('恭喜你，答对了。', mtInformation, [mbOK], 0);
+      Timer1.Enabled := false;
+    end;
+
+    Label6.Caption := Format('结果：%s = %d', [Edit1.Text, clt.Calc24]);
+    Edit1.Text := '';
+  finally
+    clt.Free;
+  end;
+end;
+
+procedure TCase03_FrmMain.Button3Click(Sender: TObject);
 begin
   Close;
 end;
 
-procedure TCase03_FrmMain.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+procedure TCase03_FrmMain.Edit1KeyPress(Sender: TObject; var Key: char);
 begin
-  Case03_FrmSplash.Close;
+  if not (key in VALID_CHAR) and (Ord(Key) <> VK_BACK) then
+    Key := #0;
 end;
 
 procedure TCase03_FrmMain.FormCreate(Sender: TObject);
-begin
-  Self.Color := FRM_COLOR;
-  Self.Caption := STR_GAME_NAME;
-
-  _GameData := TGameData.Create;
-  __LoadImage;
-  __InitCheckerBoard;
-
-  Panel1.Width := FIX_PIXEL * 4;
-  Panel1.Height := FIX_PIXEL * 5;
-  Panel1.Top := 10;
-  Panel1.Left := 10;
-
-  Panel2.Width := Panel1.Width + 20;
-  Panel2.Height := Panel1.Height + 20;
-
-  Label1.Top := Panel2.Top;
-  Label1.Left := Panel2.BaseBounds.Right + 10;
-  Label1.Caption := STR_GAME_BEGIN;
-
-  Label2.Top := Panel2.BaseBounds.Bottom + 10;
-  Label2.Caption := Format(STR_GAME_TIME, [TimeToStr(0)]);
-
-  Button1.Left := Label1.Left + 30;
-  Button1.Top := Label2.Top - 20;
-
-  Button2.Top := Button1.Top;
-  Button2.Left := Button1.BaseBounds.Right + 10;
-
-  Self.Width := Label1.BaseBounds.Right + 10;
-  Self.Height := Button1.BaseBounds.Bottom + 25;
-
-  _startDate := Now;
-end;
-
-procedure TCase03_FrmMain.FormDestroy(Sender: TObject);
-begin
-  _GameData.Free;
-end;
-
-procedure TCase03_FrmMain.Panel1DragDrop(Sender, Source: TObject; X, Y: integer);
-begin
-  _PnX := x;
-  _PnY := y;
-end;
-
-procedure TCase03_FrmMain.Panel1DragOver(Sender, Source: TObject; X, Y: integer;
-  State: TDragState; var Accept: boolean);
 var
-  Control: TControl;
+  str: string;
 begin
-  if Source is TControl then
-    Control := Source as TControl
-  else
-  if Source is TDragControlObject then
-    Control := (Source as TDragControlObject).Control
-  else
-    Control := nil;
+  _SpendTime := 0;
+  Timer1.Enabled := false;
+  Timer1.Interval := 1000;
 
-  Accept := Control is TImage;
-end;
+  Edit1.Text := '';
 
-procedure TCase03_FrmMain.Panel1Paint(Sender: TObject);
-var
-  cvs: TCanvas;
-  jpg: TJPEGImage;
-  rect: TRect;
-begin
-  cvs := Panel1.Canvas;
-
-  jpg := TJPEGImage.Create();
-  try
-    jpg.LoadFromFile(CrossFixFileName(JPG_BACKGROUND_FILE));
-    rect := TRect.Create(0, 0, Panel1.Width, Panel1.Height);
-    cvs.StretchDraw(rect, jpg);
-  finally
-    jpg.Free;
-  end;
+  str := FILE_PATH + CARD_BLACK;
+  Image1.Picture.LoadFromFile(CrossFixFileName(str));
 end;
 
 procedure TCase03_FrmMain.Timer1Timer(Sender: TObject);
 var
-  s: string;
+  _endTime: TTime;
 begin
-  s := TimeToStr(now - _startDate);
-  Label2.Caption := Format(STR_GAME_TIME, [s]);
+  _SpendTime := _SpendTime + 1;
 
-  if _GameData.Completed then
-  begin
-    Timer1.Enabled := false;
-
-    case MessageDlg(STR_GAME_COMPLETED, mtInformation, [mbYes, mbNo], 0) of
-      mrYes: Button1Click(Sender);
-    end;
-  end;
+  _endTime := Now;
+  Label5.Caption := Format('使用时间: %s', [TimeToStr(_endTime - _StartTime)]);
 end;
 
-procedure TCase03_FrmMain.__ImageEndDrag(Sender, Target: TObject; X, Y: integer);
+function TCase03_FrmMain.__GetFileName: TArr_str;
 var
-  dt: TDirection;
-  im: TImage;
-  p: TPoint;
+  res: TArr_str;
+  flag: TArr_bool;
+  i, temp: integer;
 begin
-  im := (Sender as TImage);
+  Randomize;
 
-  p := _GameData.MoveOut(im.Parent, im, _ImX, _ImY);
-  dt := _GameData.Direction;
-  im.Top := p.Y;
-  im.Left := p.X;
+  res := [];
+  _RandomData := [];
+  _CardValue := [];
+  _CardKind := [];
 
-  Caption := GetEnumName(TypeInfo(TDirection), Ord(dt));
-end;
+  SetLength(_RandomData, 4);
+  SetLength(_CardValue, 4);
+  SetLength(_CardKind, 4);
+  SetLength(flag, 52);
 
-procedure TCase03_FrmMain.__ImageMouseMove(Sender: TObject; Shift: TShiftState; X, Y: integer);
-begin
-  _ImX := X;
-  _ImY := Y;
-end;
-
-procedure TCase03_FrmMain.__ImageStartDrag(Sender: TObject; var DragObject: TDragObject);
-var
-  bmp: TBitmap;
-  im: TImage;
-begin
-  im := (Sender as TImage);
-
-  bmp := TBitmap.Create;
-  try
-    bmp.SetSize(im.Width, im.Height);
-    bmp.Assign((Sender as TImage).Picture.Bitmap);
-    DragObject := TDragObjectEx.Create(Sender as TControl, bmp);
-  finally
-    bmp.Free;
-  end;
-end;
-
-procedure TCase03_FrmMain.__InitCheckerBoard;
-var
-  i: integer;
-begin
-  {$REGION '棋子初始化'}
-  _ImMachao := TImage.Create(Self.Panel1);
-  with _ImMachao do
+  i := 0;
+  while i <= High(_RandomData) do
   begin
-    Name := '_ImMachao';
-    Tag := 2;
-    Parent := Self.Panel1;
-    AutoSize := true;
-    Top := 0;
-    Left := 0;
-    ImageList80x160.GetBitmap(_JpgMachao, Picture.Bitmap);
-  end;
+    temp := Random(52);
 
-  _ImCaocao := TImage.Create(Self.Panel1);
-  with _ImCaocao do
-  begin
-    Name := '_ImCaocao';
-    Tag := 4;
-    Parent := Self.Panel1;
-    Width := ImageList160x160.Width;
-    Height := ImageList160x160.Height;
-    Top := 0;
-    Left := FIX_PIXEL;
-    ImageList160x160.GetBitmap(_JpgCaocao, Picture.Bitmap);
-  end;
-
-  _ImZhaoyun := TImage.Create(Self.Panel1);
-  with _ImZhaoyun do
-  begin
-    Name := '_ImZhaoyun';
-    Tag := 2;
-    Parent := Self.Panel1;
-    Width := ImageList80x160.Width;
-    Height := ImageList80x160.Height;
-    Top := 0;
-    Left := FIX_PIXEL * 3;
-    ImageList80x160.GetBitmap(_JpgZhaoyun, Picture.Bitmap);
-  end;
-
-  _ImZhangfei := TImage.Create(Self.Panel1);
-  with _ImZhangfei do
-  begin
-    Name := '_ImZhangfei';
-    Tag := 2;
-    Parent := Self.Panel1;
-    Width := ImageList80x160.Width;
-    Height := ImageList80x160.Height;
-    Top := FIX_PIXEL * 2;
-    Left := 0;
-    ImageList80x160.GetBitmap(_JpgZhangfei, Picture.Bitmap);
-  end;
-
-  _ImGuanyu := TImage.Create(Self.Panel1);
-  with _ImGuanyu do
-  begin
-    Name := '_ImGuanyu';
-    Tag := 3;
-    Parent := Self.Panel1;
-    Width := ImageList160x80.Width;
-    Height := ImageList160x80.Height;
-    Top := FIX_PIXEL * 2;
-    Left := FIX_PIXEL;
-    ImageList160x80.GetBitmap(_JpgGuanyu, Picture.Bitmap);
-  end;
-
-  _ImHuangzhong := TImage.Create(Self.Panel1);
-  with _ImHuangzhong do
-  begin
-    Name := '_ImHuangzhong';
-    Tag := 2;
-    Parent := Self.Panel1;
-    Width := ImageList80x160.Width;
-    Height := ImageList80x160.Height;
-    Top := FIX_PIXEL * 2;
-    Left := FIX_PIXEL * 3;
-    ImageList80x160.GetBitmap(_JpgHuangzhong, Picture.Bitmap);
-  end;
-
-  _ImBing1 := TImage.Create(Self.Panel1);
-  with _ImBing1 do
-  begin
-    Name := '_ImBing1';
-    Tag := 1;
-    Parent := Self.Panel1;
-    Width := ImageList80x80.Width;
-    Height := ImageList80x80.Height;
-    Top := FIX_PIXEL * 4;
-    Left := 0;
-    ImageList80x80.GetBitmap(_JpgBing, Picture.Bitmap);
-  end;
-
-  _ImBing2 := TImage.Create(Self.Panel1);
-  with _ImBing2 do
-  begin
-    Name := '_ImBing2';
-    Tag := 1;
-    Parent := Self.Panel1;
-    Width := ImageList80x80.Width;
-    Height := ImageList80x80.Height;
-    Top := FIX_PIXEL * 3;
-    Left := FIX_PIXEL;
-    ImageList80x80.GetBitmap(_JpgBing, Picture.Bitmap);
-  end;
-
-  _ImBing3 := TImage.Create(Self.Panel1);
-  with _ImBing3 do
-  begin
-    Name := '_ImBing3';
-    Tag := 1;
-    Parent := Self.Panel1;
-    Width := ImageList80x80.Width;
-    Height := ImageList80x80.Height;
-    Top := FIX_PIXEL * 3;
-    Left := FIX_PIXEL * 2;
-    ImageList80x80.GetBitmap(_JpgBing, Picture.Bitmap);
-  end;
-
-  _ImBing4 := TImage.Create(Self.Panel1);
-  with _ImBing4 do
-  begin
-    Name := '_ImBing4';
-    Tag := 1;
-    Parent := Self.Panel1;
-    Width := ImageList80x80.Width;
-    Height := ImageList80x80.Height;
-    Top := FIX_PIXEL * 4;
-    Left := FIX_PIXEL * 3;
-    ImageList80x80.GetBitmap(_JpgBing, Picture.Bitmap);
-  end;
-  {$ENDREGION}
-
-  for i := 0 to Panel1.ControlCount - 1 do
-  begin
-    if Panel1.Controls[i] is TImage then
+    if flag[temp] then
+      Continue
+    else
     begin
-      (Panel1.Controls[i] as TImage).AutoSize := true;
-      (Panel1.Controls[i] as TImage).OnMouseMove := @__ImageMouseMove;
-      (Panel1.Controls[i] as TImage).OnStartDrag := @__ImageStartDrag;
-      (Panel1.Controls[i] as TImage).OnEndDrag := @__ImageEndDrag;
-      (Panel1.Controls[i] as TImage).DragMode := TDragMode.dmAutomatic;
+      _RandomData[i] := temp;
+      flag[temp] := true;
+      i += 1;
     end;
   end;
-end;
 
-procedure TCase03_FrmMain.__LoadImage;
-var
-  jpg: TJPEGImage;
-begin
-  ImageList160x160.Width := FIX_PIXEL * 2;
-  ImageList160x160.Height := FIX_PIXEL * 2;
+  // 黑=S 红=H 梅=C 方=D
+  for i := 0 to High(_RandomData) do
+  begin
+    if _RandomData[i] in [0 * 13..13 + 0 * 13 - 1] then
+      _CardKind[i] := 'S'
+    else if _RandomData[i] in [1 * 13..13 + 1 * 13 - 1] then
+      _CardKind[i] := 'H'
+    else if _RandomData[i] in [2 * 13..13 + 2 * 13 - 1] then
+      _CardKind[i] := 'C'
+    else if _RandomData[i] in [3 * 13..13 + 3 * 13 - 1] then
+      _CardKind[i] := 'D';
 
-  ImageList80x80.Width := FIX_PIXEL;
-  ImageList80x80.Height := FIX_PIXEL;
-
-  ImageList80x160.Width := FIX_PIXEL;
-  ImageList80x160.Height := FIX_PIXEL * 2;
-
-  ImageList160x80.Width := FIX_PIXEL * 2;
-  ImageList160x80.Height := FIX_PIXEL;
-
-  jpg := TJPEGImage.Create;
-  try
-    jpg.LoadFromFile(CrossFixFileName(JPG_CAOCAO_FILE));
-    _JpgCaocao := ImageList160x160.Add(jpg, nil);
-    jpg.FreeImage;
-
-    jpg.LoadFromFile(CrossFixFileName(JPG_BING_FILE));
-    _JpgBing := ImageList80x80.Add(jpg, nil);
-    jpg.FreeImage;
-
-    jpg.LoadFromFile(CrossFixFileName(JPG_GUANYU_FILE_H));
-    _JpgGuanyu := ImageList160x80.add(jpg, nil);
-    jpg.FreeImage;
-
-    jpg.LoadFromFile(CrossFixFileName(JPG_HUANGZHONG_FILE_S));
-    _JpgHuangzhong := ImageList80x160.Add(jpg, nil);
-    jpg.FreeImage;
-
-    jpg.LoadFromFile(CrossFixFileName(JPG_MACHAO_FILE_S));
-    _JpgMachao := ImageList80x160.Add(jpg, nil);
-    jpg.FreeImage;
-
-    jpg.LoadFromFile(CrossFixFileName(JPG_ZHANGFEI_FILE_S));
-    _JpgZhangfei := ImageList80x160.Add(jpg, nil);
-    jpg.FreeImage;
-
-    jpg.LoadFromFile(CrossFixFileName(JPG_ZHAOYUN_FILE_S));
-    _JpgZhaoyun := ImageList80x160.Add(jpg, nil);
-    jpg.FreeImage;
-  finally
-    jpg.Free;
+    _CardValue[i] := _RandomData[i] mod 13 + 1;
   end;
+
+  SetLength(res, 4);
+  for i := 0 to High(_CardValue) do
+  begin
+    case _CardValue[i] of
+      1: res[i] := 'A' + _CardKind[i];
+      2..10: res[i] := _CardValue[i].ToString + _CardKind[i];
+      11: res[i] := 'J' + _CardKind[i];
+      12: res[i] := 'Q' + _CardKind[i];
+      13: res[i] := 'K' + _CardKind[i];
+      else
+        raise Exception.Create('牌面数字有错！');
+    end;
+
+    res[i] += '.png';
+  end;
+
+  Result := res;
 end;
 
 end.

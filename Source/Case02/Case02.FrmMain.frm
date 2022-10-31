@@ -1,135 +1,110 @@
-﻿object Case02_FrmMain: TCase02_FrmMain
+object Case02_FrmMain: TCase02_FrmMain
   Left = 86
-  Height = 447
+  Height = 502
   Top = 85
-  Width = 770
-  BorderIcons = [biSystemMenu]
+  Width = 835
   BorderStyle = bsSingle
-  Caption = '速算24'
-  ClientHeight = 447
-  ClientWidth = 770
+  Caption = '“幸运52”模拟小游戏'
+  ClientHeight = 502
+  ClientWidth = 835
+  DesignTimePPI = 120
   Font.CharSet = ANSI_CHARSET
-  Font.Height = -14
+  Font.Height = -18
   Font.Pitch = fpVariable
   Font.Quality = fqDraft
+  OnClose = FormClose
   OnCreate = FormCreate
   Position = poScreenCenter
   LCLVersion = '7.9'
   object Label1: TLabel
-    Left = 19
-    Height = 26
-    Top = 205
-    Width = 736
-    AutoSize = False
-    Caption = '1. 单击“开始游戏”按钮，游戏开始，系统将发出4张扑克牌'
-    WordWrap = True
+    Left = 16
+    Height = 24
+    Top = 16
+    Width = 443
+    Caption = '1.单击“开始游戏”按钮，游戏开始，系统将给出商品信息'
   end
   object Label2: TLabel
-    Left = 19
-    Height = 38
-    Top = 228
-    Width = 736
-    AutoSize = False
-    Caption = '2. 要求用户利用扑克牌显示的数字，通过加减乘除运算，以最快的速度得出24(可以使用括号)，JQKA算做1。然后在文本框中写好表达式，接着单击“计算”按钮'
-    WordWrap = True
+    Left = 16
+    Height = 24
+    Top = 48
+    Width = 515
+    Caption = '2.请迅速在文本框中输入您估计的商品价格，然后单击“确定”按钮'
   end
   object Label3: TLabel
-    Left = 19
-    Height = 66
-    Top = 270
-    Width = 736
+    Left = 16
+    Height = 56
+    Top = 80
+    Width = 768
     AutoSize = False
-    Caption = '3. 这时系统会计算输入表达式的结果，告诉用户是对还是错了。在弹出的对话框中单击“确定”按钮，如果错了可以再次输入新的表达式，重复上一步。直到您的表达式正确，这时系统会恭喜算对了！'
+    Caption = '3.这时系统会提示您的估计是高了还是低了，在弹出的对话框中单击“确定”按钮，再次输入新的估计值，重复上一步。直到您的估计值正确，这时系统会恭喜您中奖了'
     WordWrap = True
   end
-  object Image1: TImage
-    Left = 32
-    Height = 160
-    Top = 19
-    Width = 130
-    Stretch = True
-  end
-  object Image2: TImage
-    Left = 168
-    Height = 160
-    Top = 19
-    Width = 130
-    Stretch = True
-  end
-  object Image3: TImage
-    Left = 304
-    Height = 160
-    Top = 19
-    Width = 130
-    Stretch = True
-  end
-  object Image4: TImage
-    Left = 440
-    Height = 160
-    Top = 19
-    Width = 130
-    Stretch = True
-  end
   object Label4: TLabel
-    Left = 19
-    Height = 20
-    Top = 344
-    Width = 140
-    Caption = '在下面输入数学表达式'
-  end
-  object Edit1: TEdit
-    Left = 19
-    Height = 28
-    Top = 368
-    Width = 557
-    OnKeyPress = Edit1KeyPress
-    TabOrder = 0
-    Text = 'Edit1'
+    Left = 312
+    Height = 24
+    Top = 256
+    Width = 338
+    Caption = '请单击“确定”按钮对您的估计值进行确定：'
   end
   object Label5: TLabel
-    Left = 19
-    Height = 20
-    Top = 407
-    Width = 109
-    Caption = '使用时间: 0:00:00'
+    Left = 312
+    Height = 24
+    Top = 216
+    Width = 324
+    Caption = '请在文本框中输入您对商品价格的估计：'
   end
   object Button1: TButton
-    Left = 608
-    Height = 25
-    Top = 344
-    Width = 75
-    Caption = '开始游戏'
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideRight.Side = asrCenter
+    Left = 689
+    Height = 31
+    Top = 256
+    Width = 94
+    Caption = '(&Y) 确定'
     OnClick = Button1Click
-    TabOrder = 1
+    TabOrder = 0
   end
   object Button2: TButton
-    Left = 608
-    Height = 25
-    Top = 375
-    Width = 75
-    Caption = '计算'
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideRight.Side = asrCenter
+    Left = 689
+    Height = 31
+    Top = 296
+    Width = 94
+    Caption = '开始游戏'
     OnClick = Button2Click
-    TabOrder = 2
+    TabOrder = 1
   end
   object Button3: TButton
-    Left = 608
-    Height = 25
-    Top = 407
-    Width = 75
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideRight.Side = asrCenter
+    Left = 689
+    Height = 31
+    Top = 336
+    Width = 94
     Caption = '退出游戏'
-    OnClick = Button3Click
-    TabOrder = 3
+    TabOrder = 2
   end
   object Label6: TLabel
-    Left = 160
-    Height = 20
-    Top = 407
-    Width = 42
-    Caption = '结果：'
+    Left = 16
+    Height = 24
+    Top = 160
+    Width = 72
+    Caption = '商品.........'
   end
-  object Timer1: TTimer
-    OnTimer = Timer1Timer
-    Left = 262
-    Top = 358
+  object Image1: TImage
+    Left = 14
+    Height = 281
+    Top = 199
+    Width = 282
+    Stretch = True
+  end
+  object Edit1: TEdit
+    Left = 656
+    Height = 32
+    Top = 216
+    Width = 160
+    OnKeyDown = Edit1KeyDown
+    TabOrder = 3
   end
 end

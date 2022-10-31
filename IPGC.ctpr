@@ -28,7 +28,7 @@
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <OtherUnitFiles Value="Source\Case01;Source\Case02;Source;Source\Case03"/>
+            <OtherUnitFiles Value="Source;Source\Case05;Source\Case02;Source\Case03;Source\Case04"/>
             <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
           <CodeGeneration>
@@ -70,10 +70,14 @@
         <IsPartOfProject Value="True"/>
       </Unit>
       <Unit>
-        <Filename Value="Source\Case01\Case01.FrmMain.pas"/>
+        <Filename Value="Source\IPGC.Main.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Case05\Case05.FrmMain.pas"/>
         <FRMtype Value="200"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="Case01_FrmMain"/>
+        <ComponentName Value="Case05_FrmMain"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit>
@@ -86,11 +90,7 @@
         <ResourceBaseClass Value="Form"/>
       </Unit>
       <Unit>
-        <Filename Value="Source\Case02\Case02.Calculate.pas"/>
-        <IsPartOfProject Value="True"/>
-      </Unit>
-      <Unit>
-        <Filename Value="Source\IPGC.Main.pas"/>
+        <Filename Value="Source\Case03\Case03.Calculate.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
       <Unit>
@@ -102,22 +102,30 @@
         <ResourceBaseClass Value="Form"/>
       </Unit>
       <Unit>
-        <Filename Value="Source\Case03\Case03.StrConsts.pas"/>
+        <Filename Value="Source\Case04\Case04.DragObject.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
       <Unit>
-        <Filename Value="Source\Case03\Case03.DragObject.pas"/>
+        <Filename Value="Source\Case04\Case04.GameData.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
       <Unit>
-        <Filename Value="Source\Case03\Case03.GameData.pas"/>
+        <Filename Value="Source\Case04\Case04.StrConsts.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
       <Unit>
-        <Filename Value="Source\Case03\Case03.FrmSplash.pas"/>
+        <Filename Value="Source\Case04\Case04.FrmMain.pas"/>
         <FRMtype Value="200"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="Case03_FrmSplash"/>
+        <ComponentName Value="Case04_FrmMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Case04\Case04.FrmSplash.pas"/>
+        <FRMtype Value="200"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Case04_FrmSplash"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit>
@@ -131,7 +139,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="Source\Case01;Source\Case02;Source;Source\Case03"/>
+      <OtherUnitFiles Value="Source;Source\Case02;Source\Case03;Source\Case05;Source\Case04"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Parsing>

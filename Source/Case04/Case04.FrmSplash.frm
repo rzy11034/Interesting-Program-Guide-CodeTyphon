@@ -1,11 +1,11 @@
-﻿object Case03_FrmSplash: TCase03_FrmSplash
+object Case04_FrmSplash: TCase04_FrmSplash
   Left = 86
   Height = 665
   Top = 85
   Width = 850
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
-  Caption = 'Case03_FrmSplash'
+  Caption = 'Case04_FrmSplash'
   ClientHeight = 665
   ClientWidth = 850
   DesignTimePPI = 120

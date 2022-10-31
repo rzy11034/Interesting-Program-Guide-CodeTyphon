@@ -16,14 +16,16 @@ uses
   LCLType,
   Forms,
   IPGC.Main,
-  Case01.FrmMain,
   Case02.FrmMain,
-  Case02.Calculate,
+  Case03.Calculate,
   Case03.FrmMain,
-  Case03.StrConsts,
-  Case03.DragObject,
-  Case03.GameData,
-  Case03.FrmSplash;
+  Case04.DragObject,
+  Case04.FrmMain,
+  Case04.FrmSplash,
+  Case04.GameData,
+  Case04.StrConsts,
+  Case05.FrmMain;
+
 
 {$R *.res}
 
@@ -52,6 +54,6 @@ begin
   RequireDerivedFormResource := true;
   Application.Scaled:=True;
   Application.Initialize;
-  Application.CreateForm(TCase03_FrmSplash, Case03_FrmSplash);
+  Application.CreateForm(TCase04_FrmMain, Case04_FrmMain);
   Application.Run;
 end.
