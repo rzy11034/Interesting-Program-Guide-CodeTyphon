@@ -52,8 +52,7 @@ begin
   TranslateLCL;
 
   RequireDerivedFormResource := true;
-  Application.Scaled:=True;
   Application.Initialize;
-  Application.CreateForm(TCase04_FrmMain, Case04_FrmMain);
+  Application.CreateForm(TCase05_FrmMain, Case05_FrmMain);
   Application.Run;
 end.

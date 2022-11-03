@@ -6,7 +6,6 @@
     <General>
       <SessionStorage Value="InProjectDir"/>
       <Title Value="IPGC"/>
-      <Scaled Value="True"/>
       <ResourceType Value="res"/>
       <UseXPManifest Value="True"/>
       <XPManifest>
@@ -56,6 +55,9 @@
       <FormatVersion Value="2"/>
     </RunParams>
     <RequiredPackages>
+      <Item>
+        <PackageName Value="lz_vlc"/>
+      </Item>
       <Item>
         <PackageName Value="DeepStar_Lib"/>
       </Item>
