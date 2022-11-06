@@ -16,8 +16,6 @@ uses
   Menus,
   ComCtrls,
   ActnList,
-  StdActns,
-  StdCtrls,
   lclvlc,
   vlc;
 
@@ -32,7 +30,17 @@ type
     ActionContral: TAction;
     ActionPlay: TAction;
     ActionList1: TActionList;
+    ImageList1: TImageList;
     OpenDialog1: TOpenDialog;
+    ToolBar1: TToolBar;
+    ToolButton1: TToolButton;
+    ToolButton2: TToolButton;
+    ToolButton3: TToolButton;
+    ToolButton4: TToolButton;
+    ToolButton5: TToolButton;
+    ToolButton6: TToolButton;
+    ToolButton7: TToolButton;
+    ToolButton8: TToolButton;
     VLCPlayer: TLCLVLCPlayer;
     MainMenu1: TMainMenu;
     MenuItem1: TMenuItem;
@@ -52,13 +60,20 @@ type
     TrackBar1: TTrackBar;
     TrackBar2: TTrackBar;
     procedure ActionContralExecute(Sender: TObject);
+    procedure ActionExitExecute(Sender: TObject);
     procedure ActionMediaExecute(Sender: TObject);
     procedure ActionOpenExecute(Sender: TObject);
+    procedure ActionPauseExecute(Sender: TObject);
     procedure ActionPlayExecute(Sender: TObject);
+    procedure ActionStopExecute(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
+    procedure Timer1Timer(Sender: TObject);
   private
     _VlcLib: TVLCLibrary;
     _FileName: string;
+    _VideoLength: QWord;
+    _Frm: TFrame;
   public
 
   end;
@@ -72,6 +87,9 @@ const
   MEDIA_PATH = '..\..\Source\Case05\media';
   LIB_PATH = '..\..\Source\Case05\Runtimes\VLC';
 
+  TOTAL_TIME = '时长：%s';
+  CURRENT_TIME = '当前播放：%s';
+
 {$R *.frm}
 
 { TCase05_FrmMain }
@@ -79,6 +97,11 @@ const
 procedure TCase05_FrmMain.ActionContralExecute(Sender: TObject);
 begin
   Exit;
+end;
+
+procedure TCase05_FrmMain.ActionExitExecute(Sender: TObject);
+begin
+  Close;
 end;
 
 procedure TCase05_FrmMain.ActionMediaExecute(Sender: TObject);
@@ -93,20 +116,89 @@ begin
   if OpenDialog1.Execute then
   begin
     _FileName := OpenDialog1.FileName;
-    VLCPlayer.PlayFile(_FileName);
+    ActionPlay.Execute;
+  end;
+end;
+
+procedure TCase05_FrmMain.ActionPauseExecute(Sender: TObject);
+begin
+  if VLCPlayer.Playing then
+  begin
+    VLCPlayer.Pause;
+    Timer1.Enabled := false;
+    ActionPause.Caption := '取消暂停(&P)';
+  end
+  else
+  begin
+    VLCPlayer.Pause;
+    Timer1.Enabled := true;
+    ActionPause.Caption := '暂停(&P)';
   end;
 end;
 
 procedure TCase05_FrmMain.ActionPlayExecute(Sender: TObject);
+var
+  tempTime: TTime;
 begin
+  if _Frm <> nil then
+    FreeAndNil(_Frm);
+
+  _Frm := TFrame.Create(Self);
+  _Frm.Parent := Self.Panel1;
+  _Frm.Align := TAlign.alClient;
+
+  VLCPlayer.ParentWindow := _Frm;
   VLCPlayer.PlayFile(_FileName);
+
+  Sleep(1000);
+  _VideoLength := VLCPlayer.VideoLength;
+
+  tempTime := VLCTimeToDateTime(_VideoLength);
+
+  with StatusBar1 do
+  begin
+    Panels[0].Text := Format(TOTAL_TIME, [TimeToStr(tempTime)]);
+    Panels[2].Text := _FileName;
+  end;
+
+  Timer1.Enabled := true;
+end;
+
+procedure TCase05_FrmMain.ActionStopExecute(Sender: TObject);
+var
+  i: integer;
+begin
+  if _Frm <> nil then
+    FreeAndNil(_Frm);
+
+  VLCPlayer.Stop;
+
+  for i := 0 to StatusBar1.Panels.Count - 1 do
+    StatusBar1.Panels[i].Text := '';
+
+  Timer1.Enabled := false;
 end;
 
 procedure TCase05_FrmMain.FormCreate(Sender: TObject);
 begin
+  Panel1.Color := clBlack;
+
   _VlcLib := TVLCLibrary.Create(Self);
   _VlcLib.LibraryPath := LIB_PATH + PathDelim;
   _VlcLib.Initialize;
+end;
+
+procedure TCase05_FrmMain.FormDestroy(Sender: TObject);
+begin
+  _VlcLib.Free;
+end;
+
+procedure TCase05_FrmMain.Timer1Timer(Sender: TObject);
+var
+  tempTime: TTime;
+begin
+  tempTime := VLCTimeToDateTime(VLCPlayer.VideoPosition);
+  StatusBar1.Panels[1].Text := Format(CURRENT_TIME, [TimeToStr(tempTime)]);
 end;
 
 end.
