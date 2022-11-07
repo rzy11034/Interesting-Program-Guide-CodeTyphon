@@ -107,27 +107,32 @@ object Case05_FrmMain: TCase05_FrmMain
       Left = 0
       Height = 40
       Top = 0
-      Width = 662
+      Width = 626
+      Max = 100
       Position = 0
       TickMarks = tmBoth
-      Align = alLeft
+      Align = alClient
       TabOrder = 0
     end
-    object TrackBar2: TTrackBar
-      Left = 750
+    object TrackBarAudioVolume: TTrackBar
+      Left = 670
       Height = 40
       Top = 0
-      Width = 100
-      Position = 0
+      Width = 180
+      Frequency = 4
+      Max = 100
+      Min = 1
+      OnChange = TrackBarAudioVolumeChange
+      Position = 1
       TickMarks = tmTopLeft
       Align = alRight
       TabOrder = 1
     end
     object SpeedButton1: TSpeedButton
-      Left = 711
+      Left = 626
       Height = 40
       Top = 0
-      Width = 39
+      Width = 44
       Align = alRight
       Color = clNone
       Images = ImageList2

@@ -8,6 +8,8 @@ interface
 uses
   Classes,
   SysUtils,
+  Math,
+  Windows,
   Forms,
   Controls,
   Graphics,
@@ -46,7 +48,7 @@ type
     ToolButton7: TToolButton;
     ToolButton8: TToolButton;
     TrackBar1: TTrackBar;
-    TrackBar2: TTrackBar;
+    TrackBarAudioVolume: TTrackBar;
     VLCPlayer: TLCLVLCPlayer;
     MainMenu1: TMainMenu;
     MenuItem1: TMenuItem;
@@ -73,11 +75,13 @@ type
     procedure FormDestroy(Sender: TObject);
     procedure SpeedButton1Click(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
+    procedure TrackBarAudioVolumeChange(Sender: TObject);
   private
     _VlcLib: TVLCLibrary;
     _FileName: string;
     _VideoLength: QWord;
     _Frm: TFrame;
+    _AudioVolume: -1..100;
   public
 
   end;
@@ -156,6 +160,11 @@ begin
   Sleep(1000);
   _VideoLength := VLCPlayer.VideoLength;
 
+  if _AudioVolume = -1 then
+    _AudioVolume := VLCPlayer.AudioVolume
+  else
+    VLCPlayer.AudioVolume := _AudioVolume;
+
   tempTime := VLCTimeToDateTime(_VideoLength);
 
   with StatusBar1 do
@@ -185,6 +194,8 @@ end;
 procedure TCase05_FrmMain.FormCreate(Sender: TObject);
 begin
   Panel1.Color := clBlack;
+  _AudioVolume := 50;
+  TrackBarAudioVolume.Position := _AudioVolume;
 
   _VlcLib := TVLCLibrary.Create(Self);
   _VlcLib.LibraryPath := LIB_PATH + PathDelim;
@@ -201,10 +212,16 @@ end;
 
 procedure TCase05_FrmMain.SpeedButton1Click(Sender: TObject);
 begin
-  if SpeedButton1.ImageIndex = 0 then
-    SpeedButton1.ImageIndex := 1
-  else
+  if VLCPlayer.AudioMuted = false then
+  begin
+    VLCPlayer.AudioMuted := true;
     SpeedButton1.ImageIndex := 0;
+  end
+  else
+  begin
+    VLCPlayer.AudioMuted := false;
+    SpeedButton1.ImageIndex := 1;
+  end;
 end;
 
 procedure TCase05_FrmMain.Timer1Timer(Sender: TObject);
@@ -213,6 +230,14 @@ var
 begin
   tempTime := VLCTimeToDateTime(VLCPlayer.VideoPosition);
   StatusBar1.Panels[1].Text := Format(CURRENT_TIME, [TimeToStr(tempTime)]);
+
+  Caption := VLCPlayer.VideoPosition.ToString;
+end;
+
+procedure TCase05_FrmMain.TrackBarAudioVolumeChange(Sender: TObject);
+begin
+  VLCPlayer.AudioVolume := TrackBarAudioVolume.Position;
+  WriteLn(TrackBarAudioVolume.Position);
 end;
 
 end.
