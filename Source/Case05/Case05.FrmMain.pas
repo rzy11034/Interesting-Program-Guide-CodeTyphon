@@ -16,6 +16,7 @@ uses
   Menus,
   ComCtrls,
   ActnList,
+  Buttons,
   lclvlc,
   vlc;
 
@@ -31,7 +32,10 @@ type
     ActionPlay: TAction;
     ActionList1: TActionList;
     ImageList1: TImageList;
+    ImageList2: TImageList;
     OpenDialog1: TOpenDialog;
+    Panel2: TPanel;
+    SpeedButton1: TSpeedButton;
     ToolBar1: TToolBar;
     ToolButton1: TToolButton;
     ToolButton2: TToolButton;
@@ -41,6 +45,8 @@ type
     ToolButton6: TToolButton;
     ToolButton7: TToolButton;
     ToolButton8: TToolButton;
+    TrackBar1: TTrackBar;
+    TrackBar2: TTrackBar;
     VLCPlayer: TLCLVLCPlayer;
     MainMenu1: TMainMenu;
     MenuItem1: TMenuItem;
@@ -52,13 +58,10 @@ type
     MenuItem7: TMenuItem;
     MenuItem8: TMenuItem;
     Panel1: TPanel;
-    ProgressBar1: TProgressBar;
     Separator1: TMenuItem;
     Separator2: TMenuItem;
     StatusBar1: TStatusBar;
     Timer1: TTimer;
-    TrackBar1: TTrackBar;
-    TrackBar2: TTrackBar;
     procedure ActionContralExecute(Sender: TObject);
     procedure ActionExitExecute(Sender: TObject);
     procedure ActionMediaExecute(Sender: TObject);
@@ -68,6 +71,7 @@ type
     procedure ActionStopExecute(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
+    procedure SpeedButton1Click(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
   private
     _VlcLib: TVLCLibrary;
@@ -140,8 +144,7 @@ procedure TCase05_FrmMain.ActionPlayExecute(Sender: TObject);
 var
   tempTime: TTime;
 begin
-  if _Frm <> nil then
-    FreeAndNil(_Frm);
+  ActionStop.Execute;
 
   _Frm := TFrame.Create(Self);
   _Frm.Parent := Self.Panel1;
@@ -186,11 +189,22 @@ begin
   _VlcLib := TVLCLibrary.Create(Self);
   _VlcLib.LibraryPath := LIB_PATH + PathDelim;
   _VlcLib.Initialize;
+
+  _FileName := MEDIA_PATH + PathDelim + 'small.mp4';
+  ActionPlay.Execute;
 end;
 
 procedure TCase05_FrmMain.FormDestroy(Sender: TObject);
 begin
   _VlcLib.Free;
+end;
+
+procedure TCase05_FrmMain.SpeedButton1Click(Sender: TObject);
+begin
+  if SpeedButton1.ImageIndex = 0 then
+    SpeedButton1.ImageIndex := 1
+  else
+    SpeedButton1.ImageIndex := 0;
 end;
 
 procedure TCase05_FrmMain.Timer1Timer(Sender: TObject);

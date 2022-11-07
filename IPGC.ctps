@@ -36,9 +36,9 @@
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="140"/>
-        <CursorPos X="53" Y="62"/>
-        <UsageCount Value="44"/>
+        <TopLine Value="184"/>
+        <CursorPos X="30" Y="207"/>
+        <UsageCount Value="49"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -53,7 +53,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="31"/>
         <CursorPos X="23" Y="9"/>
-        <UsageCount Value="43"/>
+        <UsageCount Value="48"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case03\Case03.Calculate.pas"/>
@@ -61,7 +61,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <CursorPos X="28" Y="10"/>
-        <UsageCount Value="43"/>
+        <UsageCount Value="48"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case03\Case03.FrmMain.pas"/>
@@ -74,14 +74,14 @@
         <WindowIndex Value="0"/>
         <TopLine Value="124"/>
         <CursorPos X="26" Y="140"/>
-        <UsageCount Value="43"/>
+        <UsageCount Value="48"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case04\Case04.DragObject.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <UsageCount Value="43"/>
+        <UsageCount Value="48"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case04\Case04.GameData.pas"/>
@@ -90,7 +90,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="8"/>
         <CursorPos X="16" Y="81"/>
-        <UsageCount Value="43"/>
+        <UsageCount Value="48"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case04\Case04.StrConsts.pas"/>
@@ -99,7 +99,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="7"/>
         <CursorPos X="15" Y="26"/>
-        <UsageCount Value="43"/>
+        <UsageCount Value="48"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case04\Case04.FrmMain.pas"/>
@@ -111,7 +111,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <CursorPos X="45" Y="7"/>
-        <UsageCount Value="43"/>
+        <UsageCount Value="48"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case04\Case04.FrmSplash.pas"/>
@@ -124,7 +124,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="42"/>
         <CursorPos X="25" Y="46"/>
-        <UsageCount Value="43"/>
+        <UsageCount Value="48"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case01\Case01.FrmMain.pas"/>
@@ -766,11 +766,12 @@
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\packages\libvlc\src\vlc.pp"/>
         <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
+        <EditorIndex Value="4"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="397"/>
-        <CursorPos X="22" Y="420"/>
-        <UsageCount Value="15"/>
+        <TopLine Value="1251"/>
+        <CursorPos X="23" Y="1255"/>
+        <UsageCount Value="17"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\packages_lz\lz_vlc\source\lclvlc.pp"/>
@@ -865,87 +866,7 @@
         <UsageCount Value="10"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="28">
-      <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="26" TopLine="19"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="27" TopLine="19"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="28" TopLine="19"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="29" Column="28" TopLine="19"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="26" TopLine="19"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="27" TopLine="19"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="28" TopLine="19"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="29" Column="28" TopLine="19"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="26" TopLine="19"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="27" TopLine="19"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="28" TopLine="19"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="29" Column="30" TopLine="19"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="26" TopLine="19"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="27" TopLine="19"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="28" TopLine="19"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="29" TopLine="19"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="23" Column="15" TopLine="19"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="26" TopLine="19"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="27" TopLine="19"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\IPGC.Main.pas"/>
-        <Caret Line="28" TopLine="19"/>
-      </Position>
+    <JumpHistory HistoryIndex="29">
       <Position>
         <Filename Value="Source\IPGC.Main.pas"/>
         <Caret Line="29" Column="28" TopLine="19"/>
@@ -981,6 +902,90 @@
       <Position>
         <Filename Value="Source\IPGC.Main.pas"/>
         <Caret Line="29" Column="32" TopLine="19"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case05\Case05.FrmMain.pas"/>
+        <Caret Line="175" Column="7" TopLine="133"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case05\Case05.FrmMain.pas"/>
+        <Caret Line="211" TopLine="190"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case05\Case05.FrmMain.pas"/>
+        <Caret Line="216" Column="3" TopLine="190"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case05\Case05.FrmMain.pas"/>
+        <Caret Line="173" Column="16" TopLine="156"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case05\Case05.FrmMain.pas"/>
+        <Caret Line="172" Column="16" TopLine="155"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case05\Case05.FrmMain.pas"/>
+        <Caret Line="171" Column="16" TopLine="154"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case05\Case05.FrmMain.pas"/>
+        <Caret Line="172" Column="16" TopLine="155"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case05\Case05.FrmMain.pas"/>
+        <Caret Line="171" Column="16" TopLine="154"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case05\Case05.FrmMain.pas"/>
+        <Caret Line="170" Column="16" TopLine="153"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case05\Case05.FrmMain.pas"/>
+        <Caret Line="171" Column="16" TopLine="154"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case05\Case05.FrmMain.pas"/>
+        <Caret Line="172" Column="16" TopLine="155"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case05\Case05.FrmMain.pas"/>
+        <Caret Line="173" Column="16" TopLine="156"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case05\Case05.FrmMain.pas"/>
+        <Caret Line="174" Column="16" TopLine="157"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case05\Case05.FrmMain.pas"/>
+        <Caret Line="175" Column="16" TopLine="158"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case05\Case05.FrmMain.pas"/>
+        <Caret Line="174" Column="16" TopLine="157"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case05\Case05.FrmMain.pas"/>
+        <Caret Line="176" Column="16" TopLine="159"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case05\Case05.FrmMain.pas"/>
+        <Caret Line="203" Column="8" TopLine="183"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case05\Case05.FrmMain.pas"/>
+        <Caret Line="206" Column="33" TopLine="186"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case05\Case05.FrmMain.pas"/>
+        <Caret Line="207" Column="30" TopLine="184"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case05\Case05.FrmMain.pas"/>
+        <Caret Line="208" Column="30" TopLine="185"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case05\Case05.FrmMain.pas"/>
+        <Caret Line="207" Column="30" TopLine="184"/>
       </Position>
     </JumpHistory>
     <RunParams>

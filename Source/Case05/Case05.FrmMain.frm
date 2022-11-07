@@ -1,13 +1,12 @@
 object Case05_FrmMain: TCase05_FrmMain
   Left = 86
-  Height = 678
+  Height = 542
   Top = 85
-  Width = 1063
+  Width = 850
   BorderStyle = bsSingle
   Caption = '多媒体播放器'
-  ClientHeight = 653
-  ClientWidth = 1063
-  DesignTimePPI = 120
+  ClientHeight = 522
+  ClientWidth = 850
   Menu = MainMenu1
   OnCreate = FormCreate
   OnDestroy = FormDestroy
@@ -15,106 +14,126 @@ object Case05_FrmMain: TCase05_FrmMain
   LCLVersion = '7.9'
   object Panel1: TPanel
     Left = 0
-    Height = 566
-    Top = 33
-    Width = 1063
+    Height = 434
+    Top = 26
+    Width = 850
     Align = alClient
     ParentColor = False
     TabOrder = 0
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Height = 29
-    Top = 624
-    Width = 1063
+    Height = 22
+    Top = 500
+    Width = 850
     Panels = <    
+      item
+        Width = 96
+      end    
       item
         Width = 120
       end    
       item
-        Width = 150
-      end    
-      item
-        Width = 62
+        Width = 50
       end>
     SimplePanel = False
   end
-  object ProgressBar1: TProgressBar
-    Left = 0
-    Height = 25
-    Top = 599
-    Width = 1063
-    Align = alBottom
-    TabOrder = 4
-  end
   object ToolBar1: TToolBar
     Left = 0
-    Height = 33
+    Height = 26
     Top = 0
-    Width = 1063
+    Width = 850
     Caption = 'ToolBar1'
     Images = ImageList1
-    TabOrder = 5
+    TabOrder = 2
     object ToolButton1: TToolButton
       Left = 1
       Top = 2
       Action = ActionExit
     end
     object ToolButton2: TToolButton
-      Left = 30
+      Left = 24
       Top = 2
       Action = ActionOpen
     end
     object ToolButton3: TToolButton
-      Left = 59
-      Height = 28
+      Left = 47
+      Height = 22
       Top = 2
       Caption = 'ToolButton3'
       Style = tbsDivider
     end
     object ToolButton4: TToolButton
-      Left = 64
+      Left = 52
       Top = 2
       Action = ActionPlay
     end
     object ToolButton5: TToolButton
-      Left = 93
+      Left = 75
       Top = 2
       Action = ActionPause
     end
     object ToolButton6: TToolButton
-      Left = 122
+      Left = 98
       Top = 2
       Action = ActionStop
     end
     object ToolButton7: TToolButton
-      Left = 151
-      Height = 28
+      Left = 121
+      Height = 22
       Top = 2
       ImageIndex = 5
       Style = tbsDivider
     end
     object ToolButton8: TToolButton
-      Left = 156
+      Left = 126
       Top = 2
       Action = ActionRecord
     end
   end
-  object TrackBar2: TTrackBar
-    Left = 416
-    Height = 31
-    Top = 2
-    Width = 192
-    Position = 0
+  object Panel2: TPanel
+    Left = 0
+    Height = 40
+    Top = 460
+    Width = 850
+    Align = alBottom
+    BevelOuter = bvNone
+    ClientHeight = 40
+    ClientWidth = 850
+    Color = clBtnFace
+    ParentColor = False
     TabOrder = 3
-  end
-  object TrackBar1: TTrackBar
-    Left = 216
-    Height = 31
-    Top = 2
-    Width = 208
-    Position = 0
-    TabOrder = 2
+    object TrackBar1: TTrackBar
+      Left = 0
+      Height = 40
+      Top = 0
+      Width = 662
+      Position = 0
+      TickMarks = tmBoth
+      Align = alLeft
+      TabOrder = 0
+    end
+    object TrackBar2: TTrackBar
+      Left = 750
+      Height = 40
+      Top = 0
+      Width = 100
+      Position = 0
+      TickMarks = tmTopLeft
+      Align = alRight
+      TabOrder = 1
+    end
+    object SpeedButton1: TSpeedButton
+      Left = 711
+      Height = 40
+      Top = 0
+      Width = 39
+      Align = alRight
+      Color = clNone
+      Images = ImageList2
+      ImageIndex = 1
+      OnClick = SpeedButton1Click
+    end
   end
   object VLCPlayer: TLCLVLCPlayer
     AudioDelay = -1
@@ -125,19 +144,19 @@ object Case05_FrmMain: TCase05_FrmMain
     FitWindow = False
     FullScreenMode = False
     UseEvents = False
-    Left = 224
-    Top = 120
+    Left = 179
+    Top = 96
   end
   object Timer1: TTimer
     Enabled = False
     OnTimer = Timer1Timer
-    Left = 512
-    Top = 120
+    Left = 410
+    Top = 96
   end
   object MainMenu1: TMainMenu
     Images = ImageList1
-    Left = 128
-    Top = 120
+    Left = 102
+    Top = 96
     object MenuItem1: TMenuItem
       Action = ActionMedia
       object MenuItem2: TMenuItem
@@ -171,8 +190,8 @@ object Case05_FrmMain: TCase05_FrmMain
   end
   object ActionList1: TActionList
     Images = ImageList1
-    Left = 48
-    Top = 120
+    Left = 38
+    Top = 96
     object ActionOpen: TAction
       Category = '控制'
       Caption = '打开(&O)'
@@ -221,12 +240,12 @@ object Case05_FrmMain: TCase05_FrmMain
     end
   end
   object OpenDialog1: TOpenDialog
-    Left = 304
-    Top = 120
+    Left = 243
+    Top = 96
   end
   object ImageList1: TImageList
-    Left = 400
-    Top = 120
+    Left = 320
+    Top = 96
     Bitmap = {
       4C7A060000001000000010000000B10900000000000078DADD980D58CCD91EC7
       FFCB65F5D8AB17BB14A9A6D821B5CA884AEC6EB5EE122B76515D62D71AEEC386
@@ -307,6 +326,36 @@ object Case05_FrmMain: TCase05_FrmMain
       E4ECFDAF3EADE7EE9A9429D616AE98838B4801F5840ABA7D6DED2061773DD39A
       1429C6EF8D772F57D853BF02C53D1228DE0B5F12DAD799D67FCF3D54B405AF00
       EBFE03297A336B
+    }
+  end
+  object ImageList2: TImageList
+    Height = 32
+    Width = 32
+    Left = 712
+    Top = 408
+    Bitmap = {
+      4C7A020000002000000020000000960200000000000078DAED97B18FCC5110C7
+      BF21E12804399C8EE4824A444481E63ADDE92855A794FB0FB4C2251A0A0A0ACE
+      FDDE6FB942684970CEE5E2DCFE767F8B251A7B48905C4184C4CFCC667EF2EEE5
+      F75B57ECBCDDE21593BCCC7BFBFBCCCE9B9937936519B220415629CD9BD89418
+      3CAB1964963CF6C136066B897DDF61B7C5079F3813C2FB523718169D173EF14E
+      0BEB572DC28865933A9FD8C788F19339B41E737CA2CA6FDCC62EFAFE67E14C14
+      DC4957F8CD07585F8F7181BEB564C5D512F9FA13AF39EE38FEB4F8C4395F14D7
+      6D89F091F3AE242657F03917E98EE617EF62BB7B9675BC5794AFF9FF4E621CB1
+      6C3A2ADF6F75C809973F27FE4A6C1B78CD3A393FB75A3FFECFBFEEFE0B836DF4
+      1FABA26FA477B0D3D5D17A488B5F60C31B5AA79DD8DDE6E736D0FDA5561C35CB
+      D8BEF87C173EF8B6FFEB8EFFCB6CD08A3FF679514C96E51FE79C5377FDE45FA7
+      FA63F4EB0FD75FB1A165715B64B397FADBEBF7A75FDFDF7EE83FFAA1FFEA87FE
+      B3D7FD77902041C2FC1FE6FFF2F747FA9F1F24AF48AEA45338E8F3FD65BEE39B
+      3FB51837660C36F8EA3F9895547028897091F6BECBEF66B80FF6DD7F2D1AECA5
+      FDB762C3A3EC1CD6F89EFFA5EFFD20FDFDB8F6FCCFFEE2D85B98C666EB0E8FB7
+      63C16079FE1E362ACEFF76FC3D27EE3A6BEF495B1FE394E6FCD798C21E9E37E5
+      DECE5A3E1893F315EDF997626954F666731DE5C47ED1BDD4E673BCC8DE72AEAB
+      DEC216D17DEB059FFCBF55745FB5F9698413AEFF897F40740B9AFC6A05FBF29A
+      B322FE629C91F3B1E2FC6FE7DF6C51FE914D2735E7FF1ACFEC112E97D59FA2B7
+      4873FE4F26B1E3DF774BEAAFD6FB23B1F04ECE3D2C7B7FBAF9FE727DA77387A9
+      CE5ECD7F47F2F4F524067BD07FFCA6F3D7DE5FC780AFFE4B7A8E94CE5CA2F77F
+      7798FF83042996BF9E3B5432
     }
   end
 end
