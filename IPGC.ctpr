@@ -27,7 +27,7 @@
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <OtherUnitFiles Value="Source;Source\Case05;Source\Case02;Source\Case03;Source\Case04"/>
+            <OtherUnitFiles Value="Source;Source\Case05;Source\Case02;Source\Case03;Source\Case04;Source\Case06"/>
             <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
           <CodeGeneration>
@@ -58,6 +58,9 @@
       <FormatVersion Value="2"/>
     </RunParams>
     <RequiredPackages>
+      <Item>
+        <PackageName Value="pl_RichMemo"/>
+      </Item>
       <Item>
         <PackageName Value="lz_vlc"/>
       </Item>
@@ -134,6 +137,22 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit>
+      <Unit>
+        <Filename Value="Source\Case06\Case06.FrmMain.pas"/>
+        <FRMtype Value="200"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Case06_FrmMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Case06\Case06.FrmEdit.pas"/>
+        <FRMtype Value="200"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Case06_FrmEdit"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -144,7 +163,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="Source;Source\Case02;Source\Case03;Source\Case05;Source\Case04"/>
+      <OtherUnitFiles Value="Source;Source\Case02;Source\Case03;Source\Case05;Source\Case04;Source\Case06"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Parsing>
@@ -176,9 +195,6 @@
         <IgnoredMessages idx4105="True" idx4104="True"/>
       </CompilerMessages>
       <CustomOptions Value="-dDebug"/>
-      <OtherDefines Count="1">
-        <Define0 Value="Debug"/>
-      </OtherDefines>
     </Other>
   </CompilerOptions>
   <Debugging>

@@ -103,7 +103,7 @@ object Case05_FrmMain: TCase05_FrmMain
     Color = clBtnFace
     ParentColor = False
     TabOrder = 3
-    object TrackBar1: TTrackBar
+    object TrackBarVideoPosition: TTrackBar
       Left = 0
       Height = 40
       Top = 0
@@ -112,6 +112,7 @@ object Case05_FrmMain: TCase05_FrmMain
       Position = 0
       TickMarks = tmBoth
       Align = alClient
+      OnMouseUp = TrackBarVideoPositionMouseUp
       TabOrder = 0
     end
     object TrackBarAudioVolume: TTrackBar

@@ -9,7 +9,7 @@ uses
   Classes,
   SysUtils,
   Math,
-  Windows,
+  DateUtils,
   Forms,
   Controls,
   Graphics,
@@ -47,7 +47,7 @@ type
     ToolButton6: TToolButton;
     ToolButton7: TToolButton;
     ToolButton8: TToolButton;
-    TrackBar1: TTrackBar;
+    TrackBarVideoPosition: TTrackBar;
     TrackBarAudioVolume: TTrackBar;
     VLCPlayer: TLCLVLCPlayer;
     MainMenu1: TMainMenu;
@@ -76,6 +76,7 @@ type
     procedure SpeedButton1Click(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure TrackBarAudioVolumeChange(Sender: TObject);
+    procedure TrackBarVideoPositionMouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
   private
     _VlcLib: TVLCLibrary;
     _FileName: string;
@@ -147,6 +148,7 @@ end;
 procedure TCase05_FrmMain.ActionPlayExecute(Sender: TObject);
 var
   tempTime: TTime;
+  i: integer;
 begin
   ActionStop.Execute;
 
@@ -174,6 +176,9 @@ begin
   end;
 
   Timer1.Enabled := true;
+
+  TrackBarVideoPosition.Max := SecondOf(tempTime);
+  TrackBarVideoPosition.Position := 0;
 end;
 
 procedure TCase05_FrmMain.ActionStopExecute(Sender: TObject);
@@ -232,12 +237,19 @@ begin
   StatusBar1.Panels[1].Text := Format(CURRENT_TIME, [TimeToStr(tempTime)]);
 
   Caption := VLCPlayer.VideoPosition.ToString;
+
+  TrackBarVideoPosition.Position := VLCPlayer.VideoPosition div 1000;
 end;
 
 procedure TCase05_FrmMain.TrackBarAudioVolumeChange(Sender: TObject);
 begin
   VLCPlayer.AudioVolume := TrackBarAudioVolume.Position;
   WriteLn(TrackBarAudioVolume.Position);
+end;
+
+procedure TCase05_FrmMain.TrackBarVideoPositionMouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Integer);
+begin
+  VLCPlayer.VideoPosition := TrackBarVideoPosition.Position * 1000;
 end;
 
 end.
