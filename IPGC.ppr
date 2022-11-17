@@ -24,7 +24,7 @@ uses
   Case04.FrmSplash,
   Case04.GameData,
   Case04.StrConsts,
-  Case05.FrmMain, Case06.FrmMain, Case06.FrmEdit;
+  Case05.FrmMain, Case06.FrmMain, Case06.FrmEdit, Case07.FrmMain;
 
 
 {$R *.res}
@@ -53,6 +53,6 @@ begin
 
   RequireDerivedFormResource := true;
   Application.Initialize;
-  Application.CreateForm(TCase06_FrmMain, Case06_FrmMain);
+  Application.CreateForm(TCase07_FrmMain, Case07_FrmMain);
   Application.Run;
 end.

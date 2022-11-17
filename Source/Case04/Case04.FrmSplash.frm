@@ -1,4 +1,4 @@
-object Case04_FrmSplash: TCase04_FrmSplash
+﻿object Case04_FrmSplash: TCase04_FrmSplash
   Left = 86
   Height = 665
   Top = 85

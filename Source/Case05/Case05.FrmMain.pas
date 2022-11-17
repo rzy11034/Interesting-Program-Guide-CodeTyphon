@@ -8,7 +8,6 @@ interface
 uses
   Classes,
   SysUtils,
-  Math,
   DateUtils,
   Forms,
   Controls,
@@ -148,7 +147,6 @@ end;
 procedure TCase05_FrmMain.ActionPlayExecute(Sender: TObject);
 var
   tempTime: TTime;
-  i: integer;
 begin
   ActionStop.Execute;
 

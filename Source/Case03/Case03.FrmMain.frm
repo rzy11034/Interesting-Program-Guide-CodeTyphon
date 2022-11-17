@@ -1,4 +1,4 @@
-object Case03_FrmMain: TCase03_FrmMain
+﻿object Case03_FrmMain: TCase03_FrmMain
   Left = 86
   Height = 559
   Top = 85

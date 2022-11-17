@@ -1,4 +1,4 @@
-object Case04_FrmMain: TCase04_FrmMain
+﻿object Case04_FrmMain: TCase04_FrmMain
   Left = 86
   Height = 542
   Top = 85

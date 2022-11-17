@@ -1,87 +1,70 @@
 object Case06_FrmMain: TCase06_FrmMain
   Left = 86
-  Height = 581
+  Height = 659
   Top = 85
-  Width = 759
-  Caption = 'Case06_FrmMain'
+  Width = 791
+  Caption = '多文档编辑器'
   FormStyle = fsMDIForm
   Menu = MainMenu1
+  OnClose = FormClose
+  OnCreate = FormCreate
   Position = poScreenCenter
   LCLVersion = '7.9'
-  WindowState = wsMaximized
   object MainMenu1: TMainMenu
-    Left = 24
+    Left = 64
     Top = 72
-    object MenuItem1: TMenuItem
-      Action = ActionFile
-      object MenuItem3: TMenuItem
-        Action = ActionNew
+    object MenuItemFile: TMenuItem
+      Caption = '文件(&F)'
+      GroupIndex = 1
+      object MenuItemNew: TMenuItem
+        Caption = '新建'
+        OnClick = MenuItemNewClick
       end
-      object MenuItem4: TMenuItem
-        Action = ActionOpen
+      object MenuItemOpen: TMenuItem
+        Caption = '打开…'
+        OnClick = MenuItemOpenClick
       end
       object Separator1: TMenuItem
         Caption = '-'
       end
-      object MenuItem5: TMenuItem
-        Action = ActionExit
+      object MenuItemExit: TMenuItem
+        Caption = '退出'
+        OnClick = MenuItemExitClick
       end
     end
-    object MenuItem2: TMenuItem
+    object MenuItemWindows: TMenuItem
       Caption = '窗口(&W)'
       GroupIndex = 9
-      object MenuItem6: TMenuItem
+      object MenuItemTile: TMenuItem
         Caption = '平铺'
         GroupIndex = 9
+        OnClick = MenuItemTileClick
       end
-      object MenuItem7: TMenuItem
+      object MenuItemCascade: TMenuItem
         Caption = '层叠'
         GroupIndex = 9
+        OnClick = MenuItemCascadeClick
       end
-      object MenuItem8: TMenuItem
+      object MenuItemArrangeicons: TMenuItem
         Caption = '图标显示'
         GroupIndex = 9
+        OnClick = MenuItemArrangeiconsClick
+      end
+      object Separator2: TMenuItem
+        Caption = '-'
       end
     end
   end
-  object ActionList1: TActionList
-    Left = 120
+  object OpenDialog: TOpenDialog
+    Filter = 'Rich Text File(*.rtf)|*.rtf|Normal Text File(*.txt)|*.txt|All File|*.*'
+    FilterIndex = 3
+    Left = 232
     Top = 72
-    object ActionFile: TAction
-      Caption = '文件(&F)'
-      OnExecute = ActionNil
-    end
-    object ActionNew: TAction
-      Caption = '新建'
-      OnExecute = ActionNewExecute
-    end
-    object ActionOpen: TAction
-      Caption = '打开…'
-    end
-    object ActionExit: TAction
-      Caption = '退出'
-      OnExecute = ActionExitExecute
-    end
-    object ActionWindows: TAction
-      Caption = '窗口(&W)'
-      GroupIndex = 9
-      OnExecute = ActionNil
-    end
-    object ActionTile: TAction
-      Caption = '平铺'
-      GroupIndex = 9
-    end
-    object ActionCascade: TAction
-      Caption = '层叠'
-      GroupIndex = 9
-    end
-    object ActionArrangeicons: TAction
-      Caption = '图标显示'
-      GroupIndex = 9
-    end
   end
-  object OpenDialog1: TOpenDialog
-    Left = 224
-    Top = 72
+  object Timer1: TTimer
+    Interval = 1
+    OnTimer = Timer1Timer
+    Left = 353
+    Top = 77
   end
 end
