@@ -64,9 +64,6 @@
         <PackageName Value="adFCL"/>
       </Item>
       <Item>
-        <PackageName Value="lz_SQLite3"/>
-      </Item>
-      <Item>
         <PackageName Value="lz_Printers"/>
       </Item>
       <Item>

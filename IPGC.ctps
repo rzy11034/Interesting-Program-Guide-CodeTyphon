@@ -145,7 +145,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="110"/>
         <CursorPos X="35" Y="270"/>
-        <UsageCount Value="170"/>
+        <UsageCount Value="237"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
@@ -157,9 +157,9 @@
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="4"/>
-        <CursorPos X="9" Y="7"/>
-        <UsageCount Value="68"/>
+        <TopLine Value="114"/>
+        <CursorPos X="14" Y="143"/>
+        <UsageCount Value="194"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -173,7 +173,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="58"/>
         <CursorPos X="9" Y="82"/>
-        <UsageCount Value="181"/>
+        <UsageCount Value="169"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case02\Case02.Calculate.pas"/>
@@ -181,7 +181,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="102"/>
         <CursorPos X="23" Y="120"/>
-        <UsageCount Value="202"/>
+        <UsageCount Value="190"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case03\Case04.FrmMain.pas"/>
@@ -194,7 +194,7 @@
         <TopLine Value="256"/>
         <CursorPos X="15" Y="260"/>
         <FoldState Value=" TJnB3{m T3qQ0mM"/>
-        <UsageCount Value="181"/>
+        <UsageCount Value="169"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case03\Case03.StrConsts.pas"/>
@@ -202,7 +202,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="21"/>
         <CursorPos X="47" Y="35"/>
-        <UsageCount Value="191"/>
+        <UsageCount Value="179"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case03\Case03.DragObject.pas"/>
@@ -210,7 +210,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="8"/>
         <CursorPos X="29" Y="8"/>
-        <UsageCount Value="164"/>
+        <UsageCount Value="152"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case03\Case04.GameData.pas"/>
@@ -218,7 +218,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="443"/>
         <CursorPos X="39" Y="444"/>
-        <UsageCount Value="134"/>
+        <UsageCount Value="122"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case03\Case04.FrmSplash.pas"/>
@@ -231,7 +231,7 @@
         <TopLine Value="82"/>
         <CursorPos X="37" Y="89"/>
         <FoldState Value=" T3k10:~"/>
-        <UsageCount Value="102"/>
+        <UsageCount Value="90"/>
       </Unit>
       <Unit>
         <Filename Value="README.md"/>
@@ -240,116 +240,8 @@
         <WindowIndex Value="0"/>
         <CursorPos X="13" Y="9"/>
         <SyntaxHighlighter Value="FreePascal"/>
-        <UsageCount Value="99"/>
+        <UsageCount Value="87"/>
         <DefaultSyntaxHighlighter Value="None"/>
-      </Unit>
-      <Unit>
-        <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\classes\classesh.inc"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="2165"/>
-        <CursorPos X="14" Y="2187"/>
-        <UsageCount Value="1"/>
-      </Unit>
-      <Unit>
-        <Filename Value="C:\codetyphon\fpcsrc\rtl\inc\systemh.inc"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="408"/>
-        <CursorPos X="5" Y="425"/>
-        <UsageCount Value="1"/>
-      </Unit>
-      <Unit>
-        <Filename Value="C:\codetyphon\typhon\lcl\include\customform.inc"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="3285"/>
-        <CursorPos Y="3297"/>
-        <UsageCount Value="1"/>
-      </Unit>
-      <Unit>
-        <Filename Value="Source\Case03\Case02.Calculate.pas"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="-1"/>
-        <TopLine Value="-1"/>
-        <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="1"/>
-      </Unit>
-      <Unit>
-        <Filename Value="Source\Case03\Case02.FrmMain.pas"/>
-        <FRMtype Value="200"/>
-        <ComponentName Value="Case02_FrmMain"/>
-        <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="-1"/>
-        <TopLine Value="-1"/>
-        <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="1"/>
-      </Unit>
-      <Unit>
-        <Filename Value="Source\Case04\Case04.FrmMain.frm"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="0"/>
-        <UsageCount Value="1"/>
-        <DefaultSyntaxHighlighter Value="FRM"/>
-      </Unit>
-      <Unit>
-        <Filename Value="Source\Case04\Case04.FrmSplash.frm"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="-1"/>
-        <TopLine Value="-1"/>
-        <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="1"/>
-        <DefaultSyntaxHighlighter Value="FRM"/>
-      </Unit>
-      <Unit>
-        <Filename Value="C:\codetyphon\fpcsrc\packages\libvlc\src\vlc.pp"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="432"/>
-        <CursorPos X="21" Y="462"/>
-        <UsageCount Value="6"/>
-      </Unit>
-      <Unit>
-        <Filename Value="C:\codetyphon\fpcsrc\packages\rtl-objpas\src\inc\dateutils.pp"/>
-        <FRMtype Value="0"/>
-        <UnitName Value="DateUtils"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="0"/>
-        <UsageCount Value="5"/>
-      </Unit>
-      <Unit>
-        <Filename Value="C:\codetyphon\fpcsrc\packages\rtl-objpas\src\inc\dateutil.inc"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="1142"/>
-        <CursorPos X="25" Y="1170"/>
-        <UsageCount Value="5"/>
-      </Unit>
-      <Unit>
-        <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\dati.inc"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="109"/>
-        <CursorPos X="10" Y="119"/>
-        <UsageCount Value="5"/>
-      </Unit>
-      <Unit>
-        <Filename Value="C:\codetyphon\typhon\lcl\include\menuitem.inc"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="479"/>
-        <CursorPos Y="495"/>
-        <UsageCount Value="2"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_RichMemo\source\richmemo.pas"/>
@@ -359,80 +251,7 @@
         <WindowIndex Value="0"/>
         <TopLine Value="497"/>
         <CursorPos X="5" Y="508"/>
-        <UsageCount Value="13"/>
-      </Unit>
-      <Unit>
-        <Filename Value="C:\codetyphon\typhon\lcl\stdctrls.pp"/>
-        <FRMtype Value="0"/>
-        <UnitName Value="StdCtrls"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="10"/>
-        <CursorPos X="14" Y="18"/>
-        <UsageCount Value="7"/>
-      </Unit>
-      <Unit>
-        <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\classes\stringl.inc"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="671"/>
-        <CursorPos X="3" Y="682"/>
         <UsageCount Value="1"/>
-      </Unit>
-      <Unit>
-        <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\sysencodingh.inc"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="72"/>
-        <CursorPos X="24" Y="106"/>
-        <UsageCount Value="1"/>
-      </Unit>
-      <Unit>
-        <Filename Value="C:\codetyphon\typhon\lcl\include\control.inc"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="575"/>
-        <CursorPos Y="585"/>
-        <UsageCount Value="1"/>
-      </Unit>
-      <Unit>
-        <Filename Value="C:\codetyphon\fpcsrc\packages\fcl-db\src\sqldb\mssql\mssqlconn.pp"/>
-        <FRMtype Value="0"/>
-        <UnitName Value="MSSQLConn"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="19"/>
-        <UsageCount Value="9"/>
-      </Unit>
-      <Unit>
-        <Filename Value="C:\codetyphon\fpcsrc\packages\dblib\src\dblib.pp"/>
-        <FRMtype Value="0"/>
-        <UnitName Value="DBLib"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="0"/>
-        <TopLine Value="106"/>
-        <CursorPos X="7" Y="107"/>
-        <UsageCount Value="9"/>
-      </Unit>
-      <Unit>
-        <Filename Value="C:\codetyphon\typhon\components\packages_lz\lz_SQLite3\source\registersqlite3.pas"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="0"/>
-        <UsageCount Value="9"/>
-      </Unit>
-      <Unit>
-        <Filename Value="C:\codetyphon\typhon\components\packages_lz\lz_SQLite3\source\sqlite3componenteditor.pas"/>
-        <FRMtype Value="0"/>
-        <ComponentName Value="Sqlite3TableEditorForm"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="0"/>
-        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\packages\fcl-db\src\sqldb\sqlite\sqlite3conn.pp"/>
@@ -440,9 +259,8 @@
         <UnitName Value="SQLite3Conn"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="52"/>
-        <CursorPos X="23" Y="309"/>
-        <UsageCount Value="10"/>
+        <TopLine Value="7"/>
+        <UsageCount Value="4"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\packages\sqlite\src\sqlite3dyn.pp"/>
@@ -450,14 +268,14 @@
         <UnitName Value="SQLite3Dyn"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="4"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\packages\sqlite\src\sqlite3.inc"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="4"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\packages\fcl-db\src\sqlite\sqlite3ds.pas"/>
@@ -466,7 +284,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="16"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\packages\fcl-db\src\sqlite\customsqliteds.pas"/>
@@ -475,7 +293,7 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="13"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\fpcsrc\packages\fcl-db\src\base\db.pas"/>
@@ -483,118 +301,290 @@
         <UnitName Value="DB"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="16"/>
+        <TopLine Value="2122"/>
+        <CursorPos X="34" Y="2142"/>
         <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_ZMSQL\source\zmconnection.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="ZMConnection"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="72"/>
+        <CursorPos X="16" Y="57"/>
+        <UsageCount Value="5"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_ZMSQL\source\janSQL.pas"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="145"/>
+        <UsageCount Value="5"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\components\packages_lz\lz_dbExport\source\regdbexport.pp"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="121"/>
+        <CursorPos X="2" Y="122"/>
+        <UsageCount Value="5"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\classes\classesh.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="380"/>
+        <CursorPos X="3" Y="434"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\fpcsrc\packages\sqlite\tests\test.pas"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <CursorPos X="34" Y="9"/>
+        <UsageCount Value="4"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\fpcsrc\packages\sqlite\src\sqlite3db.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="SQLite3DB"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="39"/>
+        <CursorPos X="14" Y="59"/>
+        <UsageCount Value="4"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\fpcsrc\packages\fcl-db\src\sqldb\sqldb.pp"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="SQLDB"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="2440"/>
+        <CursorPos X="3" Y="2442"/>
+        <UsageCount Value="5"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source\Case07\Case07.FrmMain.frm"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <CursorPos X="32" Y="11"/>
+        <UsageCount Value="8"/>
+        <DefaultSyntaxHighlighter Value="FRM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\fpcsrc\packages\fcl-db\src\base\database.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="442"/>
+        <CursorPos X="3" Y="445"/>
+        <UsageCount Value="5"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\sysutilh.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="97"/>
+        <CursorPos X="20" Y="124"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\sysutils\sysutils.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="242"/>
+        <CursorPos X="69" Y="247"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\win\sysutils.pp"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="SysUtils"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="58"/>
+        <CursorPos X="24" Y="32"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\objpas\typinfo.pp"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="TypInfo"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="975"/>
+        <CursorPos X="7" Y="237"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\fpcsrc\rtl\inc\dynlib.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="87"/>
+        <CursorPos X="139" Y="95"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\lcl\dbctrls.pp"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="DBCtrls"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="1372"/>
+        <CursorPos X="23" Y="1401"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\lcl\include\dbcustomnavigator.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="249"/>
+        <CursorPos X="20" Y="356"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\lcl\dbgrids.pas"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="DBGrids"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="552"/>
+        <CursorPos X="3" Y="570"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="26">
       <Position>
         <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="31" Column="3"/>
+        <Caret Line="71" Column="18" TopLine="47"/>
       </Position>
       <Position>
         <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="28" Column="3"/>
+        <Caret Line="72" Column="18" TopLine="48"/>
       </Position>
       <Position>
         <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="27" Column="3"/>
+        <Caret Line="73" Column="18" TopLine="49"/>
       </Position>
       <Position>
         <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="26" Column="3"/>
+        <Caret Line="74" Column="18" TopLine="50"/>
       </Position>
       <Position>
         <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="35" Column="3"/>
+        <Caret Line="75" Column="18" TopLine="51"/>
       </Position>
       <Position>
         <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="15" Column="29" TopLine="10"/>
+        <Caret Line="82" Column="18" TopLine="53"/>
       </Position>
       <Position>
         <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="22" Column="11" TopLine="16"/>
+        <Caret Line="70" Column="20" TopLine="54"/>
       </Position>
       <Position>
         <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="31" Column="13" TopLine="19"/>
+        <Caret Line="85" Column="10" TopLine="55"/>
       </Position>
       <Position>
         <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="32" Column="13" TopLine="19"/>
+        <Caret Line="77" Column="24" TopLine="40"/>
       </Position>
       <Position>
         <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="28" Column="20"/>
+        <Caret Line="76" Column="23" TopLine="59"/>
       </Position>
       <Position>
         <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="28" Column="20"/>
+        <Caret Line="72" Column="18" TopLine="60"/>
       </Position>
       <Position>
         <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="29" Column="20"/>
+        <Caret Line="78" Column="19" TopLine="61"/>
       </Position>
       <Position>
         <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="30" Column="20"/>
+        <Caret Line="84" Column="18" TopLine="62"/>
       </Position>
       <Position>
         <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="31" Column="20"/>
+        <Caret Line="89" Column="18" TopLine="62"/>
       </Position>
       <Position>
         <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="32" Column="20"/>
+        <Caret Line="95" Column="3" TopLine="63"/>
       </Position>
       <Position>
         <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="31" Column="20"/>
+        <Caret Line="101" Column="20" TopLine="64"/>
       </Position>
       <Position>
         <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="30" Column="20"/>
+        <Caret Line="106" Column="18" TopLine="73"/>
       </Position>
       <Position>
         <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="29" Column="20"/>
+        <Caret Line="112" Column="3" TopLine="74"/>
       </Position>
       <Position>
         <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="28" Column="20"/>
+        <Caret Line="117" Column="20" TopLine="100"/>
       </Position>
       <Position>
         <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="27" Column="20"/>
+        <Caret Line="74" Column="34" TopLine="49"/>
       </Position>
       <Position>
         <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="26" Column="20"/>
+        <Caret Line="39" Column="21" TopLine="27"/>
       </Position>
       <Position>
         <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="11" Column="46"/>
+        <Caret Line="38" Column="26" TopLine="27"/>
       </Position>
       <Position>
         <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="30" TopLine="13"/>
+        <Caret Line="36" Column="28" TopLine="30"/>
       </Position>
       <Position>
         <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="31" TopLine="4"/>
+        <Caret Line="128" Column="60" TopLine="101"/>
       </Position>
       <Position>
         <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="10" Column="22" TopLine="4"/>
+        <Caret Line="115" Column="31" TopLine="100"/>
       </Position>
       <Position>
         <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="18" Column="32" TopLine="4"/>
+        <Caret Line="117" Column="31" TopLine="102"/>
       </Position>
       <Position>
         <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="7" Column="9" TopLine="4"/>
+        <Caret Line="143" Column="10" TopLine="114"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
+        <Caret Line="36" Column="16" TopLine="14"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\codetyphon\typhon\lcl\dbgrids.pas"/>
+        <Caret Line="570" Column="3" TopLine="552"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
+        <Caret Line="36" Column="16" TopLine="17"/>
       </Position>
     </JumpHistory>
     <RunParams>
@@ -609,6 +599,9 @@
       </Item>
       <Item ClassAutoCast="True">
         <Expression Value="_Visited[curY, curX]"/>
+      </Item>
+      <Item ClassAutoCast="True">
+        <Expression Value="pt"/>
       </Item>
     </Watches>
   </Debugging>
