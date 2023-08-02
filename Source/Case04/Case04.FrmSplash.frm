@@ -1,17 +1,16 @@
-﻿object Case04_FrmSplash: TCase04_FrmSplash
+object Case04_FrmSplash: TCase04_FrmSplash
   Left = 86
-  Height = 665
+  Height = 532
   Top = 85
-  Width = 850
+  Width = 680
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Case04_FrmSplash'
-  ClientHeight = 665
-  ClientWidth = 850
-  DesignTimePPI = 120
+  ClientHeight = 532
+  ClientWidth = 680
   DoubleBuffered = True
   Font.CharSet = ANSI_CHARSET
-  Font.Height = -18
+  Font.Height = -14
   Font.Pitch = fpVariable
   Font.Quality = fqDraft
   OnActivate = FormActivate
@@ -19,39 +18,39 @@
   OnDestroy = FormDestroy
   ParentDoubleBuffered = False
   Position = poScreenCenter
-  LCLVersion = '7.9'
+  LCLVersion = '8.1'
   object Button1: TButton
-    Left = 528
-    Height = 41
-    Top = 552
-    Width = 224
+    Left = 422
+    Height = 33
+    Top = 442
+    Width = 179
     Caption = '开始'
     OnClick = Button1Click
     TabOrder = 0
   end
   object Label1: TLabel
-    Left = 448
-    Height = 472
-    Top = 24
-    Width = 376
+    Left = 358
+    Height = 378
+    Top = 19
+    Width = 301
     AutoSize = False
     Caption = 'Label1'
   end
   object PaintBox1: TPaintBox
-    Left = 16
-    Height = 616
-    Top = 24
-    Width = 400
+    Left = 13
+    Height = 493
+    Top = 19
+    Width = 320
   end
   object Image1: TImage
-    Left = 48
-    Height = 113
-    Top = 72
-    Width = 113
+    Left = 38
+    Height = 90
+    Top = 58
+    Width = 90
   end
   object Timer1: TTimer
     Interval = 1
-    Left = 580
-    Top = 100
+    Left = 464
+    Top = 80
   end
 end

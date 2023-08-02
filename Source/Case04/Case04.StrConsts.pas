@@ -13,22 +13,22 @@ const
   FRM_COLOR = $004080FF;
 
 resourcestring
-  PNG_DIALOGBACK = '..\..\Source\Case04\Resource\dialogback.png';
-  JPG_BACKGROUND_FILE = '..\..\Source\Case04\Resource\Background.JPG';
-  JPG_BING_FILE = '..\..\Source\Case04\Resource\bing.JPG';
-  JPG_CAOCAO_FILE = '..\..\Source\Case04\Resource\Caocao.JPG';
+  PNG_DIALOGBACK = 'Source\Case04\Resource\dialogback.png';
+  JPG_BACKGROUND_FILE = 'Source\Case04\Resource\Background.JPG';
+  JPG_BING_FILE = 'Source\Case04\Resource\bing.JPG';
+  JPG_CAOCAO_FILE = 'Source\Case04\Resource\Caocao.JPG';
 
-  JPG_GUANYU_FILE_S = '..\..\Source\Case04\Resource\guanyu_s.JPG';
-  JPG_HUANGZHONG_FILE_S = '..\..\Source\Case04\Resource\huangzhong_s.JPG';
-  JPG_MACHAO_FILE_S = '..\..\Source\Case04\Resource\machao_s.JPG';
-  JPG_ZHANGFEI_FILE_S = '..\..\Source\Case04\Resource\zhangfei_s.JPG';
-  JPG_ZHAOYUN_FILE_S = '..\..\Source\Case04\Resource\zhaoyun_s.JPG';
+  JPG_GUANYU_FILE_S = 'Source\Case04\Resource\guanyu_s.JPG';
+  JPG_HUANGZHONG_FILE_S = 'Source\Case04\Resource\huangzhong_s.JPG';
+  JPG_MACHAO_FILE_S = 'Source\Case04\Resource\machao_s.JPG';
+  JPG_ZHANGFEI_FILE_S = 'Source\Case04\Resource\zhangfei_s.JPG';
+  JPG_ZHAOYUN_FILE_S = 'Source\Case04\Resource\zhaoyun_s.JPG';
 
-  JPG_GUANYU_FILE_H = '..\..\Source\Case04\Resource\guanyu_h.JPG';
-  JPG_HUANGZHONG_FILE_H = '..\..\Source\Case04\Resource\huangzhong_h.JPG';
-  JPG_MACHAO_FILE_H = '..\..\Source\Case04\Resource\machao_h.JPG';
-  JPG_ZHANGFEI_FILE_H = '..\..\Source\Case04\Resource\zhangfei_h.JPG';
-  JPG_ZHAOYUN_FILE_H = '..\..\Source\Case04\Resource\zhaoyun_h.JPG';
+  JPG_GUANYU_FILE_H = 'Source\Case04\Resource\guanyu_h.JPG';
+  JPG_HUANGZHONG_FILE_H = 'Source\Case04\Resource\huangzhong_h.JPG';
+  JPG_MACHAO_FILE_H = 'Source\Case04\Resource\machao_h.JPG';
+  JPG_ZHANGFEI_FILE_H = 'Source\Case04\Resource\zhangfei_h.JPG';
+  JPG_ZHAOYUN_FILE_H = 'Source\Case04\Resource\zhaoyun_h.JPG';
 
 resourcestring
   STR_GAME_NAME = '华容道';

@@ -24,7 +24,10 @@ uses
   Case04.FrmSplash,
   Case04.GameData,
   Case04.StrConsts,
-  Case05.FrmMain, Case06.FrmMain, Case06.FrmEdit, Case07.FrmMain;
+  Case05.FrmMain,
+  Case06.FrmMain,
+  Case06.FrmEdit,
+  Case07.FrmMain;
 
 
 {$R *.res}
@@ -36,12 +39,12 @@ uses
   begin
     stm := TResourceStream.Create(HINSTANCE, 'LCLSTRCONSTS.ZH_CN', RT_RCDATA);
     try
-      try
-        po := TPOFile.Create(stm);
-        Translations.TranslateUnitResourceStrings('LCLStrConsts', po);
-      finally
-        po.Free;
-      end;
+    try
+      po := TPOFile.Create(stm);
+      Translations.TranslateUnitResourceStrings('LCLStrConsts', po);
+    finally
+      po.Free;
+    end;
     finally
       stm.Free;
     end;
@@ -53,6 +56,7 @@ begin
 
   RequireDerivedFormResource := true;
   Application.Initialize;
-  Application.CreateForm(TCase07_FrmMain, Case07_FrmMain);
+  Application.CreateForm(TCase04_FrmMain, Case04_FrmMain);
+  Application.CreateForm(TCase04_FrmSplash, Case04_FrmSplash);
   Application.Run;
 end.

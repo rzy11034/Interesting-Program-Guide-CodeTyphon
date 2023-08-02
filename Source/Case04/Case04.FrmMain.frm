@@ -1,4 +1,4 @@
-﻿object Case04_FrmMain: TCase04_FrmMain
+object Case04_FrmMain: TCase04_FrmMain
   Left = 86
   Height = 542
   Top = 85
@@ -18,7 +18,7 @@
   OnDestroy = FormDestroy
   OnShow = FormShow
   Position = poScreenCenter
-  LCLVersion = '7.9'
+  LCLVersion = '8.1'
   object Label1: TLabel
     Left = 448
     Height = 461
@@ -39,6 +39,7 @@
     ClientHeight = 516
     ClientWidth = 416
     Color = 4227327
+    ParentBackground = False
     ParentColor = False
     TabOrder = 0
     object Panel1: TPanel
