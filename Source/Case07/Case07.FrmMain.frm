@@ -7,7 +7,7 @@ object Case07_FrmMain: TCase07_FrmMain
   ClientHeight = 517
   ClientWidth = 908
   Position = poDesktopCenter
-  LCLVersion = '8.0'
+  LCLVersion = '8.2'
   object DBGrid1: TDBGrid
     Left = 0
     Height = 435
@@ -24,8 +24,8 @@ object Case07_FrmMain: TCase07_FrmMain
     Top = 464
     Width = 75
     Caption = 'Button1'
-    OnClick = Button1Click
     TabOrder = 1
+    OnClick = Button1Click
   end
   object Edit1: TEdit
     Left = 112
@@ -40,8 +40,8 @@ object Case07_FrmMain: TCase07_FrmMain
     Top = 464
     Width = 75
     Caption = 'Button2'
-    OnClick = Button2Click
     TabOrder = 3
+    OnClick = Button2Click
   end
   object Memo1: TMemo
     Left = 600
@@ -67,7 +67,7 @@ object Case07_FrmMain: TCase07_FrmMain
     )
     AutoCommit = False
     Port = 0
-    Database = 'C:\Bus.DB'
+    Database = 'Source\Case07\Bus.DB'
     Protocol = 'sqlite'
     Left = 152
     Top = 96
@@ -90,10 +90,12 @@ object Case07_FrmMain: TCase07_FrmMain
   end
   object ZTransaction1: TZTransaction
     Connection = ZConnection1
+    AutoCommit = True
     Left = 288
     Top = 96
   end
   object ZSQLMonitor1: TZSQLMonitor
+    Active = True
     MaxTraceCount = 100
     OnTrace = ZSQLMonitor1Trace
     Left = 440

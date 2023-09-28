@@ -9,7 +9,6 @@
       <ResourceType Value="res"/>
       <UseXPManifest Value="True"/>
       <XPManifest>
-        <DpiAware Value="True"/>
         <UseCompatibility Value="True"/>
         <UseCompatibilityWin10 Value="True"/>
       </XPManifest>

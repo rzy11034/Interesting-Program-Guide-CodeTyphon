@@ -1,13 +1,14 @@
 ﻿unit Case07.FrmMain;
 
 {$mode ObjFPC}{$H+}
-{$ModeSwitch unicodestrings}
+{$ModeSwitch unicodestrings}{$J-}
 
 interface
 
 uses
   Classes,
   SysUtils,
+  DeepStar.Utils,
   SQLite3Conn,
   SQLDB,
   DB,
@@ -47,6 +48,9 @@ type
 
   end;
 
+const
+  DATABASE = 'Source\Case07\Bus.DB';
+
 var
   Case07_FrmMain: TCase07_FrmMain;
 
@@ -60,6 +64,11 @@ procedure TCase07_FrmMain.Button1Click(Sender: TObject);
 var
   s: string;
 begin
+  Memo1.Clear;
+
+  ZConnection1.Database := '';
+  ZConnection1.Database := CrossFixFileName(DATABASE);
+
   ZQuery1.Open;
   DBGrid1.Columns[0].Visible := false;
   System.str(ZQuery1.State, s);
@@ -97,7 +106,7 @@ end;
 procedure TCase07_FrmMain.ZSQLMonitor1Trace(Sender: TObject;
   Event: TZLoggingEvent; var LogTrace: boolean);
 begin
-  Memo1.Lines.Add(Event.AsString);
+  Memo1.Lines.Add(Event.Message);
   Memo1.Lines.Add('');
 end;
 

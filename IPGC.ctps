@@ -9,21 +9,20 @@
         <Filename Value="IPGC.ppr"/>
         <FRMtype Value="0"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="0"/>
+        <EditorIndex Value="1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="40"/>
-        <CursorPos X="30" Y="49"/>
+        <CursorPos X="16" Y="49"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\IPGC.Main.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="7"/>
+        <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <CursorPos X="15" Y="21"/>
+        <CursorPos X="5" Y="21"/>
         <UsageCount Value="200"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case05\Case05.FrmMain.pas"/>
@@ -91,12 +90,11 @@
       <Unit>
         <Filename Value="Source\Case04\Case04.StrConsts.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="7"/>
-        <CursorPos X="52" Y="32"/>
+        <CursorPos Y="32"/>
         <UsageCount Value="228"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case04\Case04.FrmMain.pas"/>
@@ -105,13 +103,11 @@
         <ComponentName Value="Case04_FrmMain"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="74"/>
-        <CursorPos X="22" Y="90"/>
+        <CursorPos X="21" Y="90"/>
         <UsageCount Value="228"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case04\Case04.FrmSplash.pas"/>
@@ -120,14 +116,11 @@
         <ComponentName Value="Case04_FrmSplash"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="58"/>
+        <TopLine Value="173"/>
         <CursorPos X="35" Y="28"/>
         <UsageCount Value="228"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source\Case06\Case06.FrmMain.pas"/>
@@ -162,9 +155,11 @@
         <ComponentName Value="Case07_FrmMain"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="8"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
         <WindowIndex Value="0"/>
-        <CursorPos X="8" Y="9"/>
+        <TopLine Value="51"/>
+        <CursorPos X="15" Y="67"/>
         <UsageCount Value="202"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -242,10 +237,10 @@
       <Unit>
         <Filename Value="README.md"/>
         <FRMtype Value="0"/>
-        <EditorIndex Value="6"/>
+        <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
-        <CursorPos X="4" Y="7"/>
-        <SyntaxHighlighter Value="FreePascal"/>
+        <CursorPos X="25" Y="9"/>
+        <SyntaxHighlighter Value="Text"/>
         <UsageCount Value="111"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="None"/>
@@ -337,8 +332,8 @@
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="730"/>
-        <CursorPos X="12" Y="735"/>
+        <TopLine Value="729"/>
+        <CursorPos X="17" Y="751"/>
         <UsageCount Value="10"/>
       </Unit>
       <Unit>
@@ -409,11 +404,12 @@
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_ZeosDBO\source\dbc\ZDbcLogging.pas"/>
         <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
+        <EditorIndex Value="4"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="205"/>
-        <CursorPos X="3" Y="211"/>
+        <TopLine Value="76"/>
+        <CursorPos X="10" Y="87"/>
         <UsageCount Value="10"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_ZeosDBO\source\component\ZAbstractDataset.pas"/>
@@ -452,58 +448,44 @@
       <Unit>
         <Filename Value="C:\codetyphon\typhon\lcl\include\customform.inc"/>
         <FRMtype Value="0"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="2393"/>
         <CursorPos Y="2401"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="C:\codetyphon\typhon\lcl\forms.pp"/>
         <FRMtype Value="0"/>
         <UnitName Value="Forms"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="-1"/>
         <WindowIndex Value="0"/>
         <TopLine Value="2392"/>
         <CursorPos Y="2401"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_ZeosDBO\source\component\ZSqlMonitor.pas"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="56"/>
+        <CursorPos X="3" Y="66"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_ZeosDBO\source\core\ZCompatibility.pas"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="5"/>
+        <WindowIndex Value="0"/>
+        <TopLine Value="342"/>
+        <CursorPos X="42" Y="360"/>
         <UsageCount Value="10"/>
         <Loaded Value="True"/>
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="82" TopLine="68"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="84" Column="25" TopLine="68"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="73" TopLine="68"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="74" TopLine="68"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="76" TopLine="68"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="77" TopLine="68"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="78" TopLine="68"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
-        <Caret Line="79" TopLine="68"/>
-      </Position>
       <Position>
         <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
         <Caret Line="81" TopLine="68"/>
@@ -569,28 +551,60 @@
         <Caret Line="92" Column="16" TopLine="52"/>
       </Position>
       <Position>
-        <Filename Value="Source\Case04\Case04.StrConsts.pas"/>
-        <Caret Line="32" Column="52" TopLine="7"/>
-      </Position>
-      <Position>
-        <Filename Value="C:\codetyphon\typhon\lcl\forms.pp"/>
-        <Caret Line="2401" TopLine="2392"/>
-      </Position>
-      <Position>
-        <Filename Value="C:\codetyphon\typhon\lcl\include\customform.inc"/>
-        <Caret Line="2405" Column="36" TopLine="2393"/>
-      </Position>
-      <Position>
-        <Filename Value="Source\Case04\Case04.FrmSplash.pas"/>
-        <Caret Line="46" Column="25" TopLine="42"/>
-      </Position>
-      <Position>
         <Filename Value="IPGC.ppr"/>
         <Caret Line="30" Column="18" TopLine="25"/>
       </Position>
       <Position>
-        <Filename Value="Source\Case04\Case04.FrmMain.pas"/>
-        <Caret Line="93" Column="39" TopLine="74"/>
+        <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
+        <Caret Line="11" Column="90"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
+        <Caret Line="50" Column="23" TopLine="50"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
+        <Caret Line="96" Column="70" TopLine="74"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
+        <Caret Line="100" TopLine="79"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
+        <Caret Line="105" Column="34" TopLine="73"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
+        <Caret Line="74" Column="34" TopLine="100"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
+        <Caret Line="109" Column="3" TopLine="100"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_ZeosDBO\source\component\ZSqlMonitor.pas"/>
+        <Caret Line="66" Column="3" TopLine="56"/>
+      </Position>
+      <Position>
+        <Filename Value="Source\Case07\Case07.FrmMain.pas"/>
+        <Caret Line="111" Column="32" TopLine="100"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_ZeosDBO\source\dbc\ZDbcLogging.pas"/>
+        <Caret Line="100" Column="14" TopLine="80"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_ZeosDBO\source\dbc\ZDbcLogging.pas"/>
+        <Caret Line="96" Column="18" TopLine="80"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_ZeosDBO\source\dbc\ZDbcLogging.pas"/>
+        <Caret Line="211" Column="3" TopLine="205"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\codetyphon\typhon\components\packages_pl\pl_ZeosDBO\source\dbc\ZDbcLogging.pas"/>
+        <Caret Line="100" Column="42" TopLine="76"/>
       </Position>
     </JumpHistory>
     <RunParams>
